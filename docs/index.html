@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Hunt Agent | Pankaja</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --accent: #3b82f6;
+      --green: #22c55e;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    header {
+      padding: 1.5rem 1rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { font-size: 1.5rem; font-weight: 700; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+    .stats {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+    .stat strong { color: var(--accent); font-size: 1.2rem; display: block; }
+    main { max-width: 900px; margin: 0 auto; padding: 1rem; }
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.75rem;
+    }
+    .job {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+    }
+    .job.new { border-color: var(--green); }
+    .job-head { display: flex; justify-content: space-between; gap: 0.5rem; align-items: flex-start; }
+    .job h2 { font-size: 1rem; font-weight: 600; }
+    .score {
+      background: #1e3a5f;
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .company { color: var(--accent); font-size: 0.9rem; margin-top: 0.15rem; }
+    .meta { color: var(--muted); font-size: 0.8rem; margin-top: 0.25rem; }
+    .skills { font-size: 0.75rem; color: var(--muted); margin-top: 0.5rem; }
+    .apply {
+      display: inline-block;
+      margin-top: 0.75rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .apply:hover { filter: brightness(1.1); }
+    .empty, .loading { text-align: center; color: var(--muted); padding: 3rem 1rem; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.75rem;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Job Hunt Agent</h1>
+    <p class="sub">DevSecOps · Cloud · SRE — matched to your resume, updated by GitHub Actions</p>
+    <div class="stats" id="stats">
+      <div class="stat"><strong id="total">—</strong> matches</div>
+      <div class="stat"><strong id="newCount">—</strong> new</div>
+      <div class="stat"><strong id="updated">—</strong> last run</div>
+    </div>
+  </header>
+  <main>
+    <div id="content" class="loading">Loading jobs…</div>
+  </main>
+  <footer>
+    Runs on GitHub Actions every 6h ·
+    <a href="https://github.com/Pankajajagdish/job-hunt-agent/issues?q=is%3Aissue+label%3Ajob-alert">Job alerts (Issues)</a> ·
+    <a href="https://github.com/Pankajajagdish/job-hunt-agent/actions">Run manually</a>
+  </footer>
+  <script>
+    const feedUrl = "jobs_feed.json";
+
+    function fmtDate(iso) {
+      if (!iso) return "—";
+      try { return new Date(iso).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" }); }
+      catch { return iso; }
+    }
+
+    function renderJob(job, isNew) {
+      const skills = (job.matched_skills || []).slice(0, 6).join(", ");
+      return `<article class="job${isNew ? " new" : ""}">
+        <div class="job-head">
+          <div>
+            <h2>${escapeHtml(job.title)}</h2>
+            <div class="company">${escapeHtml(job.company)}</div>
+            <div class="meta">${escapeHtml(job.location)} · ${escapeHtml(job.source)}</div>
+          </div>
+          <span class="score">${job.match_score}%</span>
+        </div>
+        ${skills ? `<div class="skills">Skills: ${escapeHtml(skills)}</div>` : ""}
+        <a class="apply" href="${escapeHtml(job.url)}" target="_blank" rel="noopener">Apply Now →</a>
+      </article>`;
+    }
+
+    function escapeHtml(s) {
+      const d = document.createElement("div");
+      d.textContent = s || "";
+      return d.innerHTML;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch(feedUrl + "?t=" + Date.now());
+        const data = await res.json();
+        document.getElementById("total").textContent = data.total ?? data.jobs?.length ?? 0;
+        document.getElementById("newCount").textContent = data.new_count ?? 0;
+        document.getElementById("updated").textContent = fmtDate(data.updated_at);
+
+        const el = document.getElementById("content");
+        if (!data.jobs?.length) {
+          el.className = "empty";
+          el.innerHTML = "<p>No jobs yet. Trigger the workflow on GitHub Actions to fetch matches.</p>";
+          return;
+        }
+        el.className = "";
+        const newIds = new Set((data.new_jobs || []).map(j => j.id));
+        let html = "";
+        if (data.new_jobs?.length) {
+          html += `<div class="section-title">New this run</div>`;
+          html += data.new_jobs.map(j => renderJob(j, true)).join("");
+        }
+        html += `<div class="section-title">All matches</div>`;
+        html += data.jobs.map(j => renderJob(j, newIds.has(j.id))).join("");
+        el.innerHTML = html;
+      } catch (e) {
+        document.getElementById("content").innerHTML = `<div class="empty">Could not load feed. Run GitHub Actions first.</div>`;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

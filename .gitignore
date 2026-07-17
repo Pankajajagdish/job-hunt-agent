@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Backend runtime
+backend/output/
+backend/data/
+
+# Android / IDE
+android-app/.gradle/
+android-app/build/
+android-app/app/build/
+android-app/.idea/
+*.iml
+local.properties
+
+# OS
+.DS_Store
+Thumbs.db

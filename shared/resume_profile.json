@@ -1,0 +1,44 @@
+{
+  "name": "Pankaja Jagdish Kulkarni",
+  "email": "pankajajagdishkulkarni@gmail.com",
+  "phone": "+91 7045149611",
+  "location": "Pune, Maharashtra, India",
+  "linkedin": "https://linkedin.com/in/pankaja-jagdish-kulkarni",
+  "github": "https://github.com/Pankajajagdish",
+  "portfolio": "https://pankajajagdish.github.io",
+  "title": "DevSecOps Engineer | Cloud Engineer | Cloud Security",
+  "years_experience": 2,
+  "target_roles": [
+    "DevSecOps Engineer",
+    "Cloud Engineer",
+    "Cloud Security Engineer",
+    "Site Reliability Engineer",
+    "Platform Engineer",
+    "Azure Engineer"
+  ],
+  "skills": [
+    "Microsoft Azure", "AKS", "Kubernetes", "Terraform", "ARM Templates",
+    "Azure DevOps", "GitHub Actions", "GitLab CI/CD", "Docker", "Helm",
+    "Defender for Cloud", "Azure Policy", "Entra ID", "RBAC", "IAM", "PAM",
+    "Prometheus", "Grafana", "Azure Monitor", "Log Analytics", "Python",
+    "Shell Scripting", "Linux", "CI/CD", "DevSecOps", "SRE", "AWS",
+    "GuardDuty", "CloudTrail", "NIST", "CVSS", "Vulnerability Management",
+    "Private Endpoints", "VNets", "NSGs", "Key Vault", "MCP", "Playwright"
+  ],
+  "certifications": [
+    "Microsoft Certified: Azure Administrator Associate (AZ-104)"
+  ],
+  "summary_template": "DevSecOps and Cloud Engineer with {years} years of production experience on Azure and AKS. Skilled in {top_skills}. Built automation tools reducing manual ops work by 40-90% and MTTR by 40%. AZ-104 Certified.",
+  "experience_highlights": [
+    "Azure security compliance with Azure Policy, Defender for Cloud, and Entra ID RBAC",
+    "Production AKS cluster operations, pod recovery automation, MTTR reduced 40%",
+    "Azure networking hardening: VNets, NSGs, Private Endpoints, AMPLS",
+    "CI/CD pipelines in Azure DevOps, GitHub Actions, GitLab — 15% cost reduction",
+    "Observability with Prometheus, Grafana, Azure Monitor — 35% coverage increase",
+    "Python automation for PAM SLA, health reporting, Jira-Confluence sync"
+  ],
+  "exclude_keywords": [
+    "clearance required", "US citizen only", "10+ years", "15+ years",
+    "principal engineer", "staff engineer", "director"
+  ]
+}
