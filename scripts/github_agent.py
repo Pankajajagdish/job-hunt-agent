@@ -133,8 +133,8 @@ async def run() -> int:
     save_seen(seen)
 
     print(f"Done: {len(jobs)} matches, {len(new_jobs)} new, {issues_created} issues")
-    return len(new_jobs)
+    return 0
 
 
 if __name__ == "__main__":
-    raise SystemExit(asyncio.run(run()))
+    raise SystemExit(asyncio.run(run()) or 0)
