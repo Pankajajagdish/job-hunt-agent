@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from services.job_sources import fetch_all_free_sources
 from services.job_search import search_all
 from services.matcher import filter_and_rank
+from services.job_filter import filter_last_24h
 from services.profile import load_profile
 
 CACHE_DIR = Path(__file__).parent.parent / "data"
@@ -46,6 +47,8 @@ async def refresh_live_jobs(min_score: int = 35, include_demo: bool = False) -> 
         ranked = filter_and_rank(free_jobs, min_score=min_score)
     else:
         ranked = await search_all(min_score=min_score, include_demo=include_demo)
+
+    ranked = filter_last_24h(ranked)
 
     cache = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
