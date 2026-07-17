@@ -1,34 +1,10 @@
 {
-  "updated_at": "2026-07-17T13:11:27.664366+00:00",
+  "updated_at": "2026-07-17T19:01:45.151432+00:00",
   "profile": "Pankaja Jagdish Kulkarni",
   "daily_goal": 50,
   "filter": "last_24_hours",
-  "total": 1,
+  "total": 0,
   "new_count": 0,
-  "jobs": [
-    {
-      "id": "ce48c78ac81c",
-      "title": "Senior Azure Cloud Platform Architect (m/w/d)",
-      "company": "think about IT GmbH",
-      "location": "Nuremberg",
-      "description": "Die thinkGROUP ist eine erfolgreiche Systemhausgruppe, die st\u00e4ndig nach Innovation strebt und gro\u00dfen Wert auf die kontinuierliche Optimierung unserer internen Prozesse legt. Die Nutzung modernster Technologien ist kein Selbstzweck, sondern die Auspr\u00e4gung unseres Innovationsgeistes und gelebter Kundenorientierung. Hervorragender IT-Service bedarf optimaler Systeme. Unser motiviertes Team gibt t\u00e4glich sein Bestes, um unsere Kunden immer wieder neu zu begeistern. \n Wir suchen Dich zum n\u00e4chstm\u00f6glichen Zeitpunkt als Teammitglied unseres Fachbereichs Cloud Computing &#x26; AI am Standort  N\u00fcrnberg . Werde Teil der think about IT und unterst\u00fctze uns als  Senior Azure Cloud Platform Architect (m/w/d).  \n Die T\u00e4tigkeit kann ebenfalls in unseren Niederlassungen in  Hamburg, M\u00fcnster, Berlin, Mainz  oder  Bochum  ausge\u00fcbt werden. \n Aufgaben \n \n Sie entwickeln moderne Cloud-Plattformen und schaffen die technologische Basis f\u00fcr Business-Anwendungen und KI-L\u00f6sungen. Dabei begleiten Sie unsere Kunden von der ersten Idee bis zum erfolgreichen Betrieb \n Konzeption, Entwicklung und Weiterentwicklung zukunftssicherer Cloud-Architekturen auf Basis von Microsoft Azure sowie Beratung bei der Modernisierung von IT-Landschaften \n Design, Aufbau und Betrieb skalierbarer Plattformen f\u00fcr Container-, Kubernetes- und KI-Workloads \n automatisierung von Cloud-Infrastrukturen durch den Einsatz von Infrastructure as Code und modernen DevOps-Praktiken \n technische Beratung und Begleitung von Kunden in Workshops, Projekten sowie bei strategischen Architektur- und Technologieentscheidungen \n Architekturverantwortung f\u00fcr Cloud-L\u00f6sungen unter Ber\u00fccksichtigung von Skalierbarkeit, Sicherheit und Betriebsstabilit\u00e4t \n Zusammenarbeit mit Kunden, Fachbereichen und Projektteams zur Entwicklung und Umsetzung nachhaltiger Cloud-Strategien \n \n Qualifikation \n \n Studium der Informatik, eine vergleichbare Ausbildung oder mehrj\u00e4hrige Berufserfahrung \n Mehrj\u00e4hrige Erfahrung mit Microsoft Azure und Kubernetes \n Erfahrung mit unterschiedlichen Hypervisoren und as-a-Service Konzepten \n sehr gute Kenntnisse in Linux, Cloud Networking und Automatisierung. \n Beratungsst\u00e4rke sowie Freude an modernen Cloud-Technologien \n Flexibilit\u00e4t und Serviceorientierung \n Teamplayer mit Begeisterungsf\u00e4higkeit f\u00fcr Neues \n \n  Ideale Microsoft Zertifizierungen:  \n \n AZ-305 \u2013 Designing Microsoft Azure Infrastructure Solutions \n AZ-104 \u2013 Microsoft Azure Administrator \n AZ-400 \u2013 Designing and Implementing Microsoft DevOps Solutions \n AZ-500 \u2013 Microsoft Azure Security Technologies (w\u00fcnschenswert) \n AZ-700 \u2013 Designing and Implementing Microsoft Azure Networking Solutions (w\u00fcnschenswert) \n \n Benefits \n \n Home-Office Anteil \n j\u00e4hrlich bis zu 4 Wochen Workation \u2013 mobiles Arbeiten aus dem europ\u00e4ischen Ausland \n umfangreiches Onboarding erg\u00e4nzt durch unser Buddy-Programm \n j\u00e4hrliches Weiterbildungsbudget \n Mitarbeiter werben Mitarbeiter-Pr\u00e4mie in H\u00f6he von 1.000\u20ac \n kostenfreies Mittagessen am Healthy Wednesday \n 200\u20ac Arbeitgeberzuschuss f\u00fcr Deine Arbeitsplatzbrille \n Arbeitgeberzuschuss zur Verm\u00f6gensbildung \n hoher Grad der pers\u00f6nlichen Entfaltung sowie individuelle F\u00f6rderung \n Trainingsm\u00f6glichkeiten in kooperierendem Fitnessstudio \n Bike-Leasing-Angebote f\u00fcr Dich und Deine Familie \n Personalrabatte und Verg\u00fcnstigungen bei zahlreichen Kooperationspartnern \n gemeinsame Freizeitaktivit\u00e4ten \n \n Freue Dich auf ein Team, welches auch abseits der Arbeit zusammenh\u00e4lt. Auf unserer Website gewinnst Du einen ersten pers\u00f6nlichen Eindruck und erf\u00e4hrst, was die thinkGROUP auszeichnet. \n Du und die thinkGROUP - das passt? \nWir freuen uns auf Deine aussagekr\u00e4ftige Bewerbung mit Angabe Deiner Gehaltsvorstellung und Deines fr\u00fchestm\u00f6glichen Eintrittstermins. \n Bei fachlichen R\u00fcckfragen vermitteln wir Dir gerne schnell und unkompliziert den Kontakt zur Fachabteilung. \n think about IT GmbH \nz.H. Carmela Riga \nHR Manager \nGesundheitscampus-S\u00fcd 19 \n44801 Bochum \nTel: 0234/3336721-6040 \n Find  Jobs in Germany  on Arbeitnow",
-      "url": "https://www.arbeitnow.com/jobs/companies/think-about-it-gmbh/senior-azure-cloud-platform-architect-nuremberg-340896",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-17T07:30:29+00:00",
-      "match_score": 36,
-      "matched_skills": [
-        "Microsoft Azure",
-        "Kubernetes",
-        "Linux",
-        "NIST"
-      ],
-      "match_reason": "4 skills matched, role fit 0/6",
-      "resume_url": "applications/ce48c78ac81c/resume.docx",
-      "cover_letter_url": "applications/ce48c78ac81c/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am writing to apply for the Senior Azure Cloud Platform Architect (m/w/d) position at think about IT GmbH. With 2 years of hands-on experience in cloud engineering and DevSecOps, I have worked extensively with Microsoft Azure, Kubernetes, Linux, NIST, Azure in production environments.\n\nYour job description emphasizes requirements that align closely with my background \u2014 particularly integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs, I have reduced MTTR by 40% through AKS pod recovery automation, achieved 90% reduction in manual compliance checks via Python tooling, and improved monitoring coverage by 35% using Prometheus and Grafana on Azure.\n\nI am AZ-104 certified and have built open-source tools for Azure security auditing, cost governance, and compliance checking \u2014 demonstrating the automation-first mindset this role requires. I would welcome the opportunity to bring this experience to think about IT GmbH.\n\nThank you for your consideration. I look forward to discussing how I can contribute to your team.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Senior Azure Cloud Platform Architect (m/w/d)-focused engineer. DevSecOps and Cloud Engineer with 2 years of production experience on Azure and AKS. Skilled in Microsoft Azure, Kubernetes, Linux, NIST, Azure, Security. Built automation tools reducing manual ops work by 40-90% and MTTR by 40%. AZ-104 Certified.",
-      "application_ready": true
-    }
-  ],
+  "jobs": [],
   "new_jobs": []
 }
