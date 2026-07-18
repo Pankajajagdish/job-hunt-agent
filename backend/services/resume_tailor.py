@@ -1,6 +1,8 @@
-"""Tailor resume content and generate DOCX + cover letter per job description."""
+"""Tailor resume content and generate DOCX + cover letter per job description.
+"""
 
 import json
+import os
 import re
 from pathlib import Path
 from datetime import datetime, timezone
@@ -9,6 +11,7 @@ from docx.shared import Pt
 from services.profile import load_profile
 
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
+BASE_RESUME_PATH = Path(os.getenv("BASE_RESUME_DOCX", "shared/base_resume.docx"))
 
 
 def extract_jd_keywords(jd: str, limit: int = 15) -> list[str]:
@@ -24,6 +27,29 @@ def extract_jd_keywords(jd: str, limit: int = 15) -> list[str]:
         if e in jd_lower and e.title() not in hits and e.upper() not in hits:
             hits.append(e.title() if e != "ci/cd" else "CI/CD")
     return hits[:limit]
+
+
+def _doc_text(doc: Document) -> str:
+    return "\n".join(p.text for p in doc.paragraphs if p.text)
+
+
+def compute_ats_score(text: str, jd_keywords: list[str]) -> float:
+    """Simple ATS-like scorer (0..10). Measures presence of JD keywords in resume text.
+
+    This is intentionally conservative and transparent: it looks for exact keyword text
+    (case-insensitive) and returns matched / total * 10.
+    """
+    if not jd_keywords:
+        return 10.0
+    t = text.lower()
+    total = len(jd_keywords)
+    matched = 0
+    for k in jd_keywords:
+        if not k:
+            continue
+        if k.lower() in t:
+            matched += 1
+    return round((matched / total) * 10.0, 2)
 
 
 def tailor_summary(jd: str, job_title: str) -> str:
@@ -103,12 +129,160 @@ def generate_cover_letter_snippet(job: dict) -> str:
     )
 
 
+def _replace_sections_from_base(base_doc: Document, jd: str, title: str, company: str) -> Document:
+    """Create a new Document preserving base_doc layout but replacing specific sections.
+
+    The function looks for well-known headings and replaces the content under them with tailored
+    content while copying other paragraphs verbatim. Headings targeted:
+      - PROFESSIONAL SUMMARY
+      - RELEVANT EXPERIENCE HIGHLIGHTS
+      - KEY SKILLS FOR THIS ROLE
+      - CERTIFICATIONS
+    """
+    headings = [
+        "PROFESSIONAL SUMMARY",
+        "RELEVANT EXPERIENCE HIGHLIGHTS",
+        "KEY SKILLS FOR THIS ROLE",
+        "CERTIFICATIONS",
+    ]
+
+    def is_heading(text: str) -> bool:
+        if not text:
+            return False
+        t = text.strip().upper()
+        return any(h == t for h in headings)
+
+    new = Document()
+    # Copy normal style basic setup
+    style = new.styles["Normal"]
+    style.font.name = "Calibri"
+    style.font.size = Pt(11)
+
+    skip_until_next_heading = False
+    current_heading = None
+    for p in base_doc.paragraphs:
+        text = p.text or ""
+        if is_heading(text):
+            # write the heading and the tailored content
+            current_heading = text.strip().upper()
+            new.add_paragraph(text)
+            # insert tailored content for this heading
+            if current_heading == "PROFESSIONAL SUMMARY":
+                new.add_paragraph(tailor_summary(jd, title))
+            elif current_heading == "RELEVANT EXPERIENCE HIGHLIGHTS":
+                for b in tailor_bullets(jd):
+                    new.add_paragraph(b, style="List Bullet")
+            elif current_heading == "KEY SKILLS FOR THIS ROLE":
+                # start with extracted keywords; augmentation may follow
+                kw = extract_jd_keywords(jd, 20)
+                new.add_paragraph(", ".join(kw))
+            elif current_heading == "CERTIFICATIONS":
+                profile = load_profile()
+                for c in profile["certifications"]:
+                    new.add_paragraph(c, style="List Bullet")
+            # set flag to skip original content that followed this heading
+            skip_until_next_heading = True
+            continue
+        if skip_until_next_heading:
+            # If we hit another heading-like paragraph, stop skipping
+            if is_heading(text):
+                skip_until_next_heading = False
+                # this paragraph will be handled in next loop
+                continue
+            # otherwise skip original paragraph content
+            # continue skipping until next known heading
+            continue
+        # Not a heading and not skipping: copy paragraph as-is
+        new.add_paragraph(text)
+
+    # Preserve sections' ordering; the new document now has tailored sections
+    return new
+
+
+def _ensure_ats_threshold(doc: Document, jd: str, min_score: float = 9.5) -> Document:
+    """Ensure ATS score for jd_keywords in doc is at least min_score (out of 10).
+
+    If score is low, augment the KEY SKILLS paragraph by appending missing keywords until
+    the threshold is met or no keywords remain.
+    """
+    keywords = extract_jd_keywords(jd, 20)
+    # compute current score
+    text = _doc_text(doc)
+    score = compute_ats_score(text, keywords)
+    # If score already good and >= base resume score, return
+    if score >= min_score:
+        return doc
+
+    # Find KEY SKILLS FOR THIS ROLE paragraph index in doc
+    # We will append missing keywords to the first paragraph after that heading
+    p_index = None
+    for i, p in enumerate(doc.paragraphs):
+        if (p.text or "").strip().upper() == "KEY SKILLS FOR THIS ROLE":
+            p_index = i
+            break
+    if p_index is None or p_index + 1 >= len(doc.paragraphs):
+        # Can't find a skills paragraph to augment; append at the end
+        target_para = doc.add_paragraph()
+    else:
+        target_para = doc.paragraphs[p_index + 1]
+
+    existing = (target_para.text or "").strip()
+    existing_lower = existing.lower()
+    missing = [k for k in keywords if k.lower() not in existing_lower]
+
+    for k in missing:
+        if k.lower() in existing_lower:
+            continue
+        if existing:
+            existing += ", " + k
+        else:
+            existing = k
+        # write back
+        target_para.text = existing
+        # recompute score
+        score = compute_ats_score(_doc_text(doc), keywords)
+        if score >= min_score:
+            break
+
+    return doc
+
+
 def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     profile = load_profile()
     jd = job.get("description", "")
     title = job.get("title", "Cloud Engineer")
     company = job.get("company", "")
 
+    # If a base DOCX exists, use it and replace targeted sections to preserve formatting
+    if BASE_RESUME_PATH.exists():
+        try:
+            base_doc = Document(str(BASE_RESUME_PATH))
+            base_text = _doc_text(base_doc)
+            base_keywords = extract_jd_keywords(jd, 20)
+            base_score = compute_ats_score(base_text, base_keywords)
+
+            tailored_doc = _replace_sections_from_base(base_doc, jd, title, company)
+            # Ensure tailored ATS score >= 9.5 and not below base_score
+            min_required = max(9.5, base_score)
+            tailored_doc = _ensure_ats_threshold(tailored_doc, jd, min_required)
+
+            if output_path:
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+                tailored_doc.save(str(output_path))
+                return output_path.name
+
+            safe_name = re.sub(r"[^\w\-]", "_", f"{company}_{title}")[:40]
+            ts = datetime.now().strftime("%Y%m%d_%H%M")
+            filename = f"resume_{safe_name}_{ts}.docx"
+            path = OUTPUT_DIR / filename
+            OUTPUT_DIR.mkdir(exist_ok=True)
+            tailored_doc.save(str(path))
+            return filename
+        except Exception as e:
+            print(f"Base DOCX tailoring failed: {e}")
+            # fallback to generated doc below
+
+    # Fallback behavior: generate a new doc (existing behavior)
     doc = Document()
     style = doc.styles["Normal"]
     style.font.name = "Calibri"
@@ -142,6 +316,9 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     doc.add_paragraph("CERTIFICATIONS").runs[0].bold = True
     for c in profile["certifications"]:
         doc.add_paragraph(c, style="List Bullet")
+
+    # Ensure ATS >= 9.5
+    doc = _ensure_ats_threshold(doc, jd, 9.5)
 
     if output_path:
         output_path.parent.mkdir(parents=True, exist_ok=True)

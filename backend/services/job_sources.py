@@ -2,6 +2,7 @@
 
 import hashlib
 import re
+import os
 from datetime import datetime, timezone
 import httpx
 import xml.etree.ElementTree as ET
@@ -180,6 +181,13 @@ async def fetch_all_free_sources(queries: list[str]) -> list[dict]:
         tasks.append(fetch_jsearch(q, "India"))
         tasks.append(search_adzuna(q))
         tasks.append(search_serpapi_google_jobs(q))
+
+    # If RSS feed URLs are provided (e.g., LinkedIn job alert RSS), include them
+    rss_env = os.getenv("RSS_FEED_URLS", "")
+    if rss_env:
+        feed_urls = [u.strip() for u in rss_env.split(",") if u.strip()]
+        if feed_urls:
+            tasks.append(fetch_rss_feeds(feed_urls))
 
     results = await asyncio.gather(*tasks, return_exceptions=True)
     all_jobs: dict[str, dict] = {}
