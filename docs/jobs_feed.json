@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-18T13:06:08.517957+00:00",
+  "updated_at": "2026-07-18T16:49:22.444788+00:00",
   "profile": "Pankaja Jagdish Kulkarni",
   "daily_goal": 50,
   "filter": "last_24_hours",
   "total": 4,
-  "new_count": 1,
+  "new_count": 0,
   "jobs": [
     {
       "id": "27034b469c61",
@@ -111,32 +111,5 @@
       "application_ready": true
     }
   ],
-  "new_jobs": [
-    {
-      "id": "27034b469c61",
-      "title": "Senior Full-stack Python Engineer (m/f/d) - Network Planning",
-      "company": "Flix",
-      "location": "Berlin, Berlin, Germany",
-      "description": "At Flix, we offer a tech-driven environment where innovation meets real-world impact, with competitive pay,&nbsp;strong growth&nbsp;opportunities, and a culture of collaboration and ownership.  &nbsp;   \n   We're&nbsp;looking for an experienced&nbsp;   Senior Full-stack Python Engineer (m/f/d)   &nbsp;to join&nbsp;our Supply Division.&nbsp;You'll&nbsp;make&nbsp;an impact by&nbsp;taking&nbsp;ownership of core backend systems that power our network planning optimization product. Your work&nbsp;will&nbsp;directly support&nbsp;network planners in scheduling vehicles, drivers, and timetables \u2014 improving travel experiences for millions of passengers while driving profitability.  &nbsp;   \n   Our team builds and&nbsp;maintains&nbsp;an optimization platform addressing use cases from vehicle and driver scheduling to timetable optimization. We follow modern system design \u2014 Domain-Driven Design, Hexagonal Architecture, and SOLID principles \u2014 with strict architectural boundaries enforced by tooling. Our backend workloads (APIs, event consumers, Kubernetes jobs) are built to scale with high code quality standards.  &nbsp;   \n   The product's algorithm engine is developed by Operations Research Engineers using mathematical optimization. As a Senior Python Engineer, you will own the engineering shell around these algorithms: the APIs, use cases, data pipelines, infrastructure, and the domain models that connect optimization output to the rest of the system.  &nbsp;   \n    You'll collaborate closely with other engineering teams to design and implement the interfaces and contracts that connect our platform to the wider system landscape.    \n    Our current tech stack and toolset include:   &nbsp;   \n \n   Python, TypeScript, Shell scripting  &nbsp;   \n   Flask, React,&nbsp;Pytest  &nbsp;   \n   PostgreSQL, Confluent Kafka,&nbsp;DataDog  &nbsp;   \n  AWS tools, Terraform  \n   GitLab, Kubernetes, Docker, Azure AD  &nbsp;   \n \n   About the Role   \n \n  Own and evolve the backend: APIs, use case layer, domain models, serialization, and event-driven pipelines (Kafka)  \n  Take engineering ownership of new product modules \u2014 designing the architectural scaffold, wiring layers, and ensuring clean boundaries  \n   Build and maintain infrastructure: Kubernetes deployments, CI/CD pipelines, and cloud resources (AWS)  &nbsp;   \n  Collaborate closely with Operations Research Engineers to integrate optimization algorithms into the product  \n  Work in an AI-augmented development workflow \u2014 actively using code agents and AI assistants as a natural part of how you ship software  \n   Contribute to architecture decisions and uphold code quality through reviews, testing, and continuous improvement  &nbsp;   \n  Write well-tested, self-documenting code following hexagonal architecture patterns  \n  Share your expertise and mentor colleagues, promoting a culture of knowledge sharing and learning  \n \n   About You   \n \n  Academic background in Computer Science or equivalent  \n  5+ years of experience in backend software engineering with Python  \n  Experience with modern front-end stack (some basic front-end tasks are part of our scope)  \n  Experience applying clean architecture principles (hexagonal, ports-and-adapters, DDD) or similar approaches in production \u2014 able to contribute from day one  \n  Experience with relational databases (PostgreSQL) and event-driven systems (Kafka or similar)  \n  Strong experience in AI-augmented development \u2014 actively using code agents or AI assistants in daily work  \n  Solid experience with containerization (Docker, Kubernetes) and CI/CD pipelines  \n  Familiar with testing best practices: unit, integration, acceptance testing  \n  Experience with cloud platforms (AWS or similar) and infrastructure as code (Terraform)  \n  Familiarity with mathematical optimization or data-intensive applications is a plus  \n \n  We recognize that everyone carries a unique set of valuable skills and experiences. If you think you could have an impact even though yo",
-      "url": "https://www.arbeitnow.com/jobs/companies/flix/senior-full-stack-python-engineer-network-planning-berlin-414270",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-18T06:45:31+00:00",
-      "match_score": 58,
-      "matched_skills": [
-        "Kubernetes",
-        "Terraform",
-        "Docker",
-        "Python",
-        "Shell Scripting",
-        "CI/CD",
-        "AWS"
-      ],
-      "match_reason": "7 skills matched, role fit 0/6",
-      "resume_url": "applications/27034b469c61/resume.docx",
-      "cover_letter_url": "applications/27034b469c61/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am writing to apply for the Senior Full-stack Python Engineer (m/f/d) - Network Planning position at Flix. With 2 years of hands-on experience in cloud engineering and DevSecOps, I have worked extensively with Kubernetes, Terraform, Docker, Python, Shell Scripting in production environments.\n\nYour job description emphasizes requirements that align closely with my background \u2014 particularly operating production AKS clusters with automated recovery and observability. At Amdocs, I have reduced MTTR by 40% through AKS pod recovery automation, achieved 90% reduction in manual compliance checks via Python tooling, and improved monitoring coverage by 35% using Prometheus and Grafana on Azure.\n\nI am AZ-104 certified and have built open-source tools for Azure security auditing, cost governance, and compliance checking \u2014 demonstrating the automation-first mindset this role requires. I would welcome the opportunity to bring this experience to Flix.\n\nThank you for your consideration. I look forward to discussing how I can contribute to your team.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Senior Full-stack Python Engineer (m/f/d) - Network Planning-focused engineer. DevSecOps and Cloud Engineer with 2 years of production experience on Azure and AKS. Skilled in Kubernetes, Terraform, Docker, Python, Shell Scripting, CI/CD. Built automation tools reducing manual ops work by 40-90% and MTTR by 40%. AZ-104 Certified.",
-      "application_ready": true
-    }
-  ]
+  "new_jobs": []
 }
