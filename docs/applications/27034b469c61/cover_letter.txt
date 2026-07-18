@@ -1,0 +1,14 @@
+Dear Hiring Manager,
+
+I am writing to apply for the Senior Full-stack Python Engineer (m/f/d) - Network Planning position at Flix. With 2 years of hands-on experience in cloud engineering and DevSecOps, I have worked extensively with Kubernetes, Terraform, Docker, Python, Shell Scripting in production environments.
+
+Your job description emphasizes requirements that align closely with my background — particularly operating production AKS clusters with automated recovery and observability. At Amdocs, I have reduced MTTR by 40% through AKS pod recovery automation, achieved 90% reduction in manual compliance checks via Python tooling, and improved monitoring coverage by 35% using Prometheus and Grafana on Azure.
+
+I am AZ-104 certified and have built open-source tools for Azure security auditing, cost governance, and compliance checking — demonstrating the automation-first mindset this role requires. I would welcome the opportunity to bring this experience to Flix.
+
+Thank you for your consideration. I look forward to discussing how I can contribute to your team.
+
+Best regards,
+Pankaja Jagdish Kulkarni
++91 7045149611 | pankajajagdishkulkarni@gmail.com
+https://linkedin.com/in/pankaja-jagdish-kulkarni
