@@ -52,13 +52,61 @@ def compute_ats_score(text: str, jd_keywords: list[str]) -> float:
     return round((matched / total) * 10.0, 2)
 
 
+def humanize_text(s: str) -> str:
+    """Apply light, deterministic rewrites so text reads like a human-written resume/cover letter.
+
+    Rules are conservative (no invented facts):
+    - Replace corporate-ese with concise phrases
+    - Use contractions where appropriate
+    - Shorten very long sentences
+    - Remove or replace filler phrases
+    """
+    if not s:
+        return s
+
+    # Common phrase replacements (case-insensitive)
+    replacements = [
+        (r"I am writing to apply for", "I'm excited to apply for"),
+        (r"I am writing to apply", "I'm excited to apply"),
+        (r"I would welcome the opportunity to bring this experience to", "I'd welcome a chance to discuss how I can help"),
+        (r"demonstrating the automation-first mindset( this role requires)?", "showing measurable automation and security improvements"),
+        (r"Your job description emphasizes requirements that align closely with my background\s*[-—]*\s*particularly", "Your job emphasizes requirements that match my background, especially"),
+        (r"Thank you for your consideration\. I look forward to discussing how I can contribute to your team\.", "Thanks for your time — I look forward to speaking."),
+        (r"Thank you for your consideration\. I look forward to discussing", "Thanks for your time — I look forward to speaking about"),
+        (r"I am AZ-104 certified", "I'm AZ-104 certified"),
+        (r"I am", "I'm"),
+    ]
+
+    out = s
+    for pat, repl in replacements:
+        out = re.sub(pat, repl, out, flags=re.I)
+
+    # Remove duplicate whitespace
+    out = re.sub(r"[ \t]+", " ", out)
+
+    # Shorten very long sentences by splitting on the first comma if > 140 chars
+    sentences = re.split(r'(?<=[.!?])\s+', out)
+    for i, sent in enumerate(sentences):
+        if len(sent) > 140 and "," in sent:
+            parts = sent.split(",", 1)
+            sentences[i] = parts[0].strip() + ". " + parts[1].strip()
+
+    out = " ".join(s.strip() for s in sentences if s and s.strip())
+
+    # Final tidying: avoid repeated buzzphrases
+    out = re.sub(r"(automation[ -]first|automation-first)\s+mindset", "automation", out, flags=re.I)
+
+    return out.strip()
+
+
 def tailor_summary(jd: str, job_title: str) -> str:
     profile = load_profile()
     keywords = extract_jd_keywords(jd, 8)
     top = ", ".join(keywords[:6]) if keywords else "Azure, AKS, CI/CD, DevSecOps"
-    summary = profile["summary_template"].format(years=profile["years_experience"], top_skills=top)
-    role = job_title if job_title else profile["title"].split("|")[0].strip()
-    return f"{role}-focused engineer. {summary}"
+    # Human-friendly summary template: concise, metric-first where available
+    summary = f"{job_title if job_title else profile['title'].split('|')[0].strip()} with {profile['years_experience']} years' experience on Azure and AKS. Skilled in {top}. Built automation that reduced manual ops work and improved MTTR."
+    summary = humanize_text(summary)
+    return summary
 
 
 def tailor_bullets(jd: str, max_bullets: int = 6) -> list[str]:
@@ -72,12 +120,14 @@ def tailor_bullets(jd: str, max_bullets: int = 6) -> list[str]:
     keywords = extract_jd_keywords(jd, 5)
     if keywords:
         opener = (
-            f"Strong fit for this role with hands-on experience in "
-            f"{', '.join(keywords[:4])} in production Azure environments."
+            f"Strong fit for this role with hands-on experience in {', '.join(keywords[:4])} in production Azure environments."
         )
         if opener not in bullets:
             bullets.insert(0, opener)
-    return bullets[:max_bullets]
+
+    # Humanize bullets: keep factual and concise
+    bullets = [humanize_text(b) for b in bullets[:max_bullets]]
+    return bullets
 
 
 def _jd_hook(jd: str, keywords: list[str]) -> str:
@@ -108,25 +158,19 @@ def generate_cover_letter_snippet(job: dict) -> str:
     hook = _jd_hook(jd, keywords)
     top_skills = ", ".join(keywords[:5]) if keywords else "Azure, AKS, DevSecOps, and CI/CD"
 
-    return (
-        f"Dear Hiring Manager,\n\n"
-        f"I am writing to apply for the {title} position at {company}. "
-        f"With {profile['years_experience']} years of hands-on experience in cloud engineering and DevSecOps, "
-        f"I have worked extensively with {top_skills} in production environments.\n\n"
-        f"Your job description emphasizes requirements that align closely with my background — "
-        f"particularly {hook}. "
-        f"At Amdocs, I have reduced MTTR by 40% through AKS pod recovery automation, "
-        f"achieved 90% reduction in manual compliance checks via Python tooling, "
-        f"and improved monitoring coverage by 35% using Prometheus and Grafana on Azure.\n\n"
-        f"I am AZ-104 certified and have built open-source tools for Azure security auditing, "
-        f"cost governance, and compliance checking — demonstrating the automation-first mindset "
-        f"this role requires. I would welcome the opportunity to bring this experience to {company}.\n\n"
-        f"Thank you for your consideration. I look forward to discussing how I can contribute to your team.\n\n"
+    cover = (
+        f"I'm excited to apply for the {title} role at {company}. I have {profile['years_experience']} years' experience in cloud engineering and DevSecOps, and have worked with {top_skills} in production.\n\n"
+        f"Your job emphasizes requirements that match my background, especially {hook}. At Amdocs, I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana.\n\n"
+        f"I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help {company}.\n\n"
+        f"Thanks for your time — I look forward to speaking.\n\n"
         f"Best regards,\n"
         f"{profile['name']}\n"
         f"{profile['phone']} | {profile['email']}\n"
         f"{profile['linkedin']}"
     )
+
+    cover = humanize_text(cover)
+    return cover
 
 
 def _replace_sections_from_base(base_doc: Document, jd: str, title: str, company: str) -> Document:
@@ -168,7 +212,7 @@ def _replace_sections_from_base(base_doc: Document, jd: str, title: str, company
             new.add_paragraph(text)
             # insert tailored content for this heading
             if current_heading == "PROFESSIONAL SUMMARY":
-                new.add_paragraph(tailor_summary(jd, title))
+                new.add_paragraph(humanize_text(tailor_summary(jd, title)))
             elif current_heading == "RELEVANT EXPERIENCE HIGHLIGHTS":
                 for b in tailor_bullets(jd):
                     new.add_paragraph(b, style="List Bullet")
@@ -304,7 +348,7 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     )
 
     doc.add_paragraph("PROFESSIONAL SUMMARY").runs[0].bold = True
-    doc.add_paragraph(tailor_summary(jd, title))
+    doc.add_paragraph(humanize_text(tailor_summary(jd, title)))
 
     doc.add_paragraph("RELEVANT EXPERIENCE HIGHLIGHTS").runs[0].bold = True
     for b in tailor_bullets(jd):
