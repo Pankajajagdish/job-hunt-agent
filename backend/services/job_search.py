@@ -1,12 +1,89 @@
-"""Job search from Adzuna, SerpAPI Google Jobs, and career page parser."""
+"""Job search from Adzuna, SerpAPI Google Jobs, and career page parser.
+
+Enhanced to find Remote or India-based DevOps/DevSecOps/Cloud/IAM/Kubernetes jobs posted in the last 24 hours.
+"""
 
 import os
 import hashlib
+import re
 from datetime import datetime, timezone, timedelta
 import httpx
 from bs4 import BeautifulSoup
 from services.matcher import filter_and_rank
 from services.profile import load_profile
+
+# Roles and keywords we want to match
+ROLE_KEYWORDS = [
+    "DevOps",
+    "DevSecOps",
+    "Dev Ops",
+    "Dev Sec Ops",
+    "Cloud",
+    "IAM",
+    "Identity",
+    "Kubernetes",
+    "K8s",
+    "Site Reliability",
+    "SRE",
+    "Platform Engineer",
+]
+
+# Common Indian city names to help identify India-based roles when location strings
+INDIAN_CITIES = [
+    "bangalore",
+    "bengaluru",
+    "mumbai",
+    "delhi",
+    "gurgaon",
+    "noida",
+    "pune",
+    "hyderabad",
+    "chennai",
+    "kolkata",
+    "jaipur",
+    "ahmedabad",
+]
+
+
+def location_is_india_or_remote(location: str | None) -> bool:
+    if not location:
+        return False
+    l = location.lower()
+    if "remote" in l:
+        return True
+    if "india" in l or ", india" in l:
+        return True
+    for c in INDIAN_CITIES:
+        if c in l:
+            return True
+    return False
+
+
+def parse_iso_or_fallback(dt_str: str | None) -> datetime | None:
+    if not dt_str:
+        return None
+    # Normalize and try to parse common ISO formats
+    try:
+        # Some APIs return ISO with Z or offset; fromisoformat handles offsets but not Z
+        s = dt_str.strip()
+        if s.endswith("Z"):
+            s = s[:-1] + "+00:00"
+        return datetime.fromisoformat(s)
+    except Exception:
+        pass
+    # Try a couple of other common formats
+    fmts = [
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S",
+        "%a, %d %b %Y %H:%M:%S %Z",
+        "%Y-%m-%d",
+    ]
+    for f in fmts:
+        try:
+            return datetime.strptime(dt_str, f)
+        except Exception:
+            continue
+    return None
 
 
 async def search_adzuna(query: str, location: str = "in", max_results: int = 50) -> list[dict]:
@@ -15,13 +92,16 @@ async def search_adzuna(query: str, location: str = "in", max_results: int = 50)
     if not app_id or not app_key:
         return []
 
+    # Adzuna uses country code in the path (e.g., 'in') and a free-text `where` field.
     url = f"https://api.adzuna.com/v1/api/jobs/{location}/search/1"
     params = {
         "app_id": app_id,
         "app_key": app_key,
         "results_per_page": min(max_results, 50),
         "what": query,
-        "where": "Pune",
+        # leave `where` empty to allow both India and Remote results; we'll post-filter
+        "where": "",
+        # max_days_old ensures API-side filtering where supported
         "max_days_old": 1,
         "content-type": "application/json",
     }
@@ -32,6 +112,7 @@ async def search_adzuna(query: str, location: str = "in", max_results: int = 50)
             r.raise_for_status()
             data = r.json()
             for item in data.get("results", []):
+                posted = item.get("created") or item.get("created_at")
                 jobs.append({
                     "id": hashlib.md5(item.get("redirect_url", "").encode()).hexdigest()[:12],
                     "title": item.get("title", ""),
@@ -40,14 +121,14 @@ async def search_adzuna(query: str, location: str = "in", max_results: int = 50)
                     "description": item.get("description", ""),
                     "url": item.get("redirect_url", ""),
                     "source": "adzuna",
-                    "posted_at": item.get("created", datetime.now(timezone.utc).isoformat()),
+                    "posted_at": posted or datetime.now(timezone.utc).isoformat(),
                 })
         except Exception as e:
             print(f"Adzuna error: {e}")
     return jobs
 
 
-async def search_serpapi_google_jobs(query: str, location: str = "Pune, Maharashtra, India") -> list[dict]:
+async def search_serpapi_google_jobs(query: str, location: str = "India") -> list[dict]:
     api_key = os.getenv("SERPAPI_KEY", "")
     if not api_key:
         return []
@@ -57,6 +138,7 @@ async def search_serpapi_google_jobs(query: str, location: str = "Pune, Maharash
         "q": query,
         "location": location,
         "api_key": api_key,
+        # Request today's jobs where possible
         "chips": "date_posted:today",
     }
     jobs = []
@@ -67,6 +149,8 @@ async def search_serpapi_google_jobs(query: str, location: str = "Pune, Maharash
             data = r.json()
             for item in data.get("jobs_results", []):
                 link = item.get("apply_options", [{}])[0].get("link") or item.get("share_link", "")
+                # Try to capture posted date if available in response
+                posted = item.get("date_posted") or item.get("posted_at")
                 jobs.append({
                     "id": hashlib.md5(link.encode()).hexdigest()[:12],
                     "title": item.get("title", ""),
@@ -75,7 +159,7 @@ async def search_serpapi_google_jobs(query: str, location: str = "Pune, Maharash
                     "description": item.get("description", ""),
                     "url": link,
                     "source": "google_jobs",
-                    "posted_at": datetime.now(timezone.utc).isoformat(),
+                    "posted_at": posted or datetime.now(timezone.utc).isoformat(),
                 })
         except Exception as e:
             print(f"SerpAPI error: {e}")
@@ -134,15 +218,27 @@ async def parse_career_page(url: str) -> list[dict]:
 
 
 async def search_all(queries: list[str] | None = None, career_urls: list[str] | None = None,
-                     min_score: int = 35, include_demo: bool = True) -> list[dict]:
+                     min_score: int = 35, include_demo: bool = False) -> list[dict]:
+    """Search across providers and return only Remote or India-based roles posted in last 24 hours.
+
+    By default this function searches for DevOps/DevSecOps/Cloud/IAM/Kubernetes related roles and
+    filters results to the last 24 hours and to locations that are Remote or India.
+    """
     profile = load_profile()
-    queries = queries or profile["target_roles"][:4]
+    # Use provided queries or fall back to our role keywords
+    queries = queries or ROLE_KEYWORDS
     all_jobs: dict[str, dict] = {}
 
+    # Search Adzuna (country code 'in' ensures India-centric results, but we leave `where` blank)
     for q in queries:
-        for job in await search_adzuna(q):
+        for job in await search_adzuna(q, location="in"):
             all_jobs[job["id"]] = job
-        for job in await search_serpapi_google_jobs(q):
+
+    # Search SerpAPI twice: look for India and Remote locations
+    for q in queries:
+        for job in await search_serpapi_google_jobs(q, location="India"):
+            all_jobs[job["id"]] = job
+        for job in await search_serpapi_google_jobs(q, location="Remote"):
             all_jobs[job["id"]] = job
 
     if career_urls:
@@ -151,13 +247,44 @@ async def search_all(queries: list[str] | None = None, career_urls: list[str] | 
                 all_jobs[job["id"]] = job
 
     jobs_list = list(all_jobs.values())
+
     if not jobs_list and include_demo:
         jobs_list = get_demo_jobs()
 
-    # Filter last 24h where posted_at parseable
+    # Filter last 24h where posted_at parseable AND location is India or Remote
     cutoff = datetime.now(timezone.utc) - timedelta(hours=24)
-    recent = []
+    recent: list[dict] = []
     for j in jobs_list:
-        recent.append(j)  # APIs already filter; demo always recent
+        # Skip demo jobs unless include_demo True
+        if j.get("source") == "demo" and not include_demo:
+            continue
+        posted_raw = j.get("posted_at")
+        posted_dt = None
+        if isinstance(posted_raw, (int, float)):
+            try:
+                posted_dt = datetime.fromtimestamp(int(posted_raw), tz=timezone.utc)
+            except Exception:
+                posted_dt = None
+        elif isinstance(posted_raw, str):
+            posted_dt = parse_iso_or_fallback(posted_raw)
+            # normalize naive datetimes to UTC
+            if posted_dt and posted_dt.tzinfo is None:
+                posted_dt = posted_dt.replace(tzinfo=timezone.utc)
 
+        # If we couldn't parse posted date, conservatively skip (APIs usually provide dates)
+        if not posted_dt:
+            # allow serpapi entries which we defaulted to now earlier
+            if j.get("source") == "google_jobs":
+                posted_dt = datetime.now(timezone.utc)
+            else:
+                continue
+
+        if posted_dt < cutoff:
+            continue
+
+        # Location filter
+        if location_is_india_or_remote(j.get("location")):
+            recent.append(j)
+
+    # Further filter and rank by matching score
     return filter_and_rank(recent, min_score=min_score)
