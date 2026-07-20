@@ -1,6 +1,8 @@
 # Job Hunt Agent
 
-Finds **job openings from the last 24 hours**, **tailors your resume to each JD**, and writes a **cover letter per opening** — runs on GitHub Actions, no PC needed.
+Finds **DevOps / Kubernetes / Cloud / IAM** openings from the **last 24 hours**,
+**tailors your resume to each JD**, and writes a **cover letter per opening** —
+runs on GitHub Actions, no PC needed.
 
 | | |
 |---|---|
@@ -13,7 +15,8 @@ Finds **job openings from the last 24 hours**, **tailors your resume to each JD*
 
 For every matching job posted in the **last 24 hours**:
 
-1. **Finds** openings from Remotive, RemoteOK, Arbeitnow (+ optional Adzuna, JSearch, Google Jobs)
+1. **Finds** DevOps, Kubernetes, Cloud, IAM openings (last 24h) from:
+   Remotive, RemoteOK, Arbeitnow, Jobicy, Himalayas + optional Adzuna, JSearch, Google Jobs, RSS
 2. **Scores** against your profile (`shared/resume_profile.json`)
 3. **Generates tailored resume** (DOCX) — summary, bullets, and skills reordered for that JD
 4. **Writes cover letter** — references the JD requirements, your skills, and metrics

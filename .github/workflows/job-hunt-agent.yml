@@ -45,8 +45,8 @@ jobs:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
           RSS_FEED_URLS: ${{ secrets.RSS_FEED_URLS }}
-          MIN_MATCH_SCORE: "35"
-          ISSUE_MIN_SCORE: "45"
+          MIN_MATCH_SCORE: "30"
+          ISSUE_MIN_SCORE: "40"
           DAILY_APPLY_GOAL: "50"
         run: python scripts/github_agent.py
 

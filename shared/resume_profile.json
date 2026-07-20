@@ -9,12 +9,27 @@
   "title": "DevSecOps Engineer | Cloud Engineer | Cloud Security",
   "years_experience": 2,
   "target_roles": [
+    "DevOps Engineer",
     "DevSecOps Engineer",
+    "Kubernetes Engineer",
     "Cloud Engineer",
+    "IAM Engineer",
     "Cloud Security Engineer",
     "Site Reliability Engineer",
     "Platform Engineer",
-    "Azure Engineer"
+    "Azure Engineer",
+    "AWS Engineer",
+    "Identity and Access Management"
+  ],
+  "search_queries": [
+    "DevOps Engineer",
+    "Kubernetes",
+    "Cloud Engineer",
+    "IAM",
+    "DevSecOps",
+    "SRE",
+    "Azure DevOps",
+    "Cloud Security"
   ],
   "skills": [
     "Microsoft Azure", "AKS", "Kubernetes", "Terraform", "ARM Templates",

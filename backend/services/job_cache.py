@@ -37,18 +37,19 @@ def mark_seen(job_ids: list[str]) -> None:
     _save_json(SEEN_FILE, list(seen)[-5000:])
 
 
-async def refresh_live_jobs(min_score: int = 35, include_demo: bool = False) -> list[dict]:
-    """Fetch real jobs from all sources, rank, cache."""
+async def refresh_live_jobs(min_score: int = 30, include_demo: bool = False) -> list[dict]:
+    """Fetch real-time DevOps/K8s/Cloud/IAM jobs (last 24h), rank, cache."""
     profile = load_profile()
-    queries = profile["target_roles"]
+    queries = profile.get("search_queries") or profile.get("target_roles") or []
 
     free_jobs = await fetch_all_free_sources(queries)
+    free_jobs = filter_last_24h(free_jobs)
+
     if free_jobs:
         ranked = filter_and_rank(free_jobs, min_score=min_score)
     else:
         ranked = await search_all(min_score=min_score, include_demo=include_demo)
-
-    ranked = filter_last_24h(ranked)
+        ranked = filter_last_24h(ranked)
 
     cache = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
@@ -63,7 +64,7 @@ def get_cached_jobs() -> list[dict]:
     return data.get("jobs", [])
 
 
-async def poll_new_jobs(min_score: int = 35, mark_as_seen: bool = False) -> dict:
+async def poll_new_jobs(min_score: int = 30, mark_as_seen: bool = False) -> dict:
     """Refresh sources and return only jobs not seen before."""
     fresh = await refresh_live_jobs(min_score=min_score, include_demo=False)
     seen = get_seen_ids()

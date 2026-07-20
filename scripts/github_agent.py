@@ -29,8 +29,8 @@ DOCS_DIR = ROOT / "docs"
 APPS_DIR = DOCS_DIR / "applications"
 SEEN_FILE = DATA_DIR / "seen_jobs.json"
 FEED_FILE = DOCS_DIR / "jobs_feed.json"
-MIN_SCORE = int(os.getenv("MIN_MATCH_SCORE", "35"))
-MAX_ISSUES = int(os.getenv("MAX_ISSUES_PER_RUN", "15"))
+MIN_SCORE = int(os.getenv("MIN_MATCH_SCORE", "30"))
+MAX_ISSUES = int(os.getenv("MAX_ISSUES_PER_RUN", "20"))
 ISSUE_MIN_SCORE = int(os.getenv("ISSUE_MIN_SCORE", "40"))
 DASHBOARD_BASE = os.getenv(
     "DASHBOARD_URL", "https://pankajajagdish.github.io/job-hunt-agent"
