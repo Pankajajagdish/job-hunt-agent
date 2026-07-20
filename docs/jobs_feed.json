@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-20T08:51:37.431312+00:00",
+  "updated_at": "2026-07-20T10:54:44.418267+00:00",
   "profile": "Pankaja Jagdish Kulkarni",
   "daily_goal": 50,
   "filter": "last_24_hours",
   "total": 1,
-  "new_count": 1,
+  "new_count": 0,
   "jobs": [
     {
       "id": "14910d9ce3c9",
@@ -33,32 +33,5 @@
       "application_ready": true
     }
   ],
-  "new_jobs": [
-    {
-      "id": "14910d9ce3c9",
-      "title": "AWS DevOps Engineer",
-      "company": "MICO Software UG (haftungsbeschr\u00e4nkt)",
-      "location": "Berlin",
-      "description": "MICO Software entwickelt und betreibt im Kundenauftrag die Infrastruktur f\u00fcr eine ePaper-Plattform \u2014 eine skalierbare L\u00f6sung, mit der f\u00fchrende deutsche Verlage ihre digitalen Ausgaben ver\u00f6ffentlichen. Von der automatisierten Aufbereitung hochgeladenen Publikationsmaterials \u00fcber Content-Management bis zur Auslieferung an Reader-Apps und Web-Frontends: Wir liefern die gesamte Cloud-Infrastruktur und sorgen f\u00fcr Zuverl\u00e4ssigkeit, Sicherheit und Skalierbarkeit. \n Wir suchen eine:n erfahrene:n AWS DevOps Engineer (m/w/d) in Teilzeit (20 h/Woche), der/die unsere AWS-Infrastruktur weiterentwickelt, betreibt und sichert \u2014 in enger Zusammenarbeit mit unserem Entwicklungsteam. \n Aufgaben \n \n Infrastruktur als Code: Weiterentwicklung und Pflege unserer Terraform-Module und Multi-Tenant-Stacks (VPC, ECS Fargate, Aurora PostgreSQL, S3, CloudFront, Lambda, IAM, AWS Backup) \n Betrieb &#x26; Zuverl\u00e4ssigkeit: Monitoring, Alarmierung, Incident Response und Pflege operativer Runbooks (Backup/Restore, Secret Rotation, Aurora Cutover) \n CI/CD: Ausbau der GitHub Actions Pipelines (OIDC-Authentifizierung, ECR-Deploys, Terraform Plan/Apply, DB-Migrationen) \n Multi-Tenant-Betrieb: Onboarding neuer Verlags-Mandanten, Isolation und Skalierung der Tenant-Stacks \n Sicherheit: IAM-Least-Privilege, KMS, WAF, Secrets Manager, TLS/DNS-Konfiguration inkl. Kunden-Domain-Onboarding \n Event-getriebene Pipelines: Betrieb der ETL-Kette (S3 \u2192 SQS \u2192 ECS) f\u00fcr PDF-Verarbeitung und Vorschau-Generierung \n Zusammenarbeit: Enge Abstimmung mit Application-Entwicklung (Payload CMS, Node.js/Lambda-Services, Reader-Apps) \n \n Qualifikation \n Must-haves \n \n 5+ Jahre Berufserfahrung im Bereich Cloud/DevOps, davon substanzielle Erfahrung mit AWS \n Sehr gute Kenntnisse in Terraform (Modularisierung, Remote State, Multi-Environment-Setups) \n Erfahrung mit Container-Orchestrierung (ECS/Fargate oder vergleichbar) und Docker \n Sicherer Umgang mit CI/CD (GitHub Actions oder vergleichbare Tools) \n Kenntnisse in Netzwerk &#x26; Security auf AWS (VPC, Security Groups, IAM, ACM, WAF) \n Erfahrung mit relationalen Datenbanken im Cloud-Kontext (RDS/Aurora) \n Deutsch mindestens Niveau B2 \u2014 f\u00fcr Abstimmung mit Kunden und im Team \n Gute Englischkenntnisse f\u00fcr technische Dokumentation \n Eigenst\u00e4ndige, strukturierte Arbeitsweise und Freude an operativer Verantwortung in einem kleinen, schlagkr\u00e4ftigen Team \n \n Nice-to-haves \n \n Erfahrung mit Multi-Tenant-SaaS-Architekturen \n Kenntnisse in CloudFront, Route 53, S3 Event Notifications, SQS/SNS \n Erfahrung mit AWS Backup, Disaster Recovery und Restore-Prozeduren \n Scripting (Bash, PowerShell, Node.js) f\u00fcr Automatisierung und Runbooks \n Ber\u00fchrungspunkte mit Medien-/Publishing-Umfeld oder Content-Plattformen \n Erfahrung mit Observability (CloudWatch, Alarmierung, Metriken) \n \n Benefits \n \n Teilzeit/Drei-Viertel-Stelle (20-35 h/Woche) mit Festanstellung \u2014 planbare Work-Life-Balance \n Hybrides-Arbeitsmodell: B\u00fcro in Berlin und Homeoffice \n Verantwortungsvolle Rolle in einem kritischen Produktivsystem f\u00fcr namhafte Verlage \n Moderner Tech-Stack: AWS, Terraform, GitHub Actions, ECS Fargate, Aurora Serverless v2 \n Direkter Einfluss auf Architektur und Betriebsqualit\u00e4t in einem \u00fcberschaubaren Team \n Abwechslungsreiche Aufgaben von IaC-Entwicklung \u00fcber Incident Response bis Mandanten-Onboarding \n \n Wir freuen uns auf deine Bewerbung mit Lebenslauf und kurzem Anschreiben \n Find  Jobs in Germany  on Arbeitnow",
-      "url": "https://www.arbeitnow.com/jobs/companies/mico-software-ug-haftungsbeschrankt/aws-devops-engineer-berlin-214113",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T07:00:31+00:00",
-      "match_score": 54,
-      "matched_skills": [
-        "Terraform",
-        "GitHub Actions",
-        "Docker",
-        "IAM",
-        "CI/CD",
-        "SRE",
-        "AWS"
-      ],
-      "match_reason": "7 skills matched, role fit 0/6",
-      "resume_url": "applications/14910d9ce3c9/resume.docx",
-      "cover_letter_url": "applications/14910d9ce3c9/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the AWS DevOps Engineer role at MICO Software UG (haftungsbeschr\u00e4nkt). I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Terraform, GitHub Actions, Docker, IAM, CI/CD in production. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help MICO Software UG (haftungsbeschr\u00e4nkt). Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "AWS DevOps Engineer with 2 years' experience on Azure and AKS. Skilled in Terraform, GitHub Actions, Docker, IAM, CI/CD, SRE. Built automation that reduced manual ops work and improved MTTR.",
-      "application_ready": true
-    }
-  ]
+  "new_jobs": []
 }
