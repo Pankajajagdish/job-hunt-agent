@@ -6,13 +6,19 @@ import asyncio
 import hashlib
 import os
 import re
-import os
 from datetime import datetime, timezone
 import xml.etree.ElementTree as ET
 
 import httpx
 
-HEADERS = {"User-Agent": "JobHuntAgent/2.0 (personal job search)"}
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
 # Core search terms — DevOps / K8s / Cloud / IAM
 SEARCH_QUERIES = [
@@ -253,6 +259,124 @@ async def fetch_himalayas(keyword: str = "devops") -> list[dict]:
     return jobs
 
 
+async def fetch_linkedin_guest(
+    keywords: str,
+    location: str = "India",
+    remote_only: bool = False,
+    start: int = 0,
+) -> list[dict]:
+    """LinkedIn public guest job search — no login, no API key.
+
+    Uses the same public endpoint LinkedIn serves to logged-out visitors.
+    f_TPR=r86400 → posted in last 24 hours.
+    """
+    from bs4 import BeautifulSoup
+
+    jobs: list[dict] = []
+    url = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
+    params: dict = {
+        "keywords": keywords,
+        "location": location,
+        "f_TPR": "r86400",  # last 24 hours
+        "start": start,
+        "position": start + 1,
+        "pageNum": 0,
+    }
+    if remote_only:
+        params["f_WT"] = "2"  # Remote workplace type
+
+    async with httpx.AsyncClient(timeout=30, follow_redirects=True) as client:
+        try:
+            r = await client.get(url, headers=HEADERS, params=params)
+            if r.status_code == 429:
+                print(f"LinkedIn rate-limited ({keywords} / {location})")
+                return []
+            r.raise_for_status()
+            soup = BeautifulSoup(r.text, "lxml")
+            cards = soup.select("div.base-card, li.base-card, div.job-search-card")
+            if not cards:
+                cards = soup.select("li")
+
+            for card in cards:
+                link_el = card.select_one("a.base-card__full-link, a.base-card--link, a[href*='/jobs/view/']")
+                title_el = card.select_one("h3.base-search-card__title, h3.base-card__title, .job-search-card__title")
+                company_el = card.select_one(
+                    "h4.base-search-card__subtitle, h4.base-card__subtitle, .job-search-card__subtitle, a.hidden-nested-link"
+                )
+                loc_el = card.select_one("span.job-search-card__location, .job-search-card__location")
+                time_el = card.select_one("time")
+
+                title = (title_el.get_text(strip=True) if title_el else "") or ""
+                if not title:
+                    continue
+                href = ""
+                if link_el and link_el.get("href"):
+                    href = link_el["href"].split("?")[0]
+                if not href:
+                    continue
+                if not href.startswith("http"):
+                    href = f"https://www.linkedin.com{href}"
+
+                company = company_el.get_text(strip=True) if company_el else "See LinkedIn"
+                loc = loc_el.get_text(strip=True) if loc_el else location
+                if remote_only and "remote" not in loc.lower():
+                    loc = f"Remote · {loc}" if loc else "Remote"
+
+                posted = datetime.now(timezone.utc).isoformat()
+                if time_el is not None:
+                    posted = time_el.get("datetime") or time_el.get_text(strip=True) or posted
+
+                jobs.append({
+                    "id": _job_id(href, title),
+                    "title": title,
+                    "company": company,
+                    "location": loc or location,
+                    "description": f"{title} at {company}. Location: {loc}. Source: LinkedIn (last 24h).",
+                    "url": href,
+                    "source": "linkedin",
+                    "posted_at": posted,
+                })
+        except Exception as e:
+            print(f"LinkedIn guest ({keywords} / {location}) error: {e}")
+    return jobs
+
+
+async def fetch_all_linkedin() -> list[dict]:
+    """Fetch LinkedIn India + Remote jobs for core roles — zero user setup."""
+    queries = [
+        "DevOps Engineer",
+        "Kubernetes",
+        "Cloud Engineer",
+        "IAM Engineer",
+        "DevSecOps",
+        "Site Reliability Engineer",
+        "Azure Engineer",
+        "Cloud Security",
+    ]
+    tasks = []
+    for q in queries:
+        tasks.append(fetch_linkedin_guest(q, location="India", remote_only=False))
+        tasks.append(fetch_linkedin_guest(q, location="India", remote_only=True))
+        tasks.append(fetch_linkedin_guest(q, location="Remote", remote_only=True))
+
+    # Gentle sequential batches to reduce 429s (still no user keys needed)
+    all_jobs: dict[str, dict] = {}
+    batch_size = 4
+    for i in range(0, len(tasks), batch_size):
+        batch = tasks[i : i + batch_size]
+        results = await asyncio.gather(*batch, return_exceptions=True)
+        for result in results:
+            if isinstance(result, Exception):
+                print(f"LinkedIn batch error: {result}")
+                continue
+            for job in result:
+                all_jobs[job["id"]] = job
+        await asyncio.sleep(1.2)
+
+    print(f"LinkedIn guest: {len(all_jobs)} jobs (India/Remote, last 24h)")
+    return list(all_jobs.values())
+
+
 async def fetch_jsearch(query: str, location: str = "India") -> list[dict]:
     """RapidAPI JSearch — LinkedIn/Indeed/Glassdoor (needs RAPIDAPI_KEY)."""
     key = os.getenv("RAPIDAPI_KEY", "")
@@ -372,6 +496,9 @@ async def fetch_all_free_sources(queries: list[str] | None = None) -> list[dict]
 
     # Himalayas
     tasks.append(fetch_himalayas("devops"))
+
+    # LinkedIn (public guest search — no API key, no user setup)
+    tasks.append(fetch_all_linkedin())
 
     # RSS from env
     tasks.append(fetch_rss_feeds())

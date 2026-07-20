@@ -29,7 +29,7 @@ EXCLUDE_COUNTRY_MARKERS = [
 ]
 
 # Sources that are remote job boards by design
-REMOTE_SOURCES = {"remotive", "remoteok", "jobicy", "himalayas"}
+REMOTE_SOURCES = {"remotive", "remoteok", "jobicy", "himalayas", "linkedin"}
 
 
 def parse_posted_at(value: str | int | float | None) -> datetime | None:

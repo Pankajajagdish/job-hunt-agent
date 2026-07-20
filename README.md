@@ -1,6 +1,7 @@
 # Job Hunt Agent
 
-Finds **DevOps / Kubernetes / Cloud / IAM** openings from the **last 24 hours**,
+Finds **DevOps / Kubernetes / Cloud / IAM** openings from the **last 24 hours**
+(India or Remote), including **LinkedIn** via public guest search (no API keys),
 **tailors your resume to each JD**, and writes a **cover letter per opening** —
 runs on GitHub Actions, no PC needed.
 
@@ -15,8 +16,9 @@ runs on GitHub Actions, no PC needed.
 
 For every matching job posted in the **last 24 hours**:
 
-1. **Finds** DevOps, Kubernetes, Cloud, IAM openings (last 24h) from:
-   Remotive, RemoteOK, Arbeitnow, Jobicy, Himalayas + optional Adzuna, JSearch, Google Jobs, RSS
+1. **Finds** DevOps, Kubernetes, Cloud, IAM openings (last 24h, India or Remote) from:
+   **LinkedIn** (public guest search — no login/keys), Remotive, RemoteOK, Arbeitnow,
+   Jobicy, Himalayas + optional Adzuna, JSearch, Google Jobs, RSS
 2. **Scores** against your profile (`shared/resume_profile.json`)
 3. **Generates tailored resume** (DOCX) — summary, bullets, and skills reordered for that JD
 4. **Writes cover letter** — references the JD requirements, your skills, and metrics
