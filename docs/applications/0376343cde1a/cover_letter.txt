@@ -1,0 +1,4 @@
+I'm excited to apply for the Cloud Engineer (AWS/Azure) role at Solita. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure in production. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Solita. Thanks for your time — I look forward to speaking. Best regards,
+Pankaja Jagdish Kulkarni
++91 7045149611 | pankajajagdishkulkarni@gmail.com
+https://linkedin.com/in/pankaja-jagdish-kulkarni
