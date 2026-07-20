@@ -46,13 +46,17 @@ REMOTIVE_CATEGORIES = [
     "software-dev",
 ]
 
-# Must match at least one of these in title or description
-DOMAIN_KEYWORDS = [
-    "devops", "devsecops", "kubernetes", "k8s", "helm", "docker",
-    "cloud", "azure", "aws", "gcp", "aks", "eks", "gke",
-    "iam", "identity", "rbac", "entra", "okta", "pam",
-    "terraform", "ansible", "ci/cd", "sre", "platform engineer",
-    "site reliability", "infrastructure", "cloud security",
+# Title must hit at least one of these (core focus)
+TITLE_KEYWORDS = [
+    "devops", "devsecops", "dev ops", "kubernetes", "k8s",
+    "cloud", "azure", "aws", "gcp", "sre", "site reliability",
+    "platform engineer", "iam", "identity", "access management",
+    "infrastructure", "terraform", "cloud security", "aks", "eks",
+]
+
+DOMAIN_KEYWORDS = TITLE_KEYWORDS + [
+    "helm", "docker", "rbac", "entra", "okta", "pam",
+    "ansible", "ci/cd", "cloudops",
 ]
 
 
@@ -65,9 +69,16 @@ def _strip_html(text: str) -> str:
 
 
 def is_domain_relevant(job: dict) -> bool:
-    """Keep only DevOps / K8s / Cloud / IAM related openings."""
-    text = f"{job.get('title', '')} {job.get('description', '')}".lower()
-    return any(k in text for k in DOMAIN_KEYWORDS)
+    """Keep DevOps / K8s / Cloud / IAM openings — prefer title match."""
+    title = (job.get("title") or "").lower()
+    if any(k in title for k in TITLE_KEYWORDS):
+        return True
+    text = f"{title} {job.get('description', '')}".lower()
+    strong = (
+        "devops", "kubernetes", "k8s", "cloud engineer",
+        "iam ", "devsecops", "site reliability",
+    )
+    return any(k in text for k in strong)
 
 
 def get_search_queries(extra: list[str] | None = None) -> list[str]:
