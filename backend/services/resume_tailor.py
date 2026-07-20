@@ -11,7 +11,21 @@ from docx.shared import Pt
 from services.profile import load_profile
 
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
-BASE_RESUME_PATH = Path(os.getenv("BASE_RESUME_DOCX", "shared/base_resume.docx"))
+
+# Resolve BASE_RESUME_DOCX path relative to repo root
+def _get_base_resume_path() -> Path:
+    """Resolve BASE_RESUME_DOCX from env, relative to repo root."""
+    resume_file = os.getenv("BASE_RESUME_DOCX", "PANKAJA_DevopsEngineer_Resume.docx")
+    
+    # If it's an absolute path, use it as-is
+    if Path(resume_file).is_absolute():
+        return Path(resume_file)
+    
+    # Otherwise, resolve relative to repo root (one level up from 'backend')
+    repo_root = Path(__file__).resolve().parent.parent.parent
+    return repo_root / resume_file
+
+BASE_RESUME_PATH = _get_base_resume_path()
 
 
 def extract_jd_keywords(jd: str, limit: int = 15) -> list[str]:
@@ -104,7 +118,7 @@ def tailor_summary(jd: str, job_title: str) -> str:
     keywords = extract_jd_keywords(jd, 8)
     top = ", ".join(keywords[:6]) if keywords else "Azure, AKS, CI/CD, DevSecOps"
     # Human-friendly summary template: concise, metric-first where available
-    summary = f"{job_title if job_title else profile['title'].split('|')[0].strip()} with {profile['years_experience']} years' experience on Azure and AKS. Skilled in {top}. Built automation that reduced manual ops work and improved MTTR."
+    summary = f"{job_title if job_title else profile['title'].split('|')[0].strip()} with {profile['years_experience']} years' experience on Azure and AKS. Skilled in {top}. Built automation that reduces ops work by 40-90% and MTTR by 40%."
     summary = humanize_text(summary)
     return summary
 
@@ -159,8 +173,8 @@ def generate_cover_letter_snippet(job: dict) -> str:
     top_skills = ", ".join(keywords[:5]) if keywords else "Azure, AKS, DevSecOps, and CI/CD"
 
     cover = (
-        f"I'm excited to apply for the {title} role at {company}. I have {profile['years_experience']} years' experience in cloud engineering and DevSecOps, and have worked with {top_skills} in production.\n\n"
-        f"Your job emphasizes requirements that match my background, especially {hook}. At Amdocs, I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana.\n\n"
+        f"I'm excited to apply for the {title} role at {company}. I have {profile['years_experience']} years' experience in cloud engineering and DevSecOps, and have worked with {top_skills} in production environments.\n\n"
+        f"Your job emphasizes requirements that match my background, especially {hook}. At Amdocs, I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%.\n\n"
         f"I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help {company}.\n\n"
         f"Thanks for your time — I look forward to speaking.\n\n"
         f"Best regards,\n"
@@ -300,6 +314,7 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     # If a base DOCX exists, use it and replace targeted sections to preserve formatting
     if BASE_RESUME_PATH.exists():
         try:
+            print(f"Loading base resume from: {BASE_RESUME_PATH}")
             base_doc = Document(str(BASE_RESUME_PATH))
             base_text = _doc_text(base_doc)
             base_keywords = extract_jd_keywords(jd, 20)
@@ -324,7 +339,10 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
             return filename
         except Exception as e:
             print(f"Base DOCX tailoring failed: {e}")
+            print(f"Attempted path: {BASE_RESUME_PATH}")
             # fallback to generated doc below
+    else:
+        print(f"Base resume not found at: {BASE_RESUME_PATH}")
 
     # Fallback behavior: generate a new doc (existing behavior)
     doc = Document()
