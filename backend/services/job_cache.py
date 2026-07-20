@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from services.job_sources import fetch_all_free_sources
 from services.job_search import search_all
 from services.matcher import filter_and_rank
-from services.job_filter import filter_last_24h
+from services.job_filter import filter_last_24h, filter_india_or_remote
 from services.profile import load_profile
 
 CACHE_DIR = Path(__file__).parent.parent / "data"
@@ -38,18 +38,20 @@ def mark_seen(job_ids: list[str]) -> None:
 
 
 async def refresh_live_jobs(min_score: int = 30, include_demo: bool = False) -> list[dict]:
-    """Fetch real-time DevOps/K8s/Cloud/IAM jobs (last 24h), rank, cache."""
+    """Fetch DevOps/K8s/Cloud/IAM jobs — last 24h, India or Remote only."""
     profile = load_profile()
     queries = profile.get("search_queries") or profile.get("target_roles") or []
 
     free_jobs = await fetch_all_free_sources(queries)
     free_jobs = filter_last_24h(free_jobs)
+    free_jobs = filter_india_or_remote(free_jobs)
 
     if free_jobs:
         ranked = filter_and_rank(free_jobs, min_score=min_score)
     else:
         ranked = await search_all(min_score=min_score, include_demo=include_demo)
         ranked = filter_last_24h(ranked)
+        ranked = filter_india_or_remote(ranked)
 
     cache = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
