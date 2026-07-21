@@ -1,32 +1,12 @@
 {
-  "updated_at": "2026-07-21T01:48:47.261981+00:00",
+  "updated_at": "2026-07-21T02:21:32.809810+00:00",
   "profile": "Pankaja Jagdish Kulkarni",
   "daily_goal": 50,
   "filter": "last_24_hours_india_or_remote",
   "location_policy": "India or Remote only",
-  "total": 9,
-  "new_count": 6,
+  "total": 7,
+  "new_count": 0,
   "jobs": [
-    {
-      "id": "5071dc65fb23",
-      "title": "Cloud / DevOps Engineer (Azure, Terraform)",
-      "company": "MiTek Vietnam",
-      "location": "Remote \u00b7 Ho Chi Minh City Metropolitan Area",
-      "description": "Cloud / DevOps Engineer (Azure, Terraform) at MiTek Vietnam. Location: Remote \u00b7 Ho Chi Minh City Metropolitan Area. Source: LinkedIn (last 24h).",
-      "url": "https://vn.linkedin.com/jobs/view/cloud-devops-engineer-azure-terraform-at-mitek-vietnam-4439043312",
-      "source": "linkedin",
-      "posted_at": "2026-07-21",
-      "match_score": 69,
-      "matched_skills": [
-        "Terraform"
-      ],
-      "match_reason": "1 skills, 1 roles, 4 domain terms in title",
-      "resume_url": "applications/5071dc65fb23/resume.docx",
-      "cover_letter_url": "applications/5071dc65fb23/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Cloud / DevOps Engineer (Azure, Terraform) role at MiTek Vietnam. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Terraform, Azure in production. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help MiTek Vietnam. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Cloud / DevOps Engineer (Azure, Terraform) with 2 years' experience on Azure and AKS. Skilled in Terraform, Azure. Built automation that reduced manual ops work and improved MTTR.",
-      "application_ready": true
-    },
     {
       "id": "93388895dfd2",
       "title": "Senior Customer Support Engineer (Tier 3), Customer Escalations",
@@ -184,160 +164,7 @@
       "cover_letter": "I'm excited to apply for the Golang Engineer role at Plain Concepts. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Docker, CI/CD, AWS, Azure, Automation in production. Your job emphasizes requirements that match my background, especially building CI/CD pipelines in Azure DevOps and GitHub Actions. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python tooling, and improved monitoring coverage with Prometheus and Grafana. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Plain Concepts. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
       "tailored_summary": "Golang Engineer with 2 years' experience on Azure and AKS. Skilled in Docker, CI/CD, AWS, Azure, Automation, Monitoring. Built automation that reduced manual ops work and improved MTTR.",
       "application_ready": true
-    },
-    {
-      "id": "8ab7818635e7",
-      "title": "DevSecOps Engineer",
-      "company": "Clinikally (YC S22)",
-      "location": "Gurugram, Haryana, India",
-      "description": "DevSecOps Engineer at Clinikally (YC S22). Location: Gurugram, Haryana, India. Source: LinkedIn (last 24h).",
-      "url": "https://in.linkedin.com/jobs/view/devsecops-engineer-at-clinikally-yc-s22-4442261340",
-      "source": "linkedin",
-      "posted_at": "2026-07-21",
-      "match_score": 30,
-      "matched_skills": [
-        "DevSecOps"
-      ],
-      "match_reason": "1 skills, 1 roles, 1 domain terms in title",
-      "resume_url": "applications/8ab7818635e7/resume.docx",
-      "cover_letter_url": "applications/8ab7818635e7/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the DevSecOps Engineer role at Clinikally (YC S22). I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Clinikally (YC S22). Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "DevSecOps Engineer with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
     }
   ],
-  "new_jobs": [
-    {
-      "id": "a416bc5ac80e",
-      "title": "Software Engineer, Platform - D\u00fcsseldorf, Germany",
-      "company": "Speechify",
-      "location": "Dusseldorf, North Rhine-Westphalia, Germany",
-      "description": "The mission of Speechify is to make sure that reading is never a barrier to learning. \n Over 50 million people use Speechify's text-to-speech products to turn whatever they're reading \u2013 PDFs, books, Google Docs, news articles, websites \u2013 into audio, so they can read faster, read more, and remember more. Speechify's text-to-speech reading products include its iOS app, Android App, Mac App, Chrome Extension, and Web App. Google recently named Speechify the Chrome Extension of the Year and Apple named Speechify its 2025 Design Award winner for Inclusivity.&nbsp;&nbsp; \n Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office. These include frontend and backend engineers, AI research scientists, and others from Amazon, Microsoft, and Google, leading PhD programs like Stanford, high growth startups like Stripe, Vercel, Bolt, and many founders of their own companies. \n  Overview  \n The responsibilities of our Platform team include building and maintaining all backend services, including, but not limited to, payments, analytics, subscriptions, new products, text to speech, and external APIs. \n This is a key role and ideal for someone who thinks strategically, enjoys fast-paced environments, is passionate about making product decisions, and has experience building great user experiences that delight users. \n We are a flat organization that allows anyone to become a leader by showing excellent technical skills and delivering results consistently and fast. Work ethic, solid communication skills, and obsession with winning are paramount.&nbsp; \n Our interview process involves several technical interviews and we aim to complete them within 1 week.&nbsp; \n  What Yo  u'  ll Do  \n \n Design, develop, and maintain robust APIs including public TTS API, internal APIs like Payment, Subscription, Auth and Consumption Tracking, ensuring they meet business and scalability requirements \n Oversee the full backend API landscape, enhancing and optimizing for performance and maintainability \n Collaborate on B2B solutions, focusing on customization and integration needs for enterprise clients \n Work closely with cross-functional teams to align backend architecture with overall product strategy and user experience \n \n  An Ideal Candidate Should Have  \n \n Proven experience in backend development: TS/Node (required) \n Direct experience with GCP and knowledge of AWS, Azure, or other cloud providers \n Efficiency in ideation and implementation, prioritizing tasks based on urgency and impact \n Preferred: Experience with Docker and containerized deployments \n Preferred: Proficiency in deploying high availability applications on Kubernetes \n \n  What We Offer   \n \n A dynamic environment where your contributions shape the company and its products \n A team that values innovation, intuition, and drive \n Autonomy, fostering focus and creativity \n The opportunity to have a significant impact in a revolutionary industry \n Competitive compensation, a welcoming atmosphere, and a commitment to an exceptional asynchronous work culture \n The privilege of working on a product that changes lives, particularly for those with learning differences like dyslexia, ADD, and more \n An active role at the intersection of artificial intelligence and audio \u2013 a rapidly evolving tech domain \n \n  The Germany Based  Salary range for this role is: 30,000-120,000 USD/Year + Bonus + Stock depending on experience. \n  Think you're a good fit for this job?&nbsp;  \n Tell us more about yourself and why you're interested in the role when you apply.  And don't forget to include links to your portfolio and LinkedIn. \n  Not looking but know someone who would make a great fit?&nbsp;  \n Refer them!&nbsp; \n  Speechify is committed to a diverse and inclusive workplace.&nbsp;  \n Speechify does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legall",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/software-engineer-platform-dusseldorf-germany-dusseldorf-45606",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T20:45:27+00:00",
-      "match_score": 37,
-      "matched_skills": [
-        "Kubernetes",
-        "Docker",
-        "AWS"
-      ],
-      "match_reason": "3 skills, 0 roles, 0 domain terms in title",
-      "resume_url": "applications/a416bc5ac80e/resume.docx",
-      "cover_letter_url": "applications/a416bc5ac80e/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Software Engineer, Platform - D\u00fcsseldorf, Germany role at Speechify. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Speechify. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Software Engineer, Platform - D\u00fcsseldorf, Germany with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    },
-    {
-      "id": "8fc3f3630a35",
-      "title": "Software Engineer, Platform - Hamburg, Germany",
-      "company": "Speechify",
-      "location": "Hamburg, Germany",
-      "description": "The mission of Speechify is to make sure that reading is never a barrier to learning. \n Over 50 million people use Speechify's text-to-speech products to turn whatever they're reading \u2013 PDFs, books, Google Docs, news articles, websites \u2013 into audio, so they can read faster, read more, and remember more. Speechify's text-to-speech reading products include its iOS app, Android App, Mac App, Chrome Extension, and Web App. Google recently named Speechify the Chrome Extension of the Year and Apple named Speechify its 2025 Design Award winner for Inclusivity.&nbsp;&nbsp; \n Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office. These include frontend and backend engineers, AI research scientists, and others from Amazon, Microsoft, and Google, leading PhD programs like Stanford, high growth startups like Stripe, Vercel, Bolt, and many founders of their own companies. \n  Overview  \n The responsibilities of our Platform team include building and maintaining all backend services, including, but not limited to, payments, analytics, subscriptions, new products, text to speech, and external APIs. \n This is a key role and ideal for someone who thinks strategically, enjoys fast-paced environments, is passionate about making product decisions, and has experience building great user experiences that delight users. \n We are a flat organization that allows anyone to become a leader by showing excellent technical skills and delivering results consistently and fast. Work ethic, solid communication skills, and obsession with winning are paramount.&nbsp; \n Our interview process involves several technical interviews and we aim to complete them within 1 week.&nbsp; \n  What Yo  u'  ll Do  \n \n Design, develop, and maintain robust APIs including public TTS API, internal APIs like Payment, Subscription, Auth and Consumption Tracking, ensuring they meet business and scalability requirements \n Oversee the full backend API landscape, enhancing and optimizing for performance and maintainability \n Collaborate on B2B solutions, focusing on customization and integration needs for enterprise clients \n Work closely with cross-functional teams to align backend architecture with overall product strategy and user experience \n \n  An Ideal Candidate Should Have  \n \n Proven experience in backend development: TS/Node (required) \n Direct experience with GCP and knowledge of AWS, Azure, or other cloud providers \n Efficiency in ideation and implementation, prioritizing tasks based on urgency and impact \n Preferred: Experience with Docker and containerized deployments \n Preferred: Proficiency in deploying high availability applications on Kubernetes \n \n  What We Offer   \n \n A dynamic environment where your contributions shape the company and its products \n A team that values innovation, intuition, and drive \n Autonomy, fostering focus and creativity \n The opportunity to have a significant impact in a revolutionary industry \n Competitive compensation, a welcoming atmosphere, and a commitment to an exceptional asynchronous work culture \n The privilege of working on a product that changes lives, particularly for those with learning differences like dyslexia, ADD, and more \n An active role at the intersection of artificial intelligence and audio \u2013 a rapidly evolving tech domain \n \n  The Germany Based  Salary range for this role is: 30,000-120,000 USD/Year + Bonus + Stock depending on experience. \n  Think you're a good fit for this job?&nbsp;  \n Tell us more about yourself and why you're interested in the role when you apply.  And don't forget to include links to your portfolio and LinkedIn. \n  Not looking but know someone who would make a great fit?&nbsp;  \n Refer them!&nbsp; \n  Speechify is committed to a diverse and inclusive workplace.&nbsp;  \n Speechify does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legall",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/software-engineer-platform-hamburg-germany-238356",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T20:45:27+00:00",
-      "match_score": 37,
-      "matched_skills": [
-        "Kubernetes",
-        "Docker",
-        "AWS"
-      ],
-      "match_reason": "3 skills, 0 roles, 0 domain terms in title",
-      "resume_url": "applications/8fc3f3630a35/resume.docx",
-      "cover_letter_url": "applications/8fc3f3630a35/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Software Engineer, Platform - Hamburg, Germany role at Speechify. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Speechify. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Software Engineer, Platform - Hamburg, Germany with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    },
-    {
-      "id": "f54f6ca72942",
-      "title": "Software Engineer, Platform - Munich, Germany",
-      "company": "Speechify",
-      "location": "Munich, Bavaria, Germany",
-      "description": "The mission of Speechify is to make sure that reading is never a barrier to learning. \n Over 50 million people use Speechify's text-to-speech products to turn whatever they're reading \u2013 PDFs, books, Google Docs, news articles, websites \u2013 into audio, so they can read faster, read more, and remember more. Speechify's text-to-speech reading products include its iOS app, Android App, Mac App, Chrome Extension, and Web App. Google recently named Speechify the Chrome Extension of the Year and Apple named Speechify its 2025 Design Award winner for Inclusivity.&nbsp;&nbsp; \n Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office. These include frontend and backend engineers, AI research scientists, and others from Amazon, Microsoft, and Google, leading PhD programs like Stanford, high growth startups like Stripe, Vercel, Bolt, and many founders of their own companies. \n  Overview  \n The responsibilities of our Platform team include building and maintaining all backend services, including, but not limited to, payments, analytics, subscriptions, new products, text to speech, and external APIs. \n This is a key role and ideal for someone who thinks strategically, enjoys fast-paced environments, is passionate about making product decisions, and has experience building great user experiences that delight users. \n We are a flat organization that allows anyone to become a leader by showing excellent technical skills and delivering results consistently and fast. Work ethic, solid communication skills, and obsession with winning are paramount.&nbsp; \n Our interview process involves several technical interviews and we aim to complete them within 1 week.&nbsp; \n  What Yo  u'  ll Do  \n \n Design, develop, and maintain robust APIs including public TTS API, internal APIs like Payment, Subscription, Auth and Consumption Tracking, ensuring they meet business and scalability requirements \n Oversee the full backend API landscape, enhancing and optimizing for performance and maintainability \n Collaborate on B2B solutions, focusing on customization and integration needs for enterprise clients \n Work closely with cross-functional teams to align backend architecture with overall product strategy and user experience \n \n  An Ideal Candidate Should Have  \n \n Proven experience in backend development: TS/Node (required) \n Direct experience with GCP and knowledge of AWS, Azure, or other cloud providers \n Efficiency in ideation and implementation, prioritizing tasks based on urgency and impact \n Preferred: Experience with Docker and containerized deployments \n Preferred: Proficiency in deploying high availability applications on Kubernetes \n \n  What We Offer   \n \n A dynamic environment where your contributions shape the company and its products \n A team that values innovation, intuition, and drive \n Autonomy, fostering focus and creativity \n The opportunity to have a significant impact in a revolutionary industry \n Competitive compensation, a welcoming atmosphere, and a commitment to an exceptional asynchronous work culture \n The privilege of working on a product that changes lives, particularly for those with learning differences like dyslexia, ADD, and more \n An active role at the intersection of artificial intelligence and audio \u2013 a rapidly evolving tech domain \n \n  The Germany Based  Salary range for this role is: 30,000-120,000 USD/Year + Bonus + Stock depending on experience. \n  Think you're a good fit for this job?&nbsp;  \n Tell us more about yourself and why you're interested in the role when you apply.  And don't forget to include links to your portfolio and LinkedIn. \n  Not looking but know someone who would make a great fit?&nbsp;  \n Refer them!&nbsp; \n  Speechify is committed to a diverse and inclusive workplace.&nbsp;  \n Speechify does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legall",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/software-engineer-platform-munich-germany-304246",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T20:45:27+00:00",
-      "match_score": 37,
-      "matched_skills": [
-        "Kubernetes",
-        "Docker",
-        "AWS"
-      ],
-      "match_reason": "3 skills, 0 roles, 0 domain terms in title",
-      "resume_url": "applications/f54f6ca72942/resume.docx",
-      "cover_letter_url": "applications/f54f6ca72942/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Software Engineer, Platform - Munich, Germany role at Speechify. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Speechify. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Software Engineer, Platform - Munich, Germany with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    },
-    {
-      "id": "2f0cec34c439",
-      "title": "Software Engineer, Data Infrastructure & Acquisition - Berlin, Germany",
-      "company": "Speechify",
-      "location": "Berlin, Germany",
-      "description": "The mission of Speechify is to make sure that reading is never a barrier to learning. \n Over 50 million people use Speechify's text-to-speech products to turn whatever they're reading \u2013 PDFs, books, Google Docs, news articles, websites \u2013 into audio, so they can read faster, read more, and remember more. Speechify's text-to-speech reading products include its iOS app, Android App, Mac App, Chrome Extension, and Web App.&nbsp;Google recently named Speechify the Chrome Extension of the Year and Apple named Speechify its 2025 Design Award winner for Inclusivity.&nbsp;&nbsp; \n Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office. These include frontend and backend engineers, AI research scientists, and others from Amazon, Microsoft, and Google, leading PhD programs like Stanford, high growth startups like Stripe, Vercel, Bolt, and many founders of their own companies. \n  Overview  \n We're looking to hire for our Data side of our AI team at Speechify. This role is responsible for all aspects of data collection to support our model training operations. We are able to build high-quality datasets at petabyte-scale and low cost through a tight integration of infrastructure, engineering, and research work. We are looking for a skilled Software Engineer to join us. \n  What You'll Do  \n \n Be scrappy to find new sources of audio data and bring it into our ingestion pipeline \n Operate and extend the cloud infrastructure for our ingestion pipeline, currently running on GCP and managed with Terraform. \n Collaborate closely with our Scientists to shift the cost/throughput/quality frontier, delivering richer data at bigger scale and lower cost to power our next-generation models. \n Collaborate with others on the AI Team and Speechify Leadership to craft the AI Team's dataset roadmap to power Speechify's next-generation consumer and enterprise products. \n \n  An Ideal Candidate Should Have  \n \n BS/MS/PhD in Computer Science or a related field. \n 5+ years of industry experience in software development. \n Proficiency with bash/Python scripting in Linux environments \n Proficiency in Docker and Infrastructure-as-Code concepts and professional experience with at least one major Cloud Provider (we use GCP) \n Experience with web crawlers, large-scale data processing workflows is a plus \n Ability to handle multiple tasks and adapt to changing priorities. \n Strong communication skills, both written and verbal. \n \n  What we offer  \n \n A fast-growing environment where you can help shape the company and product. \n An entrepreneurial-minded team that supports risk, intuition, and hustle. \n A hands-off management approach so you can focus and do your best work. \n An opportunity to make a big impact in a transformative industry. \n Competitive salaries, a friendly and laid-back atmosphere, and a commitment to building a great asynchronous culture. \n Opportunity to work on a life-changing product that millions of people use. \n Build products that directly impact and support people with learning differences like dyslexia, ADD, low vision, concussions, autism, and more. \n Work in one of the fastest-growing sectors of tech, the intersection of artificial intelligence and audio. \n \n  The Germany Based  Salary range for this role is: 30,000-120,000 USD/Year + Bonus + Stock depending on experience. \n  Think you're a good fit for this job?&nbsp;  \n Tell us more about yourself and why you're interested in the role when you apply.  And don't forget to include links to your portfolio and LinkedIn. \n  Not looking but know someone who would make a great fit?&nbsp;  \n Refer them!&nbsp; \n  Speechify is committed to a diverse and inclusive workplace.&nbsp;  \n Speechify does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legally protected status.  Find more  English Speaking Jobs in Germany  on Arbeitnow",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/software-engineer-data-infrastructure-acquisition-berlin-germany-255908",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T20:45:27+00:00",
-      "match_score": 36,
-      "matched_skills": [
-        "Terraform",
-        "Docker",
-        "Python",
-        "Linux"
-      ],
-      "match_reason": "4 skills, 0 roles, 0 domain terms in title",
-      "resume_url": "applications/2f0cec34c439/resume.docx",
-      "cover_letter_url": "applications/2f0cec34c439/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Software Engineer, Data Infrastructure & Acquisition - Berlin, Germany role at Speechify. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Terraform, Docker, Python, Linux in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Speechify. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Software Engineer, Data Infrastructure & Acquisition - Berlin, Germany with 2 years' experience on Azure and AKS. Skilled in Terraform, Docker, Python, Linux. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    },
-    {
-      "id": "582d11626a9c",
-      "title": "Software Engineer, Data Infrastructure & Acquisition - Hamburg, Germany",
-      "company": "Speechify",
-      "location": "Hamburg, Germany",
-      "description": "The mission of Speechify is to make sure that reading is never a barrier to learning. \n Over 50 million people use Speechify's text-to-speech products to turn whatever they're reading \u2013 PDFs, books, Google Docs, news articles, websites \u2013 into audio, so they can read faster, read more, and remember more. Speechify's text-to-speech reading products include its iOS app, Android App, Mac App, Chrome Extension, and Web App.&nbsp;Google recently named Speechify the Chrome Extension of the Year and Apple named Speechify its 2025 Design Award winner for Inclusivity.&nbsp;&nbsp; \n Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office. These include frontend and backend engineers, AI research scientists, and others from Amazon, Microsoft, and Google, leading PhD programs like Stanford, high growth startups like Stripe, Vercel, Bolt, and many founders of their own companies. \n  Overview  \n We're looking to hire for our Data side of our AI team at Speechify. This role is responsible for all aspects of data collection to support our model training operations. We are able to build high-quality datasets at petabyte-scale and low cost through a tight integration of infrastructure, engineering, and research work. We are looking for a skilled Software Engineer to join us. \n  What You'll Do  \n \n Be scrappy to find new sources of audio data and bring it into our ingestion pipeline \n Operate and extend the cloud infrastructure for our ingestion pipeline, currently running on GCP and managed with Terraform. \n Collaborate closely with our Scientists to shift the cost/throughput/quality frontier, delivering richer data at bigger scale and lower cost to power our next-generation models. \n Collaborate with others on the AI Team and Speechify Leadership to craft the AI Team's dataset roadmap to power Speechify's next-generation consumer and enterprise products. \n \n  An Ideal Candidate Should Have  \n \n BS/MS/PhD in Computer Science or a related field. \n 5+ years of industry experience in software development. \n Proficiency with bash/Python scripting in Linux environments \n Proficiency in Docker and Infrastructure-as-Code concepts and professional experience with at least one major Cloud Provider (we use GCP) \n Experience with web crawlers, large-scale data processing workflows is a plus \n Ability to handle multiple tasks and adapt to changing priorities. \n Strong communication skills, both written and verbal. \n \n  What we offer  \n \n A fast-growing environment where you can help shape the company and product. \n An entrepreneurial-minded team that supports risk, intuition, and hustle. \n A hands-off management approach so you can focus and do your best work. \n An opportunity to make a big impact in a transformative industry. \n Competitive salaries, a friendly and laid-back atmosphere, and a commitment to building a great asynchronous culture. \n Opportunity to work on a life-changing product that millions of people use. \n Build products that directly impact and support people with learning differences like dyslexia, ADD, low vision, concussions, autism, and more. \n Work in one of the fastest-growing sectors of tech, the intersection of artificial intelligence and audio. \n \n  The Germany Based  Salary range for this role is: 30,000-120,000 USD/Year + Bonus + Stock depending on experience. \n  Think you're a good fit for this job?&nbsp;  \n Tell us more about yourself and why you're interested in the role when you apply.  And don't forget to include links to your portfolio and LinkedIn. \n  Not looking but know someone who would make a great fit?&nbsp;  \n Refer them!&nbsp; \n  Speechify is committed to a diverse and inclusive workplace.&nbsp;  \n Speechify does not discriminate on the basis of race, national origin, gender, gender identity, sexual orientation, protected veteran status, disability, age, or other legally protected status.  Find  Jobs in Germany  on Arbeitnow",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/software-engineer-data-infrastructure-acquisition-hamburg-germany-95082",
-      "source": "arbeitnow",
-      "posted_at": "2026-07-20T20:45:27+00:00",
-      "match_score": 36,
-      "matched_skills": [
-        "Terraform",
-        "Docker",
-        "Python",
-        "Linux"
-      ],
-      "match_reason": "4 skills, 0 roles, 0 domain terms in title",
-      "resume_url": "applications/582d11626a9c/resume.docx",
-      "cover_letter_url": "applications/582d11626a9c/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the Software Engineer, Data Infrastructure & Acquisition - Hamburg, Germany role at Speechify. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Terraform, Docker, Python, Linux in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Speechify. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Software Engineer, Data Infrastructure & Acquisition - Hamburg, Germany with 2 years' experience on Azure and AKS. Skilled in Terraform, Docker, Python, Linux. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    },
-    {
-      "id": "8ab7818635e7",
-      "title": "DevSecOps Engineer",
-      "company": "Clinikally (YC S22)",
-      "location": "Gurugram, Haryana, India",
-      "description": "DevSecOps Engineer at Clinikally (YC S22). Location: Gurugram, Haryana, India. Source: LinkedIn (last 24h).",
-      "url": "https://in.linkedin.com/jobs/view/devsecops-engineer-at-clinikally-yc-s22-4442261340",
-      "source": "linkedin",
-      "posted_at": "2026-07-21",
-      "match_score": 30,
-      "matched_skills": [
-        "DevSecOps"
-      ],
-      "match_reason": "1 skills, 1 roles, 1 domain terms in title",
-      "resume_url": "applications/8ab7818635e7/resume.docx",
-      "cover_letter_url": "applications/8ab7818635e7/cover_letter.txt",
-      "cover_letter": "I'm excited to apply for the DevSecOps Engineer role at Clinikally (YC S22). I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Clinikally (YC S22). Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "DevSecOps Engineer with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-      "application_ready": true
-    }
-  ]
+  "new_jobs": []
 }
