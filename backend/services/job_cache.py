@@ -37,8 +37,11 @@ def mark_seen(job_ids: list[str]) -> None:
     _save_json(SEEN_FILE, list(seen)[-5000:])
 
 
-async def refresh_live_jobs(min_score: int = 30, include_demo: bool = False) -> list[dict]:
-    """Fetch DevOps/K8s/Cloud/IAM jobs — last 24h, India or Remote only."""
+async def refresh_live_jobs(min_score: int = 0, include_demo: bool = False) -> list[dict]:
+    """Fetch DevOps/K8s/Cloud/IAM jobs — last 24h, India or Remote only.
+    
+    min_score=0 (default) keeps ALL jobs. Set higher to filter by relevance.
+    """
     profile = load_profile()
     queries = profile.get("search_queries") or profile.get("target_roles") or []
 
@@ -49,9 +52,10 @@ async def refresh_live_jobs(min_score: int = 30, include_demo: bool = False) -> 
     if free_jobs:
         ranked = filter_and_rank(free_jobs, min_score=min_score)
     else:
-        ranked = await search_all(min_score=min_score, include_demo=include_demo)
+        ranked = await search_all(min_score=0, include_demo=include_demo)
         ranked = filter_last_24h(ranked)
         ranked = filter_india_or_remote(ranked)
+        ranked = filter_and_rank(ranked, min_score=min_score)
 
     cache = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
@@ -66,8 +70,11 @@ def get_cached_jobs() -> list[dict]:
     return data.get("jobs", [])
 
 
-async def poll_new_jobs(min_score: int = 30, mark_as_seen: bool = False) -> dict:
-    """Refresh sources and return only jobs not seen before."""
+async def poll_new_jobs(min_score: int = 0, mark_as_seen: bool = False) -> dict:
+    """Refresh sources and return only jobs not seen before.
+    
+    min_score=0 (default) keeps ALL jobs. Set higher to filter by relevance.
+    """
     fresh = await refresh_live_jobs(min_score=min_score, include_demo=False)
     seen = get_seen_ids()
     new_jobs = [j for j in fresh if j["id"] not in seen]
