@@ -70,7 +70,17 @@ def score_job(job: dict) -> dict:
     return job
 
 
-def filter_and_rank(jobs: list[dict], min_score: int = 30) -> list[dict]:
+def filter_and_rank(jobs: list[dict], min_score: int = 0) -> list[dict]:
+    """Score all jobs but keep those with min_score. Set min_score=0 to keep all.
+    
+    With min_score=0 (default), all jobs are kept and ranked by relevance.
+    This preserves all 24h India/Remote jobs on the dashboard.
+    """
     scored = [score_job(j) for j in jobs]
-    filtered = [j for j in scored if j.get("match_score", 0) >= min_score]
+    # Only filter by score if min_score > 0
+    if min_score > 0:
+        filtered = [j for j in scored if j.get("match_score", 0) >= min_score]
+    else:
+        # Keep all jobs, just ranked by relevance
+        filtered = scored
     return sorted(filtered, key=lambda x: x.get("match_score", 0), reverse=True)
