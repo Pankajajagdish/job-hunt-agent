@@ -301,7 +301,7 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
 
     print(
         f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
-        f"overall {scores['overall_score']}/10 → {output_path.name}"
+        f"overall {scores['overall_score']}/10 -> {output_path.name}"
     )
     job["_ats_score"] = scores["ats_score"]
     job["_overall_score"] = scores["overall_score"]
