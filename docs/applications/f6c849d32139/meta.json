@@ -5,6 +5,9 @@
   "url": "https://jobicy.com/jobs/149547-site-reliability-engineer",
   "match_score": 45,
   "posted_at": "2026-07-21T16:20:05+00:00",
-  "tailored_summary": "Site Reliability Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, Automation, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T02:13:54.407694+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Site Reliability Engineer. Emphasized: Kubernetes, Python, Linux, DevOps.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:37.846046+00:00"
 }

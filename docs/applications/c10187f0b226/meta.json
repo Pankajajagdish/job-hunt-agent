@@ -5,6 +5,9 @@
   "url": "https://jobicy.com/jobs/149602-engineering-manager-i-applications",
   "match_score": 52,
   "posted_at": "2026-07-22T04:44:03+00:00",
-  "tailored_summary": "Engineering Manager I, Applications with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Terraform, Linux, AWS, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T08:22:16.191091+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager I, Applications. Emphasized: Kubernetes, Terraform, Linux, AWS, NIST.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:37.630426+00:00"
 }

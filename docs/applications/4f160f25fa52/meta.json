@@ -5,6 +5,9 @@
   "url": "https://jobicy.com/jobs/149528-engineering-manager-managed-services",
   "match_score": 42,
   "posted_at": "2026-07-21T16:19:32+00:00",
-  "tailored_summary": "Engineering Manager, Managed Services with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T02:13:54.571343+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager, Managed Services. Emphasized: Kubernetes, Python, Linux, NIST.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:38.095643+00:00"
 }

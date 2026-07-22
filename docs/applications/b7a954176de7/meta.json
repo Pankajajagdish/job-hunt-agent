@@ -5,6 +5,9 @@
   "url": "https://jobicy.com/jobs/149523-cloud-field-engineer",
   "match_score": 45,
   "posted_at": "2026-07-21T16:19:24+00:00",
-  "tailored_summary": "Cloud Field Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T02:13:54.439321+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Field Engineer. Emphasized: Kubernetes, Python, Linux, AWS, Microsoft Azure.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:37.880733+00:00"
 }

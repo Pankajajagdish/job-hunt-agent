@@ -5,6 +5,9 @@
   "url": "https://jobicy.com/jobs/149573-openstack-engineering-manager",
   "match_score": 42,
   "posted_at": "2026-07-21T16:20:50+00:00",
-  "tailored_summary": "OpenStack Engineering Manager with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T02:13:54.537046+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: OpenStack Engineering Manager. Emphasized: Kubernetes, Python, Linux, NIST.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:38.062831+00:00"
 }

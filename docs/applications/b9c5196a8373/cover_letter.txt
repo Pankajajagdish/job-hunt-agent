@@ -1,4 +1,12 @@
-I'm excited to apply for the Cloud Engineer – Azure role at Willsmarg Technologies LLC. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Willsmarg Technologies LLC. Thanks for your time — I look forward to speaking. Best regards,
+Dear Hiring Manager,
+
+I am applying for the Cloud Engineer – Azure role at Willsmarg Technologies LLC. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Microsoft Azure.
+
+At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.
+
+I would welcome the chance to discuss how I can contribute to Willsmarg Technologies LLC.
+
+Best regards,
 Pankaja Jagdish Kulkarni
 +91 7045149611 | pankajajagdishkulkarni@gmail.com
 https://linkedin.com/in/pankaja-jagdish-kulkarni

@@ -5,6 +5,9 @@
   "url": "https://www.arbeitnow.com/jobs/companies/sumup/backend-engineer-pos-berlin-431352",
   "match_score": 30,
   "posted_at": "2026-07-22T06:45:21+00:00",
-  "tailored_summary": "Backend Engineer - POS with 2 years' experience on Azure and AKS. Skilled in Kubernetes, CI/CD, AWS, Compliance, Monitoring. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
-  "generated_at": "2026-07-22T08:22:16.412257+00:00"
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Backend Engineer - POS. Emphasized: Kubernetes, CI/CD, AWS, Entra ID.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-22T09:58:38.682061+00:00"
 }
