@@ -1,0 +1,12 @@
+Dear Hiring Manager,
+
+I am applying for the Identity and Access Management (IAM) Engineer role at Guidehouse. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in IAM.
+
+At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.
+
+I would welcome the chance to discuss how I can contribute to Guidehouse.
+
+Best regards,
+Pankaja Jagdish Kulkarni
++91 7045149611 | pankajajagdishkulkarni@gmail.com
+https://linkedin.com/in/pankaja-jagdish-kulkarni
