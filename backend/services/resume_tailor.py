@@ -261,7 +261,6 @@ def _boost_to_threshold(doc: Document, jd: str, base_text: str, min_score: float
 def role_slug(job_title: str) -> str:
     """Sanitize job role for filename — role only, no company."""
     role = (job_title or "Cloud_Engineer").strip()
-    # Drop location/seniority noise in parentheses and after common separators
     role = re.sub(r"\([^)]*\)", " ", role)
     role = re.sub(r"\[[^\]]*\]", " ", role)
     role = re.split(r"\s+[-–—|@]\s+", role)[0]
@@ -272,39 +271,99 @@ def role_slug(job_title: str) -> str:
 
 
 def resume_filename_for_role(job_title: str) -> str:
-    """e.g. PANKAJA_DevOps_Engineer.docx — role only, never company."""
-    return f"PANKAJA_{role_slug(job_title)}.docx"
+    """e.g. PANKAJA_DevOps_Engineer.pdf — role only, never company."""
+    return f"PANKAJA_{role_slug(job_title)}.pdf"
+
+
+def convert_docx_to_pdf(docx_path: Path) -> Path:
+    """Convert DOCX → PDF via LibreOffice (GitHub Actions / Linux) or Word (Windows)."""
+    import subprocess
+    import shutil as sh
+
+    docx_path = Path(docx_path)
+    pdf_path = docx_path.with_suffix(".pdf")
+    out_dir = docx_path.parent
+
+    soffice = sh.which("soffice") or sh.which("libreoffice")
+    if soffice:
+        subprocess.run(
+            [
+                soffice,
+                "--headless",
+                "--norestore",
+                "--convert-to",
+                "pdf",
+                "--outdir",
+                str(out_dir),
+                str(docx_path),
+            ],
+            check=True,
+            timeout=120,
+            capture_output=True,
+        )
+        if not pdf_path.exists():
+            raise RuntimeError(f"LibreOffice ran but PDF missing: {pdf_path}")
+        return pdf_path
+
+    # Windows fallback: Microsoft Word via docx2pdf (optional)
+    try:
+        from docx2pdf import convert as docx2pdf_convert  # type: ignore
+
+        docx2pdf_convert(str(docx_path), str(pdf_path))
+        if pdf_path.exists():
+            return pdf_path
+    except Exception as e:
+        print(f"docx2pdf fallback failed: {e}")
+
+    raise RuntimeError(
+        "PDF conversion failed. Install LibreOffice (soffice) or Word+docx2pdf."
+    )
 
 
 def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
+    """Build skills-tailored DOCX then convert to PDF. Returns PDF filename."""
     jd = job.get("description", "") or ""
     title = job.get("title", "Cloud Engineer")
 
     base_path = _base_resume_path()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+    pdf_name = resume_filename_for_role(title)
     if output_path is None:
-        output_path = OUTPUT_DIR / resume_filename_for_role(title)
+        pdf_path = OUTPUT_DIR / pdf_name
     else:
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        pdf_path = Path(output_path)
+        if pdf_path.suffix.lower() != ".pdf":
+            pdf_path = pdf_path.with_suffix(".pdf")
+        pdf_path.parent.mkdir(parents=True, exist_ok=True)
 
-    shutil.copy2(base_path, output_path)
-    doc = Document(str(output_path))
+    # Work on a temp DOCX next to the final PDF
+    docx_path = pdf_path.with_suffix(".docx")
+    shutil.copy2(base_path, docx_path)
+    doc = Document(str(docx_path))
     base_text = _doc_text(Document(str(base_path)))
 
     update_skills_only(doc, jd)
     scores = _boost_to_threshold(doc, jd, base_text, min_score=9.5)
-    doc.save(str(output_path))
+    doc.save(str(docx_path))
+
+    try:
+        convert_docx_to_pdf(docx_path)
+        if docx_path.exists():
+            docx_path.unlink()
+    except Exception as e:
+        # Keep DOCX if PDF conversion fails so user still gets a file
+        print(f"PDF conversion error ({e}); keeping DOCX")
+        pdf_path = docx_path
 
     print(
         f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
-        f"overall {scores['overall_score']}/10 → {output_path.name}"
+        f"overall {scores['overall_score']}/10 → {pdf_path.name}"
     )
     job["_ats_score"] = scores["ats_score"]
     job["_overall_score"] = scores["overall_score"]
-    job["_resume_filename"] = output_path.name
-    return output_path.name
+    job["_resume_filename"] = pdf_path.name
+    return pdf_path.name
 
 
 def tailor_summary(jd: str, job_title: str) -> str:
@@ -344,21 +403,22 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
     jd = job.get("description", "")
     title = job.get("title", "")
 
-    # Filename = role only (no company), e.g. PANKAJA_DevOps_Engineer.docx
+    # Filename = role only (no company), e.g. PANKAJA_DevOps_Engineer.pdf
     resume_name = resume_filename_for_role(title)
     resume_path = app_dir / resume_name
     cover_path = app_dir / "cover_letter.txt"
     meta_path = app_dir / "meta.json"
 
-    # Remove stale generic resume.docx / old role-named files to avoid clutter
-    for old in app_dir.glob("*.docx"):
+    # Remove stale resumes (docx/pdf) so only the current role PDF remains
+    for old in list(app_dir.glob("*.docx")) + list(app_dir.glob("*.pdf")):
         if old.name != resume_name:
             try:
                 old.unlink()
             except OSError:
                 pass
 
-    generate_tailored_docx(job, output_path=resume_path)
+    actual_name = generate_tailored_docx(job, output_path=resume_path)
+    resume_name = actual_name
     cover = generate_cover_letter_snippet(job)
     cover_path.write_text(cover, encoding="utf-8")
 

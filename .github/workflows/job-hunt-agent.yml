@@ -28,6 +28,11 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-agent.txt
 
+      - name: Install LibreOffice (DOCX → PDF)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
+
       - name: Install dependencies
         run: pip install -r requirements-agent.txt
 

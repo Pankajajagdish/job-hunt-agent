@@ -82,9 +82,9 @@ Edit `shared/resume_profile.json`:
 
 ```
 docs/applications/{job_id}/
-  Pankaja_Kulkarni_{JobTitle}_{Company}.docx   ← skills updated for this JD
-  cover_letter.txt
-  meta.json
+  resume.pdf           ← tailored for this JD (role-named, e.g. PANKAJA_DevOps_Engineer.pdf)
+  cover_letter.txt     ← copy-paste ready
+  meta.json            ← match score, summary
 ```
 
 ---

@@ -68,7 +68,7 @@
       catch { return iso; }
     }
     function renderJob(job, isNew, idx) {
-      const resumeName = (job.resume_file || (job.resume_url || "").split("/").pop() || "resume.docx");
+      const resumeName = (job.resume_file || (job.resume_url || "").split("/").pop() || "resume.pdf");
       const resume = job.resume_url
         ? `<a class="btn btn-resume" href="${escapeHtml(job.resume_url)}" download="${escapeHtml(resumeName)}">⬇ ${escapeHtml(resumeName)}</a>`
         : "";

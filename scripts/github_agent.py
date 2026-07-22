@@ -129,7 +129,7 @@ def create_issue(job: dict) -> bool:
 ---
 
 ### Download tailored resume
-**[${job.get('resume_file') or 'Download DOCX'}]({resume_link})**
+**[Download PDF]({resume_link})**
 
 ### Apply on company site
 {job['url']}
