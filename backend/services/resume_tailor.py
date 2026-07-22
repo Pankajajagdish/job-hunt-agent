@@ -258,6 +258,25 @@ def _boost_to_threshold(doc: Document, jd: str, base_text: str, min_score: float
     }
 
 
+def resume_filename_for_job(job: dict) -> str:
+    """Build download filename from your name + job title + company.
+
+    Example: Pankaja_Kulkarni_DevOps_Engineer_Persistent_Systems.docx
+    """
+    profile = load_profile()
+    person = re.sub(r"[^\w]+", "_", (profile.get("name") or "Resume").strip()).strip("_")
+    # Short first_last if long
+    parts = [p for p in person.split("_") if p]
+    if len(parts) >= 2:
+        person = f"{parts[0]}_{parts[-1]}"
+    title = re.sub(r"[^\w]+", "_", (job.get("title") or "Role").strip()).strip("_")
+    company = re.sub(r"[^\w]+", "_", (job.get("company") or "Company").strip()).strip("_")
+    # Keep filename readable / filesystem-safe
+    title = re.sub(r"_+", "_", title)[:50].strip("_")
+    company = re.sub(r"_+", "_", company)[:40].strip("_")
+    return f"{person}_{title}_{company}.docx"
+
+
 def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     jd = job.get("description", "") or ""
     title = job.get("title", "Cloud Engineer")
@@ -267,9 +286,7 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     if output_path is None:
-        safe_name = re.sub(r"[^\w\-]", "_", f"{company}_{title}")[:40]
-        ts = datetime.now().strftime("%Y%m%d_%H%M")
-        output_path = OUTPUT_DIR / f"resume_{safe_name}_{ts}.docx"
+        output_path = OUTPUT_DIR / resume_filename_for_job(job)
     else:
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -284,10 +301,11 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
 
     print(
         f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
-        f"overall {scores['overall_score']}/10"
+        f"overall {scores['overall_score']}/10 → {output_path.name}"
     )
     job["_ats_score"] = scores["ats_score"]
     job["_overall_score"] = scores["overall_score"]
+    job["_resume_file"] = output_path.name
     return output_path.name
 
 
@@ -328,9 +346,17 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
     jd = job.get("description", "")
     title = job.get("title", "")
 
-    resume_path = app_dir / "resume.docx"
+    resume_name = resume_filename_for_job(job)
+    resume_path = app_dir / resume_name
     cover_path = app_dir / "cover_letter.txt"
     meta_path = app_dir / "meta.json"
+
+    # Remove old generic / previous resume files in this job folder
+    for old in app_dir.glob("*.docx"):
+        try:
+            old.unlink()
+        except OSError:
+            pass
 
     generate_tailored_docx(job, output_path=resume_path)
     cover = generate_cover_letter_snippet(job)
@@ -347,6 +373,7 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
         "tailored_summary": note,
         "ats_score": job.get("_ats_score"),
         "overall_score": job.get("_overall_score"),
+        "resume_file": resume_name,
         "tailor_mode": "skills_only_keep_base_resume",
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
@@ -354,7 +381,8 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
 
     base = f"applications/{job['id']}"
     return {
-        "resume_url": f"{base}/resume.docx",
+        "resume_url": f"{base}/{resume_name}",
+        "resume_file": resume_name,
         "cover_letter_url": f"{base}/cover_letter.txt",
         "cover_letter": cover,
         "tailored_summary": note,
