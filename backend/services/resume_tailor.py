@@ -258,35 +258,33 @@ def _boost_to_threshold(doc: Document, jd: str, base_text: str, min_score: float
     }
 
 
-def resume_filename_for_job(job: dict) -> str:
-    """Build download filename from your name + job title + company.
+def role_slug(job_title: str) -> str:
+    """Sanitize job role for filename — role only, no company."""
+    role = (job_title or "Cloud_Engineer").strip()
+    # Drop location/seniority noise in parentheses and after common separators
+    role = re.sub(r"\([^)]*\)", " ", role)
+    role = re.sub(r"\[[^\]]*\]", " ", role)
+    role = re.split(r"\s+[-–—|@]\s+", role)[0]
+    role = re.sub(r"[^\w\s+-]", " ", role)
+    role = re.sub(r"\s+", "_", role.strip())
+    role = re.sub(r"_+", "_", role).strip("_")
+    return (role or "Cloud_Engineer")[:60]
 
-    Example: Pankaja_Kulkarni_DevOps_Engineer_Persistent_Systems.docx
-    """
-    profile = load_profile()
-    person = re.sub(r"[^\w]+", "_", (profile.get("name") or "Resume").strip()).strip("_")
-    # Short first_last if long
-    parts = [p for p in person.split("_") if p]
-    if len(parts) >= 2:
-        person = f"{parts[0]}_{parts[-1]}"
-    title = re.sub(r"[^\w]+", "_", (job.get("title") or "Role").strip()).strip("_")
-    company = re.sub(r"[^\w]+", "_", (job.get("company") or "Company").strip()).strip("_")
-    # Keep filename readable / filesystem-safe
-    title = re.sub(r"_+", "_", title)[:50].strip("_")
-    company = re.sub(r"_+", "_", company)[:40].strip("_")
-    return f"{person}_{title}_{company}.docx"
+
+def resume_filename_for_role(job_title: str) -> str:
+    """e.g. PANKAJA_DevOps_Engineer.docx — role only, never company."""
+    return f"PANKAJA_{role_slug(job_title)}.docx"
 
 
 def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
     jd = job.get("description", "") or ""
     title = job.get("title", "Cloud Engineer")
-    company = job.get("company", "")
 
     base_path = _base_resume_path()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     if output_path is None:
-        output_path = OUTPUT_DIR / resume_filename_for_job(job)
+        output_path = OUTPUT_DIR / resume_filename_for_role(title)
     else:
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -301,11 +299,11 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
 
     print(
         f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
-        f"overall {scores['overall_score']}/10 -> {output_path.name}"
+        f"overall {scores['overall_score']}/10 → {output_path.name}"
     )
     job["_ats_score"] = scores["ats_score"]
     job["_overall_score"] = scores["overall_score"]
-    job["_resume_file"] = output_path.name
+    job["_resume_filename"] = output_path.name
     return output_path.name
 
 
@@ -346,17 +344,19 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
     jd = job.get("description", "")
     title = job.get("title", "")
 
-    resume_name = resume_filename_for_job(job)
+    # Filename = role only (no company), e.g. PANKAJA_DevOps_Engineer.docx
+    resume_name = resume_filename_for_role(title)
     resume_path = app_dir / resume_name
     cover_path = app_dir / "cover_letter.txt"
     meta_path = app_dir / "meta.json"
 
-    # Remove old generic / previous resume files in this job folder
+    # Remove stale generic resume.docx / old role-named files to avoid clutter
     for old in app_dir.glob("*.docx"):
-        try:
-            old.unlink()
-        except OSError:
-            pass
+        if old.name != resume_name:
+            try:
+                old.unlink()
+            except OSError:
+                pass
 
     generate_tailored_docx(job, output_path=resume_path)
     cover = generate_cover_letter_snippet(job)
