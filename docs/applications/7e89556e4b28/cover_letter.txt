@@ -1,10 +1,10 @@
 Dear Hiring Manager,
 
-I am applying for the Engineering Manager - MLOps & Analytics role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.
+I am writing to apply for the Engineering Manager - MLOps & Analytics role at Canonical Ltd.. I am a DevSecOps and Cloud Engineer at Amdocs with hands-on ownership of Azure/AKS platforms, cloud security controls, and automation — including Kubernetes, Docker, Python, Linux.
 
-At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.
+Relevant outcomes from my work include reducing MTTR by 40% through AKS recovery automation, cutting vulnerability triage time by 50%, and eliminating up to 90% of manual reporting with Python tooling. I am Microsoft Certified: Azure Administrator Associate (AZ-104).
 
-I would welcome the chance to discuss how I can contribute to Canonical Ltd..
+I would welcome the opportunity to discuss how I can contribute to Canonical Ltd..
 
 Best regards,
 Pankaja Jagdish Kulkarni
