@@ -1,10 +1,10 @@
 Dear Hiring Manager,
 
-I am applying for the AWS DevOps Engineer role at Compliance Cart. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in AWS, DevOps.
+I am applying for the Site Reliability Engineer (SRE) role at 12Build. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in SRE.
 
 At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.
 
-I would welcome the chance to discuss how I can contribute to Compliance Cart.
+I would welcome the chance to discuss how I can contribute to 12Build.
 
 Best regards,
 Pankaja Jagdish Kulkarni
