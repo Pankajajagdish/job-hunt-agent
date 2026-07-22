@@ -49,26 +49,15 @@ def save_seen(seen: set[str]) -> None:
 
 
 def tailor_job(job: dict) -> dict:
-    """Generate tailored resume + cover letter; attach paths to job dict."""
+    """Copy base resume, update TECHNICAL SKILLS only for this JD."""
     app_dir = APPS_DIR / job["id"]
-    if (app_dir / "resume.docx").exists() and (app_dir / "cover_letter.txt").exists():
-        cover = (app_dir / "cover_letter.txt").read_text(encoding="utf-8")
-        meta_file = app_dir / "meta.json"
-        summary = ""
-        if meta_file.exists():
-            summary = json.loads(meta_file.read_text(encoding="utf-8")).get("tailored_summary", "")
-        base = f"applications/{job['id']}"
-        job.update({
-            "resume_url": f"{base}/resume.docx",
-            "cover_letter_url": f"{base}/cover_letter.txt",
-            "cover_letter": cover,
-            "tailored_summary": summary,
-            "application_ready": True,
-        })
-        return job
+    # Always regenerate so skills-only logic stays current
     package = generate_application_package(job, app_dir)
     job.update(package)
-    print(f"  Tailored: {job['title']} @ {job['company']}")
+    print(
+        f"  Skills-only resume: {job['title']} @ {job['company']} "
+        f"(ATS {job.get('ats_score')}/10, overall {job.get('overall_score')}/10)"
+    )
     return job
 
 
@@ -126,13 +115,16 @@ def create_issue(job: dict) -> bool:
 | | |
 |---|---|
 | **Match score** | {job['match_score']}% |
+| **ATS / Overall** | {job.get('ats_score', '—')}/10 · {job.get('overall_score', '—')}/10 |
 | **Posted** | {job.get('posted_at', '—')} |
 | **Location** | {job.get('location', '—')} |
 | **Source** | {job.get('source', '—')} |
 | **Matched skills** | {skills} |
 
-### Tailored summary
+### Resume note
 {job.get('tailored_summary', '—')}
+
+> Your full resume is kept as-is. Only **TECHNICAL SKILLS** was updated for this JD (nothing removed).
 
 ---
 

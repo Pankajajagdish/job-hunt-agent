@@ -1,45 +1,88 @@
-"""Tailor resume content and generate DOCX + cover letter per job description.
+"""Resume tailor: copy your real resume, ONLY update TECHNICAL SKILLS for the JD.
+
+Rules (strict):
+- Keep every existing word in the resume — never delete or rewrite summary/experience/etc.
+- Only modify the TECHNICAL SKILLS section: reorder JD-matched skills first + append missing JD skills.
+- Target ATS / overall score >= 9.5 / 10.
 """
 
+from __future__ import annotations
+
 import json
-import os
 import re
-from pathlib import Path
+import shutil
 from datetime import datetime, timezone
+from pathlib import Path
+
 from docx import Document
-from docx.shared import Pt
 from services.profile import load_profile
 
+ROOT = Path(__file__).resolve().parent.parent.parent
 OUTPUT_DIR = Path(__file__).parent.parent / "output"
+BASE_RESUME_CANDIDATES = [
+    Path(__file__).parent.parent / "shared" / "base_resume.docx",
+    ROOT / "shared" / "base_resume.docx",
+    ROOT / "PANKAJA_DevopsEngineer_Resume.docx",
+]
 
-# Resolve BASE_RESUME_DOCX path relative to repo root
-def _get_base_resume_path() -> Path:
-    """Resolve BASE_RESUME_DOCX from env, relative to repo root."""
-    resume_file = os.getenv("BASE_RESUME_DOCX", "PANKAJA_DevopsEngineer_Resume.docx")
-    
-    # If it's an absolute path, use it as-is
-    if Path(resume_file).is_absolute():
-        return Path(resume_file)
-    
-    # Otherwise, resolve relative to repo root (one level up from 'backend')
-    repo_root = Path(__file__).resolve().parent.parent.parent
-    return repo_root / resume_file
+SKILLS_STOP_HEADINGS = {
+    "PROFESSIONAL EXPERIENCE",
+    "EXPERIENCE",
+    "WORK EXPERIENCE",
+    "TOOLS AND AUTOMATION BUILT",
+    "PROJECTS",
+    "CERTIFICATIONS",
+    "EDUCATION",
+    "PROFESSIONAL SUMMARY",
+}
 
-BASE_RESUME_PATH = _get_base_resume_path()
+CATEGORY_HINTS = {
+    "cloud": 0, "azure": 0, "aws": 0, "gcp": 0, "aks": 0, "terraform": 0,
+    "arm": 0, "iac": 0, "vnet": 0, "networking": 0,
+    "devops": 1, "devsecops": 1, "security": 1, "iam": 1, "rbac": 1,
+    "entra": 1, "docker": 1, "helm": 1, "ci/cd": 1, "cicd": 1,
+    "policy": 1, "defender": 1, "pam": 1,
+    "kubernetes": 2, "k8s": 2, "prometheus": 2, "grafana": 2, "sre": 2,
+    "python": 2, "linux": 2, "monitor": 2, "observability": 2, "shell": 2,
+}
 
 
-def extract_jd_keywords(jd: str, limit: int = 15) -> list[str]:
+def _base_resume_path() -> Path:
+    for p in BASE_RESUME_CANDIDATES:
+        if p.exists():
+            return p
+    raise FileNotFoundError(
+        "Base resume not found. Place your DOCX at shared/base_resume.docx"
+    )
+
+
+def extract_jd_keywords(jd: str, limit: int = 25) -> list[str]:
     profile = load_profile()
-    jd_lower = jd.lower()
-    hits = [s for s in profile["skills"] if s.lower() in jd_lower]
+    jd_lower = (jd or "").lower()
+    hits: list[str] = []
+
+    for s in profile.get("skills", []):
+        if s.lower() in jd_lower and s not in hits:
+            hits.append(s)
+
     extras = [
-        "terraform", "kubernetes", "azure", "devsecops", "ci/cd", "sre",
-        "prometheus", "grafana", "defender", "compliance", "automation",
-        "python", "docker", "helm", "monitoring", "security",
+        ("kubernetes", "Kubernetes"), ("k8s", "Kubernetes"), ("aks", "AKS"),
+        ("terraform", "Terraform"), ("azure", "Microsoft Azure"), ("aws", "AWS"),
+        ("devops", "DevOps"), ("devsecops", "DevSecOps"), ("ci/cd", "CI/CD"),
+        ("cicd", "CI/CD"), ("docker", "Docker"), ("helm", "Helm"), ("iam", "IAM"),
+        ("rbac", "RBAC"), ("entra", "Entra ID"), ("prometheus", "Prometheus"),
+        ("grafana", "Grafana"), ("sre", "SRE"), ("python", "Python"),
+        ("linux", "Linux"), ("ansible", "Ansible"), ("jenkins", "Jenkins"),
+        ("argocd", "ArgoCD"), ("istio", "Istio"), ("openid", "OIDC"),
+        ("oauth", "OAuth"), ("vault", "Key Vault"), ("key vault", "Key Vault"),
+        ("defender", "Defender for Cloud"), ("azure policy", "Azure Policy"),
+        ("github actions", "GitHub Actions"), ("azure devops", "Azure DevOps"),
+        ("gitlab", "GitLab CI/CD"), ("cloud security", "Cloud Security"),
+        ("platform engineer", "Platform Engineering"),
     ]
-    for e in extras:
-        if e in jd_lower and e.title() not in hits and e.upper() not in hits:
-            hits.append(e.title() if e != "ci/cd" else "CI/CD")
+    for needle, label in extras:
+        if needle in jd_lower and label not in hits:
+            hits.append(label)
     return hits[:limit]
 
 
@@ -48,356 +91,239 @@ def _doc_text(doc: Document) -> str:
 
 
 def compute_ats_score(text: str, jd_keywords: list[str]) -> float:
-    """Simple ATS-like scorer (0..10). Measures presence of JD keywords in resume text.
-
-    This is intentionally conservative and transparent: it looks for exact keyword text
-    (case-insensitive) and returns matched / total * 10.
-    """
     if not jd_keywords:
         return 10.0
     t = text.lower()
-    total = len(jd_keywords)
-    matched = 0
-    for k in jd_keywords:
-        if not k:
+    matched = sum(1 for k in jd_keywords if k and k.lower() in t)
+    return round((matched / len(jd_keywords)) * 10.0, 2)
+
+
+def compute_overall_score(text: str, jd_keywords: list[str], base_text: str) -> float:
+    ats = compute_ats_score(text, jd_keywords)
+    base_tokens = set(re.findall(r"[a-zA-Z0-9+#/.-]{3,}", base_text.lower()))
+    new_tokens = set(re.findall(r"[a-zA-Z0-9+#/.-]{3,}", text.lower()))
+    if not base_tokens:
+        integrity = 10.0
+    else:
+        preserved = len(base_tokens & new_tokens) / len(base_tokens)
+        integrity = round(preserved * 10.0, 2)
+    return round(0.6 * ats + 0.4 * integrity, 2)
+
+
+def _is_heading(text: str) -> bool:
+    t = (text or "").strip().upper()
+    if not t:
+        return False
+    if t in SKILLS_STOP_HEADINGS or t == "TECHNICAL SKILLS":
+        return True
+    if t.isupper() and 3 <= len(t) <= 40 and ":" not in t:
+        return True
+    return False
+
+
+def _find_skills_paragraphs(doc: Document) -> list[int]:
+    start = None
+    for i, p in enumerate(doc.paragraphs):
+        if (p.text or "").strip().upper() == "TECHNICAL SKILLS":
+            start = i + 1
+            break
+    if start is None:
+        return []
+    indices = []
+    for i in range(start, len(doc.paragraphs)):
+        t = (doc.paragraphs[i].text or "").strip()
+        if not t:
             continue
-        if k.lower() in t:
-            matched += 1
-    return round((matched / total) * 10.0, 2)
+        if _is_heading(t) and t.upper() != "TECHNICAL SKILLS":
+            break
+        indices.append(i)
+    return indices
 
 
-def humanize_text(s: str) -> str:
-    """Apply light, deterministic rewrites so text reads like a human-written resume/cover letter.
+def _split_skill_items(line: str) -> tuple[str, list[str]]:
+    if ":" in line:
+        label, rest = line.split(":", 1)
+        return label.strip() + ": ", [x.strip() for x in rest.split(",") if x.strip()]
+    return "", [x.strip() for x in line.split(",") if x.strip()]
 
-    Rules are conservative (no invented facts):
-    - Replace corporate-ese with concise phrases
-    - Use contractions where appropriate
-    - Shorten very long sentences
-    - Remove or replace filler phrases
-    """
-    if not s:
-        return s
 
-    # Common phrase replacements (case-insensitive)
-    replacements = [
-        (r"I am writing to apply for", "I'm excited to apply for"),
-        (r"I am writing to apply", "I'm excited to apply"),
-        (r"I would welcome the opportunity to bring this experience to", "I'd welcome a chance to discuss how I can help"),
-        (r"demonstrating the automation-first mindset( this role requires)?", "showing measurable automation and security improvements"),
-        (r"Your job description emphasizes requirements that align closely with my background\s*[-—]*\s*particularly", "Your job emphasizes requirements that match my background, especially"),
-        (r"Thank you for your consideration\. I look forward to discussing how I can contribute to your team\.", "Thanks for your time — I look forward to speaking."),
-        (r"Thank you for your consideration\. I look forward to discussing", "Thanks for your time — I look forward to speaking about"),
-        (r"I am AZ-104 certified", "I'm AZ-104 certified"),
-        (r"I am", "I'm"),
-    ]
+def _already_covered(skill: str, existing: list[str]) -> bool:
+    s = skill.lower()
+    for e in existing:
+        el = e.lower()
+        if s == el or s in el or el in s:
+            return True
+    return False
 
-    out = s
-    for pat, repl in replacements:
-        out = re.sub(pat, repl, out, flags=re.I)
 
-    # Remove duplicate whitespace
-    out = re.sub(r"[ \t]+", " ", out)
+def _category_for(skill: str, n_lines: int) -> int:
+    sl = skill.lower()
+    for hint, idx in CATEGORY_HINTS.items():
+        if hint in sl:
+            return min(idx, n_lines - 1)
+    return min(1, n_lines - 1)
 
-    # Shorten very long sentences by splitting on the first comma if > 140 chars
-    sentences = re.split(r'(?<=[.!?])\s+', out)
-    for i, sent in enumerate(sentences):
-        if len(sent) > 140 and "," in sent:
-            parts = sent.split(",", 1)
-            sentences[i] = parts[0].strip() + ". " + parts[1].strip()
 
-    out = " ".join(s.strip() for s in sentences if s and s.strip())
+def _reorder_and_append(items: list[str], jd_keywords: list[str]) -> list[str]:
+    jd_lower = [k.lower() for k in jd_keywords]
 
-    # Final tidying: avoid repeated buzzphrases
-    out = re.sub(r"(automation[ -]first|automation-first)\s+mindset", "automation", out, flags=re.I)
+    def rank(item: str) -> tuple[int, int]:
+        il = item.lower()
+        for i, k in enumerate(jd_lower):
+            if k in il or il in k:
+                return (0, i)
+        return (1, 0)
 
-    return out.strip()
+    indexed = list(enumerate(items))
+    indexed.sort(key=lambda pair: (rank(pair[1])[0], rank(pair[1])[1], pair[0]))
+    return [it for _, it in indexed]
+
+
+def update_skills_only(doc: Document, jd: str) -> list[str]:
+    jd_keywords = extract_jd_keywords(jd, 25)
+    idxs = _find_skills_paragraphs(doc)
+    if not idxs:
+        raise RuntimeError("TECHNICAL SKILLS section not found in base resume")
+
+    lines: list[tuple[str, list[str]]] = []
+    for i in idxs:
+        prefix, items = _split_skill_items(doc.paragraphs[i].text or "")
+        lines.append((prefix, items))
+
+    all_items = [it for _, items in lines for it in items]
+    appended: list[str] = []
+    for kw in jd_keywords:
+        if _already_covered(kw, all_items):
+            continue
+        cat = _category_for(kw, len(lines))
+        lines[cat][1].append(kw)
+        all_items.append(kw)
+        appended.append(kw)
+
+    for li, (prefix, items) in enumerate(lines):
+        lines[li] = (prefix, _reorder_and_append(items, jd_keywords))
+
+    for para_i, (prefix, items) in zip(idxs, lines):
+        new_text = prefix + ", ".join(items)
+        para = doc.paragraphs[para_i]
+        if para.runs:
+            para.runs[0].text = new_text
+            for run in para.runs[1:]:
+                run.text = ""
+        else:
+            para.add_run(new_text)
+    return appended
+
+
+def _boost_to_threshold(doc: Document, jd: str, base_text: str, min_score: float = 9.5) -> dict:
+    keywords = extract_jd_keywords(jd, 25)
+    text = _doc_text(doc)
+    ats = compute_ats_score(text, keywords)
+    overall = compute_overall_score(text, keywords, base_text)
+    if ats >= min_score and overall >= min_score:
+        return {"ats_score": ats, "overall_score": overall, "appended_extra": []}
+
+    idxs = _find_skills_paragraphs(doc)
+    if not idxs:
+        return {"ats_score": ats, "overall_score": overall, "appended_extra": []}
+
+    target_i = idxs[-1]
+    prefix, items = _split_skill_items(doc.paragraphs[target_i].text or "")
+    extra: list[str] = []
+
+    for kw in keywords:
+        text = _doc_text(doc)
+        ats = compute_ats_score(text, keywords)
+        overall = compute_overall_score(text, keywords, base_text)
+        if ats >= min_score and overall >= min_score:
+            break
+        if kw.lower() in text.lower() or _already_covered(kw, items):
+            continue
+        items.append(kw)
+        extra.append(kw)
+        new_text = prefix + ", ".join(items)
+        para = doc.paragraphs[target_i]
+        if para.runs:
+            para.runs[0].text = new_text
+            for run in para.runs[1:]:
+                run.text = ""
+        else:
+            para.add_run(new_text)
+
+    text = _doc_text(doc)
+    return {
+        "ats_score": compute_ats_score(text, keywords),
+        "overall_score": compute_overall_score(text, keywords, base_text),
+        "appended_extra": extra,
+    }
+
+
+def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
+    jd = job.get("description", "") or ""
+    title = job.get("title", "Cloud Engineer")
+    company = job.get("company", "")
+
+    base_path = _base_resume_path()
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    if output_path is None:
+        safe_name = re.sub(r"[^\w\-]", "_", f"{company}_{title}")[:40]
+        ts = datetime.now().strftime("%Y%m%d_%H%M")
+        output_path = OUTPUT_DIR / f"resume_{safe_name}_{ts}.docx"
+    else:
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    shutil.copy2(base_path, output_path)
+    doc = Document(str(output_path))
+    base_text = _doc_text(Document(str(base_path)))
+
+    update_skills_only(doc, jd)
+    scores = _boost_to_threshold(doc, jd, base_text, min_score=9.5)
+    doc.save(str(output_path))
+
+    print(
+        f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
+        f"overall {scores['overall_score']}/10"
+    )
+    job["_ats_score"] = scores["ats_score"]
+    job["_overall_score"] = scores["overall_score"]
+    return output_path.name
 
 
 def tailor_summary(jd: str, job_title: str) -> str:
-    profile = load_profile()
-    keywords = extract_jd_keywords(jd, 8)
-    top = ", ".join(keywords[:6]) if keywords else "Azure, AKS, CI/CD, DevSecOps"
-    # Human-friendly summary template: concise, metric-first where available
-    summary = f"{job_title if job_title else profile['title'].split('|')[0].strip()} with {profile['years_experience']} years' experience on Azure and AKS. Skilled in {top}. Built automation that reduces ops work by 40-90% and MTTR by 40%."
-    summary = humanize_text(summary)
-    return summary
-
-
-def tailor_bullets(jd: str, max_bullets: int = 6) -> list[str]:
-    profile = load_profile()
-    bullets = profile["experience_highlights"].copy()
-
-    def relevance(b: str) -> int:
-        return sum(1 for k in extract_jd_keywords(jd, 20) if k.lower() in b.lower())
-
-    bullets.sort(key=relevance, reverse=True)
-    keywords = extract_jd_keywords(jd, 5)
-    if keywords:
-        opener = (
-            f"Strong fit for this role with hands-on experience in {', '.join(keywords[:4])} in production Azure environments."
-        )
-        if opener not in bullets:
-            bullets.insert(0, opener)
-
-    # Humanize bullets: keep factual and concise
-    bullets = [humanize_text(b) for b in bullets[:max_bullets]]
-    return bullets
-
-
-def _jd_hook(jd: str, keywords: list[str]) -> str:
-    """One sentence referencing what the JD asks for."""
-    jd_lower = jd.lower()
-    hooks = []
-    if "devsecops" in jd_lower or "security" in jd_lower:
-        hooks.append("integrating security across the SDLC with Azure Policy and Defender for Cloud")
-    if "kubernetes" in jd_lower or "aks" in jd_lower:
-        hooks.append("operating production AKS clusters with automated recovery and observability")
-    if "terraform" in jd_lower or "iac" in jd_lower:
-        hooks.append("Infrastructure as Code using Terraform and ARM templates")
-    if "ci/cd" in jd_lower or "pipeline" in jd_lower:
-        hooks.append("building CI/CD pipelines in Azure DevOps and GitHub Actions")
-    if "sre" in jd_lower or "reliability" in jd_lower:
-        hooks.append("SRE practices including monitoring, alerting, and MTTR reduction")
-    if hooks:
-        return hooks[0]
-    return f"delivering solutions with {', '.join(keywords[:3])}"
+    kws = extract_jd_keywords(jd, 6)
+    top = ", ".join(kws[:5]) if kws else "Azure, Kubernetes, DevOps"
+    return (
+        f"Base resume kept as-is. TECHNICAL SKILLS updated for: {job_title}. "
+        f"Emphasized: {top}."
+    )
 
 
 def generate_cover_letter_snippet(job: dict) -> str:
     profile = load_profile()
     jd = job.get("description", "")
-    keywords = extract_jd_keywords(jd, 8)
+    keywords = extract_jd_keywords(jd, 6)
     title = job.get("title", "the open position")
     company = job.get("company", "your organization")
-    hook = _jd_hook(jd, keywords)
-    top_skills = ", ".join(keywords[:5]) if keywords else "Azure, AKS, DevSecOps, and CI/CD"
+    top = ", ".join(keywords[:4]) if keywords else "Azure, Kubernetes, DevOps, IAM"
 
-    cover = (
-        f"I'm excited to apply for the {title} role at {company}. I have {profile['years_experience']} years' experience in cloud engineering and DevSecOps, and have worked with {top_skills} in production environments.\n\n"
-        f"Your job emphasizes requirements that match my background, especially {hook}. At Amdocs, I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%.\n\n"
-        f"I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help {company}.\n\n"
-        f"Thanks for your time — I look forward to speaking.\n\n"
+    return (
+        f"Dear Hiring Manager,\n\n"
+        f"I am applying for the {title} role at {company}. "
+        f"I have {profile['years_experience']} years of production experience in DevSecOps and cloud engineering, "
+        f"with hands-on work in {top}.\n\n"
+        f"At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, "
+        f"and automate CI/CD and observability. I am AZ-104 certified.\n\n"
+        f"I would welcome the chance to discuss how I can contribute to {company}.\n\n"
         f"Best regards,\n"
         f"{profile['name']}\n"
         f"{profile['phone']} | {profile['email']}\n"
         f"{profile['linkedin']}"
     )
 
-    cover = humanize_text(cover)
-    return cover
-
-
-def _replace_sections_from_base(base_doc: Document, jd: str, title: str, company: str) -> Document:
-    """Create a new Document preserving base_doc layout but replacing specific sections.
-
-    The function looks for well-known headings and replaces the content under them with tailored
-    content while copying other paragraphs verbatim. Headings targeted:
-      - PROFESSIONAL SUMMARY
-      - RELEVANT EXPERIENCE HIGHLIGHTS
-      - KEY SKILLS FOR THIS ROLE
-      - CERTIFICATIONS
-    """
-    headings = [
-        "PROFESSIONAL SUMMARY",
-        "RELEVANT EXPERIENCE HIGHLIGHTS",
-        "KEY SKILLS FOR THIS ROLE",
-        "CERTIFICATIONS",
-    ]
-
-    def is_heading(text: str) -> bool:
-        if not text:
-            return False
-        t = text.strip().upper()
-        return any(h == t for h in headings)
-
-    new = Document()
-    # Copy normal style basic setup
-    style = new.styles["Normal"]
-    style.font.name = "Calibri"
-    style.font.size = Pt(11)
-
-    skip_until_next_heading = False
-    current_heading = None
-    for p in base_doc.paragraphs:
-        text = p.text or ""
-        if is_heading(text):
-            # write the heading and the tailored content
-            current_heading = text.strip().upper()
-            new.add_paragraph(text)
-            # insert tailored content for this heading
-            if current_heading == "PROFESSIONAL SUMMARY":
-                new.add_paragraph(humanize_text(tailor_summary(jd, title)))
-            elif current_heading == "RELEVANT EXPERIENCE HIGHLIGHTS":
-                for b in tailor_bullets(jd):
-                    new.add_paragraph(b, style="List Bullet")
-            elif current_heading == "KEY SKILLS FOR THIS ROLE":
-                # start with extracted keywords; augmentation may follow
-                kw = extract_jd_keywords(jd, 20)
-                new.add_paragraph(", ".join(kw))
-            elif current_heading == "CERTIFICATIONS":
-                profile = load_profile()
-                for c in profile["certifications"]:
-                    new.add_paragraph(c, style="List Bullet")
-            # set flag to skip original content that followed this heading
-            skip_until_next_heading = True
-            continue
-        if skip_until_next_heading:
-            # If we hit another heading-like paragraph, stop skipping
-            if is_heading(text):
-                skip_until_next_heading = False
-                # this paragraph will be handled in next loop
-                continue
-            # otherwise skip original paragraph content
-            # continue skipping until next known heading
-            continue
-        # Not a heading and not skipping: copy paragraph as-is
-        new.add_paragraph(text)
-
-    # Preserve sections' ordering; the new document now has tailored sections
-    return new
-
-
-def _ensure_ats_threshold(doc: Document, jd: str, min_score: float = 9.5) -> Document:
-    """Ensure ATS score for jd_keywords in doc is at least min_score (out of 10).
-
-    If score is low, augment the KEY SKILLS paragraph by appending missing keywords until
-    the threshold is met or no keywords remain.
-    """
-    keywords = extract_jd_keywords(jd, 20)
-    # compute current score
-    text = _doc_text(doc)
-    score = compute_ats_score(text, keywords)
-    # If score already good and >= base resume score, return
-    if score >= min_score:
-        return doc
-
-    # Find KEY SKILLS FOR THIS ROLE paragraph index in doc
-    # We will append missing keywords to the first paragraph after that heading
-    p_index = None
-    for i, p in enumerate(doc.paragraphs):
-        if (p.text or "").strip().upper() == "KEY SKILLS FOR THIS ROLE":
-            p_index = i
-            break
-    if p_index is None or p_index + 1 >= len(doc.paragraphs):
-        # Can't find a skills paragraph to augment; append at the end
-        target_para = doc.add_paragraph()
-    else:
-        target_para = doc.paragraphs[p_index + 1]
-
-    existing = (target_para.text or "").strip()
-    existing_lower = existing.lower()
-    missing = [k for k in keywords if k.lower() not in existing_lower]
-
-    for k in missing:
-        if k.lower() in existing_lower:
-            continue
-        if existing:
-            existing += ", " + k
-        else:
-            existing = k
-        # write back
-        target_para.text = existing
-        # recompute score
-        score = compute_ats_score(_doc_text(doc), keywords)
-        if score >= min_score:
-            break
-
-    return doc
-
-
-def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
-    profile = load_profile()
-    jd = job.get("description", "")
-    title = job.get("title", "Cloud Engineer")
-    company = job.get("company", "")
-
-    # If a base DOCX exists, use it and replace targeted sections to preserve formatting
-    if BASE_RESUME_PATH.exists():
-        try:
-            print(f"Loading base resume from: {BASE_RESUME_PATH}")
-            base_doc = Document(str(BASE_RESUME_PATH))
-            base_text = _doc_text(base_doc)
-            base_keywords = extract_jd_keywords(jd, 20)
-            base_score = compute_ats_score(base_text, base_keywords)
-
-            tailored_doc = _replace_sections_from_base(base_doc, jd, title, company)
-            # Ensure tailored ATS score >= 9.5 and not below base_score
-            min_required = max(9.5, base_score)
-            tailored_doc = _ensure_ats_threshold(tailored_doc, jd, min_required)
-
-            if output_path:
-                output_path.parent.mkdir(parents=True, exist_ok=True)
-                tailored_doc.save(str(output_path))
-                return output_path.name
-
-            safe_name = re.sub(r"[^\w\-]", "_", f"{company}_{title}")[:40]
-            ts = datetime.now().strftime("%Y%m%d_%H%M")
-            filename = f"resume_{safe_name}_{ts}.docx"
-            path = OUTPUT_DIR / filename
-            OUTPUT_DIR.mkdir(exist_ok=True)
-            tailored_doc.save(str(path))
-            return filename
-        except Exception as e:
-            print(f"Base DOCX tailoring failed: {e}")
-            print(f"Attempted path: {BASE_RESUME_PATH}")
-            # fallback to generated doc below
-    else:
-        print(f"Base resume not found at: {BASE_RESUME_PATH}")
-
-    # Fallback behavior: generate a new doc (existing behavior)
-    doc = Document()
-    style = doc.styles["Normal"]
-    style.font.name = "Calibri"
-    style.font.size = Pt(11)
-
-    name = doc.add_paragraph()
-    nr = name.add_run(profile["name"])
-    nr.bold = True
-    nr.font.size = Pt(16)
-
-    headline = doc.add_paragraph()
-    hr = headline.add_run(f"Tailored for: {title} at {company}")
-    hr.bold = True
-    hr.font.size = Pt(11)
-
-    doc.add_paragraph(
-        f"{profile['location']} | {profile['phone']} | {profile['email']}\n"
-        f"LinkedIn: {profile['linkedin']} | GitHub: {profile['github']}"
-    )
-
-    doc.add_paragraph("PROFESSIONAL SUMMARY").runs[0].bold = True
-    doc.add_paragraph(humanize_text(tailor_summary(jd, title)))
-
-    doc.add_paragraph("RELEVANT EXPERIENCE HIGHLIGHTS").runs[0].bold = True
-    for b in tailor_bullets(jd):
-        doc.add_paragraph(b, style="List Bullet")
-
-    doc.add_paragraph("KEY SKILLS FOR THIS ROLE").runs[0].bold = True
-    doc.add_paragraph(", ".join(extract_jd_keywords(jd, 20)))
-
-    doc.add_paragraph("CERTIFICATIONS").runs[0].bold = True
-    for c in profile["certifications"]:
-        doc.add_paragraph(c, style="List Bullet")
-
-    # Ensure ATS >= 9.5
-    doc = _ensure_ats_threshold(doc, jd, 9.5)
-
-    if output_path:
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        doc.save(str(output_path))
-        return output_path.name
-
-    safe_name = re.sub(r"[^\w\-]", "_", f"{company}_{title}")[:40]
-    ts = datetime.now().strftime("%Y%m%d_%H%M")
-    filename = f"resume_{safe_name}_{ts}.docx"
-    path = OUTPUT_DIR / filename
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    doc.save(str(path))
-    return filename
-
 
 def generate_application_package(job: dict, app_dir: Path) -> dict:
-    """Generate tailored resume DOCX + cover letter for one job opening."""
     app_dir.mkdir(parents=True, exist_ok=True)
     jd = job.get("description", "")
     title = job.get("title", "")
@@ -410,25 +336,29 @@ def generate_application_package(job: dict, app_dir: Path) -> dict:
     cover = generate_cover_letter_snippet(job)
     cover_path.write_text(cover, encoding="utf-8")
 
-    summary = tailor_summary(jd, title)
-    job_id = job["id"]
+    note = tailor_summary(jd, title)
     meta = {
-        "job_id": job_id,
+        "job_id": job["id"],
         "title": title,
         "company": job.get("company", ""),
         "url": job.get("url", ""),
         "match_score": job.get("match_score", 0),
         "posted_at": job.get("posted_at", ""),
-        "tailored_summary": summary,
+        "tailored_summary": note,
+        "ats_score": job.get("_ats_score"),
+        "overall_score": job.get("_overall_score"),
+        "tailor_mode": "skills_only_keep_base_resume",
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
     meta_path.write_text(json.dumps(meta, indent=2), encoding="utf-8")
 
-    base = f"applications/{job_id}"
+    base = f"applications/{job['id']}"
     return {
         "resume_url": f"{base}/resume.docx",
         "cover_letter_url": f"{base}/cover_letter.txt",
         "cover_letter": cover,
-        "tailored_summary": summary,
+        "tailored_summary": note,
+        "ats_score": job.get("_ats_score"),
+        "overall_score": job.get("_overall_score"),
         "application_ready": True,
     }
