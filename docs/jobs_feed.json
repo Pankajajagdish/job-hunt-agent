@@ -1,9 +1,14 @@
 {
+<<<<<<< Updated upstream
   "updated_at": "2026-07-22T14:05:16.375733+00:00",
+=======
+  "updated_at": "2026-07-22T09:56:19.324114+00:00",
+>>>>>>> Stashed changes
   "profile": "Pankaja Jagdish Kulkarni",
   "daily_goal": 50,
   "filter": "last_24_hours_india_or_remote",
   "location_policy": "India or Remote only",
+<<<<<<< Updated upstream
   "total": 45,
   "new_count": 2,
   "jobs": [
@@ -31,6 +36,69 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Azure Cloud Engineer (Terraform & DevOps). Emphasized: Terraform, Microsoft Azure, DevOps.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+  "total": 42,
+  "new_count": 12,
+  "jobs": [
+    {
+      "id": "02f7b5ebb612",
+      "title": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only",
+      "company": "YMinds.AI",
+      "location": "Remote \u00b7 India",
+      "description": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only at YMinds.AI. Location: Remote \u00b7 India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/devops-engineer-aws-azure-7%2Byears-immediate-joiners-only-at-yminds-ai-4443756742",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 56,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 1 roles, 3 domain terms in title",
+      "resume_url": "applications/02f7b5ebb612/resume.docx",
+      "cover_letter_url": "applications/02f7b5ebb612/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only role at YMinds.AI. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help YMinds.AI. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only with 2 years' experience on Azure and AKS. Skilled in AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "1dc294d24e66",
+      "title": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation",
+      "company": "G-Research",
+      "location": "Remote \u00b7 London Area, United Kingdom",
+      "description": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation at G-Research. Location: Remote \u00b7 London Area, United Kingdom. Source: LinkedIn (last 24h).",
+      "url": "https://uk.linkedin.com/jobs/view/iam-platform-engineer-%E2%80%93-identity-entitlements-authorisation-at-g-research-4443111392",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 56,
+      "matched_skills": [
+        "IAM"
+      ],
+      "match_reason": "1 skills, 1 roles, 3 domain terms in title",
+      "resume_url": "applications/1dc294d24e66/resume.docx",
+      "cover_letter_url": "applications/1dc294d24e66/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation role at G-Research. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with IAM in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with IAM. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help G-Research. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation with 2 years' experience on Azure and AKS. Skilled in IAM. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "9eca70bd33ac",
+      "title": "Cloud Security Specialist (Azure-AWS oriented)",
+      "company": "Obrela",
+      "location": "Remote \u00b7 Athens, Attiki, Greece",
+      "description": "Cloud Security Specialist (Azure-AWS oriented) at Obrela. Location: Remote \u00b7 Athens, Attiki, Greece. Source: LinkedIn (last 24h).",
+      "url": "https://gr.linkedin.com/jobs/view/cloud-security-specialist-azure-aws-oriented-at-obrela-4428916856",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 55,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 0 roles, 4 domain terms in title",
+      "resume_url": "applications/9eca70bd33ac/resume.docx",
+      "cover_letter_url": "applications/9eca70bd33ac/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Security Specialist (Azure-AWS oriented) role at Obrela. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Obrela. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Security Specialist (Azure-AWS oriented) with 2 years' experience on Azure and AKS. Skilled in AWS, Azure, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -38,7 +106,7 @@
       "title": "DevOps Softwareentwickler/in mit Karriereambitionen - jetzt mit uns voll durchstarten!",
       "company": "Auralis Group",
       "location": "Markt Indersdorf",
-      "description": "Wir sind ein fast zwei Jahre altes IT Unternehmen, aktuell 50 MA, und suchen nun weiterhin Verst\u00e4rkung, um Cloud-Projekte bei unseren Kunden durchzuf\u00fchren. \n Aufgaben \n Du willst: \n \n Deine Arbeitszeiten selbst bestimmen? \n von zuhause aus arbeiten (remote)? \n den n\u00e4chsten Schritt in Deiner Karriere gehen und lernen, wie man Teams leitet und ein Unternehmen f\u00fchrt? \n einen Arbeitgeber, der Dich leistungs- und ergebnisorientiert bezahlt? \n \n Qualifikation \n Du: \n \n bist seit 4 Jahren in Vollzeit berufst\u00e4tig im Bereich Softwareentwicklung/DevOps und hast gro\u00dfe Teile Deiner Erfahrung in Cloud-Infrastrukturen und Deployment-Prozessen gesammelt? \n bringst Erfahrung in einem der gro\u00dfen Cloud-Dienstleister (z.B. AWS, Azure) mit? \n bist firm in IaC (Terraform, Pulumi), Monitoring (z.B. ELK, Grafana) und CI/CD? \n hast einen Fokus auf eine oder mehrere Programmiersprachen wie z.B. Java, Python, C++, C, Rust oder Go und bist dort ein Experte? \n bist nicht kontaktscheu und kommunikationsfreudig? \n bist gesegnet mit einem Growth Mindset und willst im Leben immer weiterkommen? \n bist \u00fcberzeugt davon, dass Dein Potenzial noch lange nicht ausgesch\u00f6pft ist? \n \n Benefits \n \n Fixum: 65.000 \u20ac - 70.000 \u20ac \n Zielgehalt: 75.000 \u20ac - 80.000 \u20ac (Umsatzbeteiligung an eigenem Umsatz, quartalsweise Aussch\u00fcttung) \n 30 Tage Urlaub \n IT Equipment deiner Wahl (Mac, Linux, Windows) \n Gelebter interner Expertenaustausch und Support \n Flexible Arbeitszeit und 95% - 100% Homeoffice (abh\u00e4ngig vom Kunden) \n Remote-Arbeit im Ausland (GF war Co-Founder von rhome) \n \n Melde Dich bei uns! \n Wir sind eine Gruppe von jungen und hungrigen Entwicklern, die gemeinsam die Firma betreiben, in der wir immer arbeiten wollten, die aber nicht existent war! \n Wir: \n \n unterst\u00fctzen unsere Kunden in Software Development Projekten \n bauen Startups und gr\u00fcnden sie aus \n arbeiten an und mit Top Notch Technologien (AI, Quantum Computing) \n sind ein geiles Team \n \n LET\u2019S ROCK! \n Find  Jobs in Germany  on Arbeitnow",
+      "description": "Wir sind ein fast zwei Jahre altes IT Unternehmen, aktuell 50 MA, und suchen nun weiterhin Verst\u00e4rkung, um Cloud-Projekte bei unseren Kunden durchzuf\u00fchren. \n Aufgaben \n Du willst: \n \n Deine Arbeitszeiten selbst bestimmen? \n von zuhause aus arbeiten (remote)? \n den n\u00e4chsten Schritt in Deiner Karriere gehen und lernen, wie man Teams leitet und ein Unternehmen f\u00fchrt? \n einen Arbeitgeber, der Dich leistungs- und ergebnisorientiert bezahlt? \n \n Qualifikation \n Du: \n \n bist seit 4 Jahren in Vollzeit berufst\u00e4tig im Bereich Softwareentwicklung/DevOps und hast gro\u00dfe Teile Deiner Erfahrung in Cloud-Infrastrukturen und Deployment-Prozessen gesammelt? \n bringst Erfahrung in einem der gro\u00dfen Cloud-Dienstleister (z.B. AWS, Azure) mit? \n bist firm in IaC (Terraform, Pulumi), Monitoring (z.B. ELK, Grafana) und CI/CD? \n hast einen Fokus auf eine oder mehrere Programmiersprachen wie z.B. Java, Python, C++, C, Rust oder Go und bist dort ein Experte? \n bist nicht kontaktscheu und kommunikationsfreudig? \n bist gesegnet mit einem Growth Mindset und willst im Leben immer weiterkommen? \n bist \u00fcberzeugt davon, dass Dein Potenzial noch lange nicht ausgesch\u00f6pft ist? \n \n Benefits \n \n Fixum: 65.000 \u20ac - 70.000 \u20ac \n Zielgehalt: 75.000 \u20ac - 80.000 \u20ac (Umsatzbeteiligung an eigenem Umsatz, quartalsweise Aussch\u00fcttung) \n 30 Tage Urlaub \n IT Equipment deiner Wahl (Mac, Linux, Windows) \n Gelebter interner Expertenaustausch und Support \n Flexible Arbeitszeit und 95% - 100% Homeoffice (abh\u00e4ngig vom Kunden) \n Remote-Arbeit im Ausland (GF war Co-Founder von rhome) \n \n Melde Dich bei uns! \n Wir sind eine Gruppe von jungen und hungrigen Entwicklern, die gemeinsam die Firma betreiben, in der wir immer arbeiten wollten, die aber nicht existent war! \n Wir: \n \n unterst\u00fctzen unsere Kunden in Software Development Projekten \n bauen Startups und gr\u00fcnden sie aus \n arbeiten an und mit Top Notch Technologien (AI, Quantum Computing) \n sind ein geiles Team \n \n LET\u2019S ROCK! \n Find more  English Speaking Jobs in Germany  on Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/auralis-group/devops-softwareentwickler-in-mit-karriereambitionen-jetzt-mit-uns-voll-durchstarten-markt-indersdorf-165014",
       "source": "arbeitnow",
       "posted_at": "2026-07-22T07:00:38+00:00",
@@ -52,16 +120,18 @@
         "AWS"
       ],
       "match_reason": "6 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_DevOps_Softwareentwickler_in_mit_Karriereambitionen.docx",
       "resume_url": "applications/5025fe92f558/PANKAJA_DevOps_Softwareentwickler_in_mit_Karriereambitionen.docx",
       "resume_file": "PANKAJA_DevOps_Softwareentwickler_in_mit_Karriereambitionen.docx",
+=======
+      "resume_url": "applications/5025fe92f558/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/5025fe92f558/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the DevOps Softwareentwickler/in mit Karriereambitionen - jetzt mit uns voll durchstarten! role at Auralis Group. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Terraform, Grafana, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Auralis Group.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: DevOps Softwareentwickler/in mit Karriereambitionen - jetzt mit uns voll durchstarten!. Emphasized: Terraform, Grafana, Python, Linux, CI/CD.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the DevOps Softwareentwickler/in mit Karriereambitionen - jetzt mit uns voll durchstarten! role at Auralis Group. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Terraform, Grafana, Python, Linux, CI/CD in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Auralis Group. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevOps Softwareentwickler/in mit Karriereambitionen - jetzt mit uns voll durchstarten! with 2 years' experience on Azure and AKS. Skilled in Terraform, Grafana, Python, Linux, CI/CD, AWS. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -82,16 +152,18 @@
         "NIST"
       ],
       "match_reason": "5 skills, 1 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Engineering_Manager_I_Applications.docx",
       "resume_url": "applications/c10187f0b226/PANKAJA_Engineering_Manager_I_Applications.docx",
       "resume_file": "PANKAJA_Engineering_Manager_I_Applications.docx",
+=======
+      "resume_url": "applications/c10187f0b226/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/c10187f0b226/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Engineering Manager I, Applications role at StackAdapt. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Terraform, Linux, AWS.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to StackAdapt.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager I, Applications. Emphasized: Kubernetes, Terraform, Linux, AWS, NIST.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Engineering Manager I, Applications role at StackAdapt. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Terraform, Linux, AWS, NIST in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help StackAdapt. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Engineering Manager I, Applications with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Terraform, Linux, AWS, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -111,30 +183,33 @@
         "NIST"
       ],
       "match_reason": "4 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Engineering_Manager.docx",
       "resume_url": "applications/167b69e361dd/PANKAJA_Cloud_Engineering_Manager.docx",
       "resume_file": "PANKAJA_Cloud_Engineering_Manager.docx",
+=======
+      "resume_url": "applications/167b69e361dd/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/167b69e361dd/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Engineering Manager role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, NIST.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Engineering Manager. Emphasized: Kubernetes, Python, Linux, NIST.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Engineering Manager role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, NIST in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Engineering Manager with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
-      "id": "5597ad4bbded",
-      "title": "Senior Azure Cloud Platform Engineer",
-      "company": "Syneos Health",
-      "location": "Remote \u00b7 Serilingampalli, Telangana, India",
-      "description": "Senior Azure Cloud Platform Engineer at Syneos Health. Location: Remote \u00b7 Serilingampalli, Telangana, India. Source: LinkedIn (last 24h).",
-      "url": "https://in.linkedin.com/jobs/view/senior-azure-cloud-platform-engineer-at-syneos-health-4413440034",
+      "id": "bbabf93773ae",
+      "title": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai)",
+      "company": "Husky Technologies",
+      "location": "Remote \u00b7 Chennai, Tamil Nadu, India",
+      "description": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) at Husky Technologies. Location: Remote \u00b7 Chennai, Tamil Nadu, India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/platform-engineer-azure-iac-devops-husky-guindy-chennai-at-husky-technologies-4442964616",
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 52,
       "matched_skills": [],
       "match_reason": "0 skills, 1 roles, 3 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_Azure_Cloud_Platform_Engineer.docx",
@@ -145,6 +220,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Senior Azure Cloud Platform Engineer. Emphasized: Microsoft Azure, Platform Engineering.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/bbabf93773ae/resume.docx",
+      "cover_letter_url": "applications/bbabf93773ae/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) role at Husky Technologies. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Azure in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Husky Technologies. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) with 2 years' experience on Azure and AKS. Skilled in Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -187,16 +268,18 @@
         "AWS"
       ],
       "match_reason": "3 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Platform_Engineer_mit_Karriereambitionen.docx",
       "resume_url": "applications/47b6a8661076/PANKAJA_Platform_Engineer_mit_Karriereambitionen.docx",
       "resume_file": "PANKAJA_Platform_Engineer_mit_Karriereambitionen.docx",
+=======
+      "resume_url": "applications/47b6a8661076/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/47b6a8661076/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Platform Engineer (m/w/d) mit Karriereambitionen! role at Auralis Group. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Python, Linux, AWS, Microsoft Azure.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Auralis Group.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Platform Engineer (m/w/d) mit Karriereambitionen!. Emphasized: Python, Linux, AWS, Microsoft Azure, DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Platform Engineer (m/w/d) mit Karriereambitionen! role at Auralis Group. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with Python, Linux, AWS. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Auralis Group. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Platform Engineer (m/w/d) mit Karriereambitionen! with 2 years' experience on Azure and AKS. Skilled in Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -216,16 +299,18 @@
         "DevSecOps"
       ],
       "match_reason": "4 skills, 1 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_Site_Reliability_Engineer.docx",
       "resume_url": "applications/867d6b2d4ff7/PANKAJA_Senior_Site_Reliability_Engineer.docx",
       "resume_file": "PANKAJA_Senior_Site_Reliability_Engineer.docx",
+=======
+      "resume_url": "applications/867d6b2d4ff7/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/867d6b2d4ff7/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Senior Site Reliability Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, DevSecOps.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Senior Site Reliability Engineer. Emphasized: Kubernetes, Python, Linux, DevSecOps, DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Senior Site Reliability Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior Site Reliability Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, DevSecOps, Devsecops, Automation. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -233,7 +318,7 @@
       "title": "Cloud Engineer (m/w/d) mit Karriereambitionen!",
       "company": "Auralis Group",
       "location": "Markt Indersdorf",
-      "description": "Wir sind ein fast zwei Jahre altes IT Unternehmen, aktuell 50 MA, und suchen nun weiterhin Verst\u00e4rkung, um Cloud-Projekte bei unseren Kunden durchzuf\u00fchren. \n Aufgaben \n Du willst: \n \n Deine Arbeitszeiten selbst bestimmen? \n von zuhause aus arbeiten (remote)? \n den n\u00e4chsten Schritt in Deiner Karriere gehen und lernen, wie man Teams leitet und ein Unternehmen f\u00fchrt? \n einen Arbeitgeber, der Dich leistungs- und ergebnisorientiert bezahlt? \n \n Qualifikation \n Du: \n \n bist seit 4 Jahren in Vollzeit berufst\u00e4tig im Bereich Softwareentwicklung/DevOps und hast gro\u00dfe Teile Deiner Erfahrung in Cloud-Infrastrukturen und Deployment-Prozessen gesammelt? \n bringst Erfahrung in einem der gro\u00dfen Cloud-Dienstleister (z.B. AWS, Azure) mit? \n hast einen Fokus auf eine oder mehrere Programmiersprachen wie z.B. Python, C++, C, Rust oder Go und bist dort ein Experte? \n bist nicht kontaktscheu und kommunikationsfreudig? \n bist gesegnet mit einem Growth Mindset und willst im Leben immer weiterkommen? \n bist \u00fcberzeugt davon, dass Dein Potenzial noch lange nicht ausgesch\u00f6pft ist? \n \n Benefits \n \n Fixum: 70.000 \u20ac - 72.000 \u20ac \n Zielgehalt: 77.000 \u20ac - 82.000 \u20ac (Umsatzbeteiligung an eigenem Umsatz, quartalsweise Aussch\u00fcttung) \n 30 Tage Urlaub \n IT Equipment deiner Wahl (Mac, Linux, Windows) \n Gelebter interner Expertenaustausch und Support \n Flexible Arbeitszeit und 95% - 100% Homeoffice \n Remote-Arbeit im Ausland (GF war Co-Founder von rhome) \n \n Melde Dich bei uns! \n Wir sind eine Gruppe von jungen und hungrigen Entwicklern, die gemeinsam die Firma betreiben, in der wir immer arbeiten wollten, die aber nicht existent war! \n Wir: \n \n unterst\u00fctzen unsere Kunden in Software Development Projekten \n bauen Startups und gr\u00fcnden sie aus \n arbeiten an und mit Top Notch Technologien (AI, Quantum Computing) \n sind ein geiles Team \n \n LET\u2019S ROCK! \n Find more  English Speaking Jobs in Germany  on Arbeitnow",
+      "description": "Wir sind ein fast zwei Jahre altes IT Unternehmen, aktuell 50 MA, und suchen nun weiterhin Verst\u00e4rkung, um Cloud-Projekte bei unseren Kunden durchzuf\u00fchren. \n Aufgaben \n Du willst: \n \n Deine Arbeitszeiten selbst bestimmen? \n von zuhause aus arbeiten (remote)? \n den n\u00e4chsten Schritt in Deiner Karriere gehen und lernen, wie man Teams leitet und ein Unternehmen f\u00fchrt? \n einen Arbeitgeber, der Dich leistungs- und ergebnisorientiert bezahlt? \n \n Qualifikation \n Du: \n \n bist seit 4 Jahren in Vollzeit berufst\u00e4tig im Bereich Softwareentwicklung/DevOps und hast gro\u00dfe Teile Deiner Erfahrung in Cloud-Infrastrukturen und Deployment-Prozessen gesammelt? \n bringst Erfahrung in einem der gro\u00dfen Cloud-Dienstleister (z.B. AWS, Azure) mit? \n hast einen Fokus auf eine oder mehrere Programmiersprachen wie z.B. Python, C++, C, Rust oder Go und bist dort ein Experte? \n bist nicht kontaktscheu und kommunikationsfreudig? \n bist gesegnet mit einem Growth Mindset und willst im Leben immer weiterkommen? \n bist \u00fcberzeugt davon, dass Dein Potenzial noch lange nicht ausgesch\u00f6pft ist? \n \n Benefits \n \n Fixum: 70.000 \u20ac - 72.000 \u20ac \n Zielgehalt: 77.000 \u20ac - 82.000 \u20ac (Umsatzbeteiligung an eigenem Umsatz, quartalsweise Aussch\u00fcttung) \n 30 Tage Urlaub \n IT Equipment deiner Wahl (Mac, Linux, Windows) \n Gelebter interner Expertenaustausch und Support \n Flexible Arbeitszeit und 95% - 100% Homeoffice \n Remote-Arbeit im Ausland (GF war Co-Founder von rhome) \n \n Melde Dich bei uns! \n Wir sind eine Gruppe von jungen und hungrigen Entwicklern, die gemeinsam die Firma betreiben, in der wir immer arbeiten wollten, die aber nicht existent war! \n Wir: \n \n unterst\u00fctzen unsere Kunden in Software Development Projekten \n bauen Startups und gr\u00fcnden sie aus \n arbeiten an und mit Top Notch Technologien (AI, Quantum Computing) \n sind ein geiles Team \n \n LET\u2019S ROCK! \n Find  Jobs in Germany  on Arbeitnow",
       "url": "https://www.arbeitnow.com/jobs/companies/auralis-group/cloud-engineer-mit-karriereambitionen-markt-indersdorf-458266",
       "source": "arbeitnow",
       "posted_at": "2026-07-22T07:00:39+00:00",
@@ -244,6 +329,7 @@
         "AWS"
       ],
       "match_reason": "3 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Engineer_mit_Karriereambitionen.docx",
@@ -254,6 +340,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Engineer (m/w/d) mit Karriereambitionen!. Emphasized: Python, Linux, AWS, Microsoft Azure, DevOps.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/9925dedbcbc2/resume.docx",
+      "cover_letter_url": "applications/9925dedbcbc2/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Engineer (m/w/d) mit Karriereambitionen! role at Auralis Group. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with Python, Linux, AWS. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Auralis Group. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Engineer (m/w/d) mit Karriereambitionen! with 2 years' experience on Azure and AKS. Skilled in Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -272,16 +364,18 @@
         "Linux"
       ],
       "match_reason": "3 skills, 1 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Site_Reliability_Engineer.docx",
       "resume_url": "applications/f6c849d32139/PANKAJA_Site_Reliability_Engineer.docx",
       "resume_file": "PANKAJA_Site_Reliability_Engineer.docx",
+=======
+      "resume_url": "applications/f6c849d32139/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/f6c849d32139/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Site Reliability Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, DevOps.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Site Reliability Engineer. Emphasized: Kubernetes, Python, Linux, DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Site Reliability Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, Automation, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Site Reliability Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, Automation, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -301,16 +395,38 @@
         "AWS"
       ],
       "match_reason": "4 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Field_Engineer.docx",
       "resume_url": "applications/b7a954176de7/PANKAJA_Cloud_Field_Engineer.docx",
       "resume_file": "PANKAJA_Cloud_Field_Engineer.docx",
+=======
+      "resume_url": "applications/b7a954176de7/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/b7a954176de7/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Field Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, AWS.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Field Engineer. Emphasized: Kubernetes, Python, Linux, AWS, Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Field Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Field Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "6407ef491269",
+      "title": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity",
+      "company": "Arista Networks",
+      "location": "Remote \u00b7 Dublin, County Dublin, Ireland",
+      "description": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity at Arista Networks. Location: Remote \u00b7 Dublin, County Dublin, Ireland. Source: LinkedIn (last 24h).",
+      "url": "https://ie.linkedin.com/jobs/view/site-reliability-engineer-sre-devops-engineering-productivity-at-arista-networks-4440771153",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 45,
+      "matched_skills": [
+        "SRE"
+      ],
+      "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/6407ef491269/resume.docx",
+      "cover_letter_url": "applications/6407ef491269/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity role at Arista Networks. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with SRE in production environments. Your job emphasizes requirements that match my background, especially SRE practices including monitoring, alerting, and MTTR reduction. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Arista Networks. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity with 2 years' experience on Azure and AKS. Skilled in SRE. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -356,16 +472,18 @@
         "AWS"
       ],
       "match_reason": "4 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Solutions_Architect.docx",
       "resume_url": "applications/bcfbf0aac819/PANKAJA_Cloud_Solutions_Architect.docx",
       "resume_file": "PANKAJA_Cloud_Solutions_Architect.docx",
+=======
+      "resume_url": "applications/bcfbf0aac819/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/bcfbf0aac819/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Solutions Architect - Alliances role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, AWS.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Solutions Architect - Alliances. Emphasized: Kubernetes, Python, Linux, AWS, Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Solutions Architect - Alliances role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Solutions Architect - Alliances with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, AWS, Azure, Automation. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -387,16 +505,18 @@
         "SRE"
       ],
       "match_reason": "6 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_Site_Reliability_Gitops_Engineer.docx",
       "resume_url": "applications/47026bdbde31/PANKAJA_Senior_Site_Reliability_Gitops_Engineer.docx",
       "resume_file": "PANKAJA_Senior_Site_Reliability_Gitops_Engineer.docx",
+=======
+      "resume_url": "applications/47026bdbde31/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/47026bdbde31/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Senior Site Reliability / Gitops Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Prometheus, Grafana, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Senior Site Reliability / Gitops Engineer. Emphasized: Prometheus, Grafana, Python, Linux, CI/CD.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Senior Site Reliability / Gitops Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Prometheus, Grafana, Python, Linux, CI/CD in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior Site Reliability / Gitops Engineer with 2 years' experience on Azure and AKS. Skilled in Prometheus, Grafana, Python, Linux, CI/CD, SRE. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -413,6 +533,36 @@
         "AWS"
       ],
       "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/a0226b729e91/resume.docx",
+      "cover_letter_url": "applications/a0226b729e91/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the AWS DevOps Engineer role at Compliance Cart. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Compliance in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Compliance. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Compliance Cart. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "AWS DevOps Engineer with 2 years' experience on Azure and AKS. Skilled in AWS, Compliance. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+<<<<<<< Updated upstream
+      "id": "a0226b729e91",
+      "title": "AWS DevOps Engineer",
+      "company": "Compliance Cart",
+      "location": "Remote \u00b7 Pune/Pimpri-Chinchwad Area",
+      "description": "AWS DevOps Engineer at Compliance Cart. Location: Remote \u00b7 Pune/Pimpri-Chinchwad Area. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/aws-devops-engineer-at-compliance-cart-4443753393",
+=======
+      "id": "32528b32a115",
+      "title": "AWS Cloud Engineer",
+      "company": "VMC Soft Technologies, Inc",
+      "location": "Chennai, Tamil Nadu, India",
+      "description": "AWS Cloud Engineer at VMC Soft Technologies, Inc. Location: Chennai, Tamil Nadu, India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/aws-cloud-engineer-at-vmc-soft-technologies-inc-4443733575",
+>>>>>>> Stashed changes
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 43,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_AWS_DevOps_Engineer.docx",
@@ -458,6 +608,21 @@
       "location": "Remote \u00b7 Sunnyvale, CA",
       "description": "AWS Cloud Engineer at Bright Vision Technologies. Location: Remote \u00b7 Sunnyvale, CA. Source: LinkedIn (last 24h).",
       "url": "https://www.linkedin.com/jobs/view/aws-cloud-engineer-at-bright-vision-technologies-4442919961",
+=======
+      "resume_url": "applications/32528b32a115/resume.docx",
+      "cover_letter_url": "applications/32528b32a115/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the AWS Cloud Engineer role at VMC Soft Technologies, Inc. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help VMC Soft Technologies, Inc. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "AWS Cloud Engineer with 2 years' experience on Azure and AKS. Skilled in AWS. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "532591638af9",
+      "title": "AWS Cloud Engineer",
+      "company": "Bright Vision Technologies",
+      "location": "Remote \u00b7 Jersey City, NJ",
+      "description": "AWS Cloud Engineer at Bright Vision Technologies. Location: Remote \u00b7 Jersey City, NJ. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/aws-cloud-engineer-at-bright-vision-technologies-4443707376",
+>>>>>>> Stashed changes
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 43,
@@ -465,6 +630,7 @@
         "AWS"
       ],
       "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_AWS_Cloud_Engineer.docx",
@@ -475,6 +641,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: AWS Cloud Engineer. Emphasized: AWS.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/532591638af9/resume.docx",
+      "cover_letter_url": "applications/532591638af9/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the AWS Cloud Engineer role at Bright Vision Technologies. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Bright Vision Technologies. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "AWS Cloud Engineer with 2 years' experience on Azure and AKS. Skilled in AWS. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -494,16 +666,18 @@
         "NIST"
       ],
       "match_reason": "4 skills, 1 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_OpenStack_Engineering_Manager.docx",
       "resume_url": "applications/0368ac8d0121/PANKAJA_OpenStack_Engineering_Manager.docx",
       "resume_file": "PANKAJA_OpenStack_Engineering_Manager.docx",
+=======
+      "resume_url": "applications/0368ac8d0121/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/0368ac8d0121/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the OpenStack Engineering Manager role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, NIST.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: OpenStack Engineering Manager. Emphasized: Kubernetes, Python, Linux, NIST.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the OpenStack Engineering Manager role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, NIST in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "OpenStack Engineering Manager with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -523,16 +697,38 @@
         "NIST"
       ],
       "match_reason": "4 skills, 1 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Engineering_Manager_Managed_Services.docx",
       "resume_url": "applications/4f160f25fa52/PANKAJA_Engineering_Manager_Managed_Services.docx",
       "resume_file": "PANKAJA_Engineering_Manager_Managed_Services.docx",
+=======
+      "resume_url": "applications/4f160f25fa52/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/4f160f25fa52/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Engineering Manager, Managed Services role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, NIST.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager, Managed Services. Emphasized: Kubernetes, Python, Linux, NIST.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Engineering Manager, Managed Services role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, NIST in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Engineering Manager, Managed Services with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "0a6ead66dcdb",
+      "title": "Azure/AWS Cloud Eng/Architect",
+      "company": "Invi Grid Inc.",
+      "location": "Remote \u00b7 India",
+      "description": "Azure/AWS Cloud Eng/Architect at Invi Grid Inc.. Location: Remote \u00b7 India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/azure-aws-cloud-eng-architect-at-invi-grid-inc-4442952712",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 42,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 0 roles, 3 domain terms in title",
+      "resume_url": "applications/0a6ead66dcdb/resume.docx",
+      "cover_letter_url": "applications/0a6ead66dcdb/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Azure/AWS Cloud Eng/Architect role at Invi Grid Inc.. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Invi Grid Inc.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Azure/AWS Cloud Eng/Architect with 2 years' experience on Azure and AKS. Skilled in AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -579,16 +775,18 @@
         "AWS"
       ],
       "match_reason": "5 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Engineering_Manager.docx",
       "resume_url": "applications/7e89556e4b28/PANKAJA_Engineering_Manager.docx",
       "resume_file": "PANKAJA_Engineering_Manager.docx",
+=======
+      "resume_url": "applications/7e89556e4b28/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/7e89556e4b28/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Engineering Manager - MLOps & Analytics role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager - MLOps & Analytics. Emphasized: Kubernetes, Docker, Python, Linux, AWS.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Engineering Manager - MLOps & Analytics role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, Python, Linux, AWS in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Engineering Manager - MLOps & Analytics with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -607,16 +805,18 @@
         "AWS"
       ],
       "match_reason": "3 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Professional_Services_Manager.docx",
       "resume_url": "applications/926e1f3ab2b8/PANKAJA_Cloud_Professional_Services_Manager.docx",
       "resume_file": "PANKAJA_Cloud_Professional_Services_Manager.docx",
+=======
+      "resume_url": "applications/926e1f3ab2b8/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/926e1f3ab2b8/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Professional Services Manager role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Linux, AWS, Microsoft Azure.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Professional Services Manager. Emphasized: Kubernetes, Linux, AWS, Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Professional Services Manager role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Professional Services Manager with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -635,16 +835,18 @@
         "Linux"
       ],
       "match_reason": "3 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Python_and_Kubernetes_Software_Engineer.docx",
       "resume_url": "applications/9c146f49266e/PANKAJA_Python_and_Kubernetes_Software_Engineer.docx",
       "resume_file": "PANKAJA_Python_and_Kubernetes_Software_Engineer.docx",
+=======
+      "resume_url": "applications/9c146f49266e/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/9c146f49266e/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics. Emphasized: Kubernetes, Python, Linux.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Kubernetes, Python, Linux in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Python and Kubernetes Software Engineer - Data, Workflows, AI/ML & Analytics with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -659,16 +861,18 @@
       "match_score": 39,
       "matched_skills": [],
       "match_reason": "0 skills, 1 roles, 2 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Devops_Engineer.docx",
       "resume_url": "applications/05849b5bdc76/PANKAJA_Cloud_Devops_Engineer.docx",
       "resume_file": "PANKAJA_Cloud_Devops_Engineer.docx",
+=======
+      "resume_url": "applications/05849b5bdc76/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/05849b5bdc76/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Devops Engineer (m/w/d) role at Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in DevOps.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Devops Engineer (m/w/d). Emphasized: DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Devops Engineer (m/w/d) role at Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Azure, AKS, DevSecOps, and CI/CD in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with . At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Devops Engineer (m/w/d) with 2 years' experience on Azure and AKS. Skilled in Azure, AKS, CI/CD, DevSecOps. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -707,30 +911,42 @@
       "match_score": 39,
       "matched_skills": [],
       "match_reason": "0 skills, 1 roles, 2 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Engineer.docx",
       "resume_url": "applications/b9c5196a8373/PANKAJA_Cloud_Engineer.docx",
       "resume_file": "PANKAJA_Cloud_Engineer.docx",
+=======
+      "resume_url": "applications/b9c5196a8373/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/b9c5196a8373/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Cloud Engineer \u2013 Azure role at Willsmarg Technologies LLC. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Microsoft Azure.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Willsmarg Technologies LLC.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Engineer \u2013 Azure. Emphasized: Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Cloud Engineer \u2013 Azure role at Willsmarg Technologies LLC. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Willsmarg Technologies LLC. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Engineer \u2013 Azure with 2 years' experience on Azure and AKS. Skilled in Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
+<<<<<<< Updated upstream
       "id": "01a9a601b274",
       "title": "Cloud Security Engineer - Consultant",
       "company": "Virtusa",
       "location": "Remote \u00b7 Andhra Pradesh, India",
       "description": "Cloud Security Engineer - Consultant at Virtusa. Location: Remote \u00b7 Andhra Pradesh, India. Source: LinkedIn (last 24h).",
       "url": "https://in.linkedin.com/jobs/view/cloud-security-engineer-consultant-at-virtusa-4432344462",
+=======
+      "id": "8c04b6186636",
+      "title": "Cloud Security Engineer",
+      "company": "TENTEN Partners",
+      "location": "Remote \u00b7 Singapore, Singapore",
+      "description": "Cloud Security Engineer at TENTEN Partners. Location: Remote \u00b7 Singapore, Singapore. Source: LinkedIn (last 24h).",
+      "url": "https://sg.linkedin.com/jobs/view/cloud-security-engineer-at-tenten-partners-4431485152",
+>>>>>>> Stashed changes
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 39,
       "matched_skills": [],
       "match_reason": "0 skills, 1 roles, 2 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Cloud_Security_Engineer.docx",
@@ -741,6 +957,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud Security Engineer - Consultant. Emphasized: Cloud Security.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/8c04b6186636/resume.docx",
+      "cover_letter_url": "applications/8c04b6186636/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Security Engineer role at TENTEN Partners. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help TENTEN Partners. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Security Engineer with 2 years' experience on Azure and AKS. Skilled in Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -760,16 +982,18 @@
         "AWS"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Ubuntu_Sales_Engineer.docx",
       "resume_url": "applications/9f4269830356/PANKAJA_Ubuntu_Sales_Engineer.docx",
       "resume_file": "PANKAJA_Ubuntu_Sales_Engineer.docx",
+=======
+      "resume_url": "applications/9f4269830356/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/9f4269830356/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Ubuntu Sales Engineer (Entry-Level) role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, AWS.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Ubuntu Sales Engineer (Entry-Level). Emphasized: Kubernetes, Python, Linux, AWS, Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Ubuntu Sales Engineer (Entry-Level) role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Ubuntu Sales Engineer (Entry-Level) with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -789,16 +1013,18 @@
         "Linux"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Microservices_Engineer.docx",
       "resume_url": "applications/26a7de346b5b/PANKAJA_Microservices_Engineer.docx",
       "resume_file": "PANKAJA_Microservices_Engineer.docx",
+=======
+      "resume_url": "applications/26a7de346b5b/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/26a7de346b5b/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Microservices Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Microservices Engineer. Emphasized: Kubernetes, Docker, Python, Linux, DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Microservices Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, Python, Linux, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Microservices Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, Python, Linux, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -818,16 +1044,18 @@
         "Linux"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Containerization_Virtualisation_Engineer.docx",
       "resume_url": "applications/364bd3d68648/PANKAJA_Containerization_Virtualisation_Engineer.docx",
       "resume_file": "PANKAJA_Containerization_Virtualisation_Engineer.docx",
+=======
+      "resume_url": "applications/364bd3d68648/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/364bd3d68648/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Containerization & Virtualisation Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Containerization & Virtualisation Engineer. Emphasized: Kubernetes, Docker, Python, Linux.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Containerization & Virtualisation Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, Python, Linux, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Containerization & Virtualisation Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, Python, Linux, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -847,16 +1075,18 @@
         "AWS"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Alliances_Field_Engineer.docx",
       "resume_url": "applications/ae6a155cd0d0/PANKAJA_Alliances_Field_Engineer.docx",
       "resume_file": "PANKAJA_Alliances_Field_Engineer.docx",
+=======
+      "resume_url": "applications/ae6a155cd0d0/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/ae6a155cd0d0/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Alliances Field Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, AWS.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Alliances Field Engineer. Emphasized: Kubernetes, Python, Linux, AWS, Microsoft Azure.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Alliances Field Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, AWS, Azure in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Alliances Field Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, AWS, Azure, Automation. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -876,16 +1106,18 @@
         "NIST"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Engineering_Manager.docx",
       "resume_url": "applications/ba880f085694/PANKAJA_Engineering_Manager.docx",
       "resume_file": "PANKAJA_Engineering_Manager.docx",
+=======
+      "resume_url": "applications/ba880f085694/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/ba880f085694/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Engineering Manager - Solutions Engineering role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Python, Linux, NIST.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Engineering Manager - Solutions Engineering. Emphasized: Kubernetes, Python, Linux, NIST, DevOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Engineering Manager - Solutions Engineering role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Python, Linux, NIST, Automation in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Engineering Manager - Solutions Engineering with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Python, Linux, NIST, Automation. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -903,6 +1135,7 @@
         "IAM"
       ],
       "match_reason": "2 skills, 0 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_Software_Engineer_Compute.docx",
@@ -939,6 +1172,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Site Reliability Engineer (SRE). Emphasized: SRE.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/881e5dcbe727/resume.docx",
+      "cover_letter_url": "applications/881e5dcbe727/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Senior Software Engineer, Compute (Temporal Cloud) role at Temporal Technologies. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Kubernetes, IAM, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Temporal Technologies. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior Software Engineer, Compute (Temporal Cloud) with 2 years' experience on Azure and AKS. Skilled in Kubernetes, IAM, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -958,16 +1197,18 @@
         "Linux"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Python_Engineer.docx",
       "resume_url": "applications/1165f2768ba8/PANKAJA_Python_Engineer.docx",
       "resume_file": "PANKAJA_Python_Engineer.docx",
+=======
+      "resume_url": "applications/1165f2768ba8/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/1165f2768ba8/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Python Engineer role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Python Engineer. Emphasized: Kubernetes, Docker, Python, Linux.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Python Engineer role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, Python, Linux in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Python Engineer with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, Python, Linux. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -987,16 +1228,38 @@
         "Linux"
       ],
       "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Software_Engineer_Sustaining_Engineering.docx",
       "resume_url": "applications/ff1a01a968c8/PANKAJA_Software_Engineer_Sustaining_Engineering.docx",
       "resume_file": "PANKAJA_Software_Engineer_Sustaining_Engineering.docx",
+=======
+      "resume_url": "applications/ff1a01a968c8/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/ff1a01a968c8/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Software Engineer, Sustaining Engineering role at Canonical Ltd.. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, Docker, Python, Linux.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to Canonical Ltd..\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Software Engineer, Sustaining Engineering. Emphasized: Kubernetes, Docker, Python, Linux.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Software Engineer, Sustaining Engineering role at Canonical Ltd.. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, Docker, Python, Linux in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Canonical Ltd.. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Software Engineer, Sustaining Engineering with 2 years' experience on Azure and AKS. Skilled in Kubernetes, Docker, Python, Linux. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "f8fe217cca17",
+      "title": "DevSecops Engineer",
+      "company": "ConsultNet Technology Services and Solutions",
+      "location": "Remote \u00b7 United States",
+      "description": "DevSecops Engineer at ConsultNet Technology Services and Solutions. Location: Remote \u00b7 United States. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/devsecops-engineer-at-consultnet-technology-services-and-solutions-4442921507",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 31,
+      "matched_skills": [
+        "DevSecOps"
+      ],
+      "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+      "resume_url": "applications/f8fe217cca17/resume.docx",
+      "cover_letter_url": "applications/f8fe217cca17/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the DevSecops Engineer role at ConsultNet Technology Services and Solutions. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help ConsultNet Technology Services and Solutions. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevSecops Engineer with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
@@ -1041,31 +1304,37 @@
         "AWS"
       ],
       "match_reason": "3 skills, 0 roles, 0 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Backend_Engineer.docx",
       "resume_url": "applications/241c90b67cda/PANKAJA_Backend_Engineer.docx",
       "resume_file": "PANKAJA_Backend_Engineer.docx",
+=======
+      "resume_url": "applications/241c90b67cda/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/241c90b67cda/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Backend Engineer - POS role at SumUp. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in Kubernetes, CI/CD, AWS, Entra ID.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to SumUp.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Backend Engineer - POS. Emphasized: Kubernetes, CI/CD, AWS, Entra ID.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the Backend Engineer - POS role at SumUp. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, CI/CD, AWS, Compliance, Monitoring in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help SumUp. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Backend Engineer - POS with 2 years' experience on Azure and AKS. Skilled in Kubernetes, CI/CD, AWS, Compliance, Monitoring. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
-      "id": "fc4269dd6cab",
-      "title": "DevOps/SRE Engineer - Remote Work | REF#296686",
-      "company": "BairesDev",
-      "location": "Remote \u00b7 Pune Division, Maharashtra, India",
-      "description": "DevOps/SRE Engineer - Remote Work | REF#296686 at BairesDev. Location: Remote \u00b7 Pune Division, Maharashtra, India. Source: LinkedIn (last 24h).",
-      "url": "https://in.linkedin.com/jobs/view/devops-sre-engineer-remote-work-ref%23296686-at-bairesdev-4435337452",
-      "source": "linkedin",
-      "posted_at": "2026-07-22",
+      "id": "367d4c2f8af2",
+      "title": "Golang-Entwickler (m/w/d) - Remote (Deutschland)",
+      "company": "Muxon",
+      "location": "Berlin",
+      "description": "Gehaltstransparenz:  \nDiese Position richtet sich an Kandidat:innen mit mindestens 4 Jahren Berufserfahrung. \n Die Gehaltsspanne liegt je nach Erfahrung zwischen 65.000 \u20ac und 80.000 \u20ac brutto pro Jahr. \n Arbeitsmodell: Vollzeit, 100 % remote innerhalb Deutschlands. \n Standort: Deutschland (remote). \n Muxon ist eine kleine, international t\u00e4tige Personalvermittlungsagentur und f\u00fchrt diese Suche im Auftrag unseres Partners durch \u2013 ein innovatives deutsches Technologieunternehmen, das eigene Produkte im Bereich cloudbasierter Softwarel\u00f6sungen und moderner Backend-Plattformen entwickelt. Mit einer kollaborativen Engineering-Kultur und einem starken Fokus auf Innovation, kontinuierliches Lernen und technische Eigenverantwortung bietet das Unternehmen Engineers die M\u00f6glichkeit, an modernen, API-getriebenen Systemen mit einem zukunftsweisenden Cloud-native-Technologie-Stack zu arbeiten. \n Aufgaben \n \n Design, Entwicklung und Weiterentwicklung von REST-APIs, vorwiegend mit Go. \n Wartung und Verbesserung bestehender Backend-Services. \n Anwendung von Test-Driven-Development-Praktiken sowie Sicherstellung hoher Codequalit\u00e4t durch statische Analyse und Linting. \n Entwicklung interner CLI-Tools und unterst\u00fctzender Utilities. \n Arbeiten mit PostgreSQL, Redis, RabbitMQ/Kafka, S3 Storage und containerisierten Umgebungen. \n Mitwirkung an CI/CD-Pipelines und Kubernetes-Deployments. \n Enge Zusammenarbeit mit dem Engineering-Team zur Bereitstellung zuverl\u00e4ssiger und skalierbarer Backend-L\u00f6sungen. \n \n Qualifikation \n \n Mindestens 4 Jahre Berufserfahrung in der Backend-/API-Entwicklung. \n Fundierte praktische Erfahrung mit Go und der Entwicklung von REST-APIs. \n Erfahrung mit PostgreSQL, Redis, RabbitMQ oder Kafka sowie S3-kompatiblem Storage. \n Solide Kenntnisse in Docker, Kubernetes und CI/CD-Tools wie GitLab CI oder GitHub Actions. \n Gute Shell-/CLI-Kenntnisse. \n Verst\u00e4ndnis von Test-Driven Development und Best Practices der Softwarequalit\u00e4t. \n Wohnsitz in Deutschland. \n Verhandlungssichere Deutschkenntnisse (C1). \n \n Benefits \n \n 100 % Remote-Arbeit von \u00fcberall in Deutschland aus, ohne Reiset\u00e4tigkeit. \n Moderner Technologie-Stack mit Go, Kubernetes, Docker und Cloud-native-Tools. \n Hohes Ma\u00df an technischer Eigenverantwortung und Einfluss auf architektonische Entscheidungen. \n Kollaboratives Engineering-Umfeld mit flexibler Projektplanung. \n Individuelles Weiterbildungsbudget. \n Klare Aufstiegsm\u00f6glichkeiten und wachsende Projektverantwortung. \n 30 Urlaubstage pro Jahr. \n \n Wenn Sie eine moderne Backend-Engineering-Rolle suchen, in der Sie mit den neuesten Technologien arbeiten und gleichzeitig volle Remote-Flexibilit\u00e4t genie\u00dfen k\u00f6nnen, freuen wir uns auf Ihre Bewerbung. \n Find  Jobs in Germany  on Arbeitnow",
+      "url": "https://www.arbeitnow.com/jobs/companies/muxon/golang-entwickler-remote-deutschland-berlin-106446",
+      "source": "arbeitnow",
+      "posted_at": "2026-07-21T15:00:27+00:00",
       "match_score": 30,
       "matched_skills": [
-        "SRE"
+        "Kubernetes",
+        "GitHub Actions",
+        "Docker",
+        "CI/CD"
       ],
+<<<<<<< Updated upstream
       "match_reason": "1 skills, 0 roles, 2 domain terms in title",
       "_ats_score": 10.0,
       "_overall_score": 10.0,
@@ -1077,14 +1346,21 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: DevOps/SRE Engineer - Remote Work | REF#296686. Emphasized: SRE, DevOps.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "match_reason": "4 skills, 0 roles, 0 domain terms in title",
+      "resume_url": "applications/367d4c2f8af2/resume.docx",
+      "cover_letter_url": "applications/367d4c2f8af2/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Golang-Entwickler (m/w/d) - Remote (Deutschland) role at Muxon. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Kubernetes, GitHub Actions, Docker, CI/CD in production environments. Your job emphasizes requirements that match my background. especially operating production AKS clusters with automated recovery and observability. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Muxon. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Golang-Entwickler (m/w/d) - Remote (Deutschland) with 2 years' experience on Azure and AKS. Skilled in Kubernetes, GitHub Actions, Docker, CI/CD. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
       "id": "e8c23c1cd9a1",
       "title": "IAM Engineer",
       "company": "Persistent Systems",
-      "location": "Pune City, Maharashtra, India",
-      "description": "IAM Engineer at Persistent Systems. Location: Pune City, Maharashtra, India. Source: LinkedIn (last 24h).",
+      "location": "Remote \u00b7 Pune City, Maharashtra, India",
+      "description": "IAM Engineer at Persistent Systems. Location: Remote \u00b7 Pune City, Maharashtra, India. Source: LinkedIn (last 24h).",
       "url": "https://in.linkedin.com/jobs/view/iam-engineer-at-persistent-systems-4443750720",
       "source": "linkedin",
       "posted_at": "2026-07-22",
@@ -1093,6 +1369,7 @@
         "IAM"
       ],
       "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_IAM_Engineer.docx",
@@ -1103,6 +1380,12 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: IAM Engineer. Emphasized: IAM.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/e8c23c1cd9a1/resume.docx",
+      "cover_letter_url": "applications/e8c23c1cd9a1/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the IAM Engineer role at Persistent Systems. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with IAM in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with IAM. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Persistent Systems. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "IAM Engineer with 2 years' experience on Azure and AKS. Skilled in IAM. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     },
     {
@@ -1119,25 +1402,36 @@
         "DevSecOps"
       ],
       "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_DevSecOps_Engineer.docx",
       "resume_url": "applications/2780ec5cabf5/PANKAJA_DevSecOps_Engineer.docx",
       "resume_file": "PANKAJA_DevSecOps_Engineer.docx",
+=======
+      "resume_url": "applications/2780ec5cabf5/resume.docx",
+>>>>>>> Stashed changes
       "cover_letter_url": "applications/2780ec5cabf5/cover_letter.txt",
-      "cover_letter": "Dear Hiring Manager,\n\nI am applying for the DevSecOps Engineer role at METRO Global Solution Center IN. I have 2 years of production experience in DevSecOps and cloud engineering, with hands-on work in DevSecOps.\n\nAt Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, and automate CI/CD and observability. I am AZ-104 certified.\n\nI would welcome the chance to discuss how I can contribute to METRO Global Solution Center IN.\n\nBest regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
-      "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: DevSecOps Engineer. Emphasized: DevSecOps.",
-      "ats_score": 10.0,
-      "overall_score": 10.0,
+      "cover_letter": "I'm excited to apply for the DevSecOps Engineer role at METRO Global Solution Center IN. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help METRO Global Solution Center IN. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevSecOps Engineer with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
       "application_ready": true
     },
     {
+<<<<<<< Updated upstream
       "id": "2246ba8086e4",
       "title": "Senior DevSecOps Engineer",
       "company": "Dr. Martens plc",
       "location": "Remote \u00b7 Bengaluru, Karnataka, India",
       "description": "Senior DevSecOps Engineer at Dr. Martens plc. Location: Remote \u00b7 Bengaluru, Karnataka, India. Source: LinkedIn (last 24h).",
       "url": "https://in.linkedin.com/jobs/view/senior-devsecops-engineer-at-dr-martens-plc-4425893331",
+=======
+      "id": "ecbdd008e277",
+      "title": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA)",
+      "company": "First Citizens Bank",
+      "location": "Remote \u00b7 North Carolina, United States",
+      "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 North Carolina, United States. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443734317",
+>>>>>>> Stashed changes
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 30,
@@ -1145,6 +1439,7 @@
         "DevSecOps"
       ],
       "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_DevSecOps_Engineer.docx",
@@ -1164,6 +1459,21 @@
       "location": "Remote \u00b7 North Carolina, United States",
       "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 North Carolina, United States. Source: LinkedIn (last 24h).",
       "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443734317",
+=======
+      "resume_url": "applications/ecbdd008e277/resume.docx",
+      "cover_letter_url": "applications/ecbdd008e277/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) role at First Citizens Bank. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help First Citizens Bank. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "f84ab63714ff",
+      "title": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA)",
+      "company": "First Citizens Bank",
+      "location": "Remote \u00b7 Raleigh, NC",
+      "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 Raleigh, NC. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443727802",
+>>>>>>> Stashed changes
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 30,
@@ -1171,6 +1481,7 @@
         "DevSecOps"
       ],
       "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_DevSecOps_Engineer.docx",
@@ -1233,11 +1544,18 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Senior DevSecOps Engineer (Remote NC, TX, AZ, GA). Emphasized: DevSecOps.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/f84ab63714ff/resume.docx",
+      "cover_letter_url": "applications/f84ab63714ff/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) role at First Citizens Bank. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help First Citizens Bank. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     }
   ],
   "new_jobs": [
     {
+<<<<<<< Updated upstream
       "id": "a5fba1f53d4c",
       "title": "Site Reliability Engineer (SRE)",
       "company": "12Build",
@@ -1270,6 +1588,187 @@
       "location": "Remote \u00b7 Texas, United States",
       "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 Texas, United States. Source: LinkedIn (last 24h).",
       "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443725862",
+=======
+      "id": "02f7b5ebb612",
+      "title": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only",
+      "company": "YMinds.AI",
+      "location": "Remote \u00b7 India",
+      "description": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only at YMinds.AI. Location: Remote \u00b7 India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/devops-engineer-aws-azure-7%2Byears-immediate-joiners-only-at-yminds-ai-4443756742",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 56,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 1 roles, 3 domain terms in title",
+      "resume_url": "applications/02f7b5ebb612/resume.docx",
+      "cover_letter_url": "applications/02f7b5ebb612/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only role at YMinds.AI. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Azure. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help YMinds.AI. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevOps Engineer |AWS, Azure | 7+Years| Immediate Joiners Only with 2 years' experience on Azure and AKS. Skilled in AWS, Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "1dc294d24e66",
+      "title": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation",
+      "company": "G-Research",
+      "location": "Remote \u00b7 London Area, United Kingdom",
+      "description": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation at G-Research. Location: Remote \u00b7 London Area, United Kingdom. Source: LinkedIn (last 24h).",
+      "url": "https://uk.linkedin.com/jobs/view/iam-platform-engineer-%E2%80%93-identity-entitlements-authorisation-at-g-research-4443111392",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 56,
+      "matched_skills": [
+        "IAM"
+      ],
+      "match_reason": "1 skills, 1 roles, 3 domain terms in title",
+      "resume_url": "applications/1dc294d24e66/resume.docx",
+      "cover_letter_url": "applications/1dc294d24e66/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation role at G-Research. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with IAM in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with IAM. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help G-Research. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "IAM Platform Engineer \u2013 Identity, Entitlements & Authorisation with 2 years' experience on Azure and AKS. Skilled in IAM. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "9eca70bd33ac",
+      "title": "Cloud Security Specialist (Azure-AWS oriented)",
+      "company": "Obrela",
+      "location": "Remote \u00b7 Athens, Attiki, Greece",
+      "description": "Cloud Security Specialist (Azure-AWS oriented) at Obrela. Location: Remote \u00b7 Athens, Attiki, Greece. Source: LinkedIn (last 24h).",
+      "url": "https://gr.linkedin.com/jobs/view/cloud-security-specialist-azure-aws-oriented-at-obrela-4428916856",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 55,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 0 roles, 4 domain terms in title",
+      "resume_url": "applications/9eca70bd33ac/resume.docx",
+      "cover_letter_url": "applications/9eca70bd33ac/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Security Specialist (Azure-AWS oriented) role at Obrela. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Azure, Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Obrela. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Security Specialist (Azure-AWS oriented) with 2 years' experience on Azure and AKS. Skilled in AWS, Azure, Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "bbabf93773ae",
+      "title": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai)",
+      "company": "Husky Technologies",
+      "location": "Remote \u00b7 Chennai, Tamil Nadu, India",
+      "description": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) at Husky Technologies. Location: Remote \u00b7 Chennai, Tamil Nadu, India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/platform-engineer-azure-iac-devops-husky-guindy-chennai-at-husky-technologies-4442964616",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 52,
+      "matched_skills": [],
+      "match_reason": "0 skills, 1 roles, 3 domain terms in title",
+      "resume_url": "applications/bbabf93773ae/resume.docx",
+      "cover_letter_url": "applications/bbabf93773ae/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) role at Husky Technologies. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Azure in production environments. Your job emphasizes requirements that match my background, especially Infrastructure as Code using Terraform and ARM templates. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Husky Technologies. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Platform Engineer - (Azure, IaC & DevOps) - Husky (Guindy, Chennai) with 2 years' experience on Azure and AKS. Skilled in Azure. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "6407ef491269",
+      "title": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity",
+      "company": "Arista Networks",
+      "location": "Remote \u00b7 Dublin, County Dublin, Ireland",
+      "description": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity at Arista Networks. Location: Remote \u00b7 Dublin, County Dublin, Ireland. Source: LinkedIn (last 24h).",
+      "url": "https://ie.linkedin.com/jobs/view/site-reliability-engineer-sre-devops-engineering-productivity-at-arista-networks-4440771153",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 45,
+      "matched_skills": [
+        "SRE"
+      ],
+      "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/6407ef491269/resume.docx",
+      "cover_letter_url": "applications/6407ef491269/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity role at Arista Networks. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with SRE in production environments. Your job emphasizes requirements that match my background, especially SRE practices including monitoring, alerting, and MTTR reduction. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Arista Networks. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Site Reliability Engineer (SRE/ DevOps) - Engineering Productivity with 2 years' experience on Azure and AKS. Skilled in SRE. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "a0226b729e91",
+      "title": "AWS DevOps Engineer",
+      "company": "Compliance Cart",
+      "location": "Remote \u00b7 Pune/Pimpri-Chinchwad Area",
+      "description": "AWS DevOps Engineer at Compliance Cart. Location: Remote \u00b7 Pune/Pimpri-Chinchwad Area. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/aws-devops-engineer-at-compliance-cart-4443753393",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 43,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/a0226b729e91/resume.docx",
+      "cover_letter_url": "applications/a0226b729e91/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the AWS DevOps Engineer role at Compliance Cart. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS, Compliance in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS, Compliance. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Compliance Cart. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "AWS DevOps Engineer with 2 years' experience on Azure and AKS. Skilled in AWS, Compliance. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "532591638af9",
+      "title": "AWS Cloud Engineer",
+      "company": "Bright Vision Technologies",
+      "location": "Remote \u00b7 Jersey City, NJ",
+      "description": "AWS Cloud Engineer at Bright Vision Technologies. Location: Remote \u00b7 Jersey City, NJ. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/aws-cloud-engineer-at-bright-vision-technologies-4443707376",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 43,
+      "matched_skills": [
+        "AWS"
+      ],
+      "match_reason": "1 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/532591638af9/resume.docx",
+      "cover_letter_url": "applications/532591638af9/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the AWS Cloud Engineer role at Bright Vision Technologies. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with AWS in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with AWS. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Bright Vision Technologies. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "AWS Cloud Engineer with 2 years' experience on Azure and AKS. Skilled in AWS. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "05849b5bdc76",
+      "title": "Cloud Devops Engineer (m/w/d)",
+      "company": "Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts",
+      "location": "Remote \u00b7 Hamburg, Hamburg, Germany",
+      "description": "Cloud Devops Engineer (m/w/d) at Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. Location: Remote \u00b7 Hamburg, Hamburg, Germany. Source: LinkedIn (last 24h).",
+      "url": "https://de.linkedin.com/jobs/view/cloud-devops-engineer-m-w-d-at-hamburg-port-authority-hpa-anstalt-%C3%B6ffentlichen-rechts-4443785426",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 39,
+      "matched_skills": [],
+      "match_reason": "0 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/05849b5bdc76/resume.docx",
+      "cover_letter_url": "applications/05849b5bdc76/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Devops Engineer (m/w/d) role at Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. I have 2 years' experience in cloud engineering and DevSecOps. and have worked with Azure, AKS, DevSecOps, and CI/CD in production environments. Your job emphasizes requirements that match my background, especially delivering solutions with . At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help Hamburg Port Authority (HPA) Anstalt \u00f6ffentlichen Rechts. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Devops Engineer (m/w/d) with 2 years' experience on Azure and AKS. Skilled in Azure, AKS, CI/CD, DevSecOps. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "8c04b6186636",
+      "title": "Cloud Security Engineer",
+      "company": "TENTEN Partners",
+      "location": "Remote \u00b7 Singapore, Singapore",
+      "description": "Cloud Security Engineer at TENTEN Partners. Location: Remote \u00b7 Singapore, Singapore. Source: LinkedIn (last 24h).",
+      "url": "https://sg.linkedin.com/jobs/view/cloud-security-engineer-at-tenten-partners-4431485152",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 39,
+      "matched_skills": [],
+      "match_reason": "0 skills, 1 roles, 2 domain terms in title",
+      "resume_url": "applications/8c04b6186636/resume.docx",
+      "cover_letter_url": "applications/8c04b6186636/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Cloud Security Engineer role at TENTEN Partners. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with Security in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help TENTEN Partners. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Cloud Security Engineer with 2 years' experience on Azure and AKS. Skilled in Security. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "2780ec5cabf5",
+      "title": "DevSecOps Engineer",
+      "company": "METRO Global Solution Center IN",
+      "location": "Remote \u00b7 Pune Division, Maharashtra, India",
+      "description": "DevSecOps Engineer at METRO Global Solution Center IN. Location: Remote \u00b7 Pune Division, Maharashtra, India. Source: LinkedIn (last 24h).",
+      "url": "https://in.linkedin.com/jobs/view/devsecops-engineer-at-metro-global-solution-center-in-4443111552",
       "source": "linkedin",
       "posted_at": "2026-07-22",
       "match_score": 30,
@@ -1277,6 +1776,28 @@
         "DevSecOps"
       ],
       "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+      "resume_url": "applications/2780ec5cabf5/resume.docx",
+      "cover_letter_url": "applications/2780ec5cabf5/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the DevSecOps Engineer role at METRO Global Solution Center IN. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help METRO Global Solution Center IN. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "DevSecOps Engineer with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "ecbdd008e277",
+      "title": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA)",
+      "company": "First Citizens Bank",
+      "location": "Remote \u00b7 North Carolina, United States",
+      "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 North Carolina, United States. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443734317",
+>>>>>>> Stashed changes
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 30,
+      "matched_skills": [
+        "DevSecOps"
+      ],
+      "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+<<<<<<< Updated upstream
       "_ats_score": 10.0,
       "_overall_score": 10.0,
       "_resume_filename": "PANKAJA_Senior_DevSecOps_Engineer.docx",
@@ -1287,6 +1808,32 @@
       "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Senior DevSecOps Engineer (Remote NC, TX, AZ, GA). Emphasized: DevSecOps.",
       "ats_score": 10.0,
       "overall_score": 10.0,
+=======
+      "resume_url": "applications/ecbdd008e277/resume.docx",
+      "cover_letter_url": "applications/ecbdd008e277/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) role at First Citizens Bank. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help First Citizens Bank. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+      "application_ready": true
+    },
+    {
+      "id": "f84ab63714ff",
+      "title": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA)",
+      "company": "First Citizens Bank",
+      "location": "Remote \u00b7 Raleigh, NC",
+      "description": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) at First Citizens Bank. Location: Remote \u00b7 Raleigh, NC. Source: LinkedIn (last 24h).",
+      "url": "https://www.linkedin.com/jobs/view/senior-devsecops-engineer-remote-nc-tx-az-ga-at-first-citizens-bank-4443727802",
+      "source": "linkedin",
+      "posted_at": "2026-07-22",
+      "match_score": 30,
+      "matched_skills": [
+        "DevSecOps"
+      ],
+      "match_reason": "1 skills, 1 roles, 1 domain terms in title",
+      "resume_url": "applications/f84ab63714ff/resume.docx",
+      "cover_letter_url": "applications/f84ab63714ff/cover_letter.txt",
+      "cover_letter": "I'm excited to apply for the Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) role at First Citizens Bank. I have 2 years' experience in cloud engineering and DevSecOps, and have worked with DevSecOps, Devsecops in production environments. Your job emphasizes requirements that match my background. especially integrating security across the SDLC with Azure Policy and Defender for Cloud. At Amdocs. I reduced MTTR by 40% through AKS pod recovery automation, cut manual compliance effort via Python scripting, and delivered observability improvements that increased coverage by 35%. I'm AZ-104 certified and have built open-source tools for Azure security auditing and cost governance. I'd welcome a chance to discuss how I can help First Citizens Bank. Thanks for your time \u2014 I look forward to speaking. Best regards,\nPankaja Jagdish Kulkarni\n+91 7045149611 | pankajajagdishkulkarni@gmail.com\nhttps://linkedin.com/in/pankaja-jagdish-kulkarni",
+      "tailored_summary": "Senior DevSecOps Engineer (Remote NC, TX, AZ, GA) with 2 years' experience on Azure and AKS. Skilled in DevSecOps, Devsecops. Built automation that reduces ops work by 40-90% and MTTR by 40%.",
+>>>>>>> Stashed changes
       "application_ready": true
     }
   ]
