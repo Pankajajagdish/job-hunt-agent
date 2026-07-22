@@ -99,6 +99,7 @@ def compute_ats_score(text: str, jd_keywords: list[str]) -> float:
 
 
 def compute_overall_score(text: str, jd_keywords: list[str], base_text: str) -> float:
+    """Recruiter-style overall score (0–10): ATS fit + integrity + structure signals."""
     ats = compute_ats_score(text, jd_keywords)
     base_tokens = set(re.findall(r"[a-zA-Z0-9+#/.-]{3,}", base_text.lower()))
     new_tokens = set(re.findall(r"[a-zA-Z0-9+#/.-]{3,}", text.lower()))
@@ -107,7 +108,25 @@ def compute_overall_score(text: str, jd_keywords: list[str], base_text: str) -> 
     else:
         preserved = len(base_tokens & new_tokens) / len(base_tokens)
         integrity = round(preserved * 10.0, 2)
-    return round(0.6 * ats + 0.4 * integrity, 2)
+
+    required = [
+        "professional summary",
+        "technical skills",
+        "professional experience",
+        "certifications",
+        "education",
+        "amdocs",
+        "az-104",
+    ]
+    t = text.lower()
+    structure = round(10.0 * sum(1 for r in required if r in t) / len(required), 2)
+
+    penalty = 0.0
+    if "production support" in t or "2 years production experience" in t:
+        penalty = 1.5
+
+    overall = round(0.50 * ats + 0.30 * integrity + 0.20 * structure - penalty, 2)
+    return min(10.0, max(0.0, overall))
 
 
 def _is_heading(text: str) -> bool:
@@ -358,7 +377,7 @@ def generate_tailored_docx(job: dict, output_path: Path | None = None) -> str:
 
     print(
         f"Resume tailored (skills only): ATS {scores['ats_score']}/10, "
-        f"overall {scores['overall_score']}/10 → {pdf_path.name}"
+        f"overall {scores['overall_score']}/10 -> {pdf_path.name}"
     )
     job["_ats_score"] = scores["ats_score"]
     job["_overall_score"] = scores["overall_score"]
@@ -385,12 +404,13 @@ def generate_cover_letter_snippet(job: dict) -> str:
 
     return (
         f"Dear Hiring Manager,\n\n"
-        f"I am applying for the {title} role at {company}. "
-        f"I have {profile['years_experience']} years of production experience in DevSecOps and cloud engineering, "
-        f"with hands-on work in {top}.\n\n"
-        f"At Amdocs I operate Azure/AKS production systems, strengthen security with Azure Policy and Entra ID RBAC, "
-        f"and automate CI/CD and observability. I am AZ-104 certified.\n\n"
-        f"I would welcome the chance to discuss how I can contribute to {company}.\n\n"
+        f"I am writing to apply for the {title} role at {company}. "
+        f"I am a DevSecOps and Cloud Engineer at Amdocs with hands-on ownership of Azure/AKS platforms, "
+        f"cloud security controls, and automation — including {top}.\n\n"
+        f"Relevant outcomes from my work include reducing MTTR by 40% through AKS recovery automation, "
+        f"cutting vulnerability triage time by 50%, and eliminating up to 90% of manual reporting with Python tooling. "
+        f"I am Microsoft Certified: Azure Administrator Associate (AZ-104).\n\n"
+        f"I would welcome the opportunity to discuss how I can contribute to {company}.\n\n"
         f"Best regards,\n"
         f"{profile['name']}\n"
         f"{profile['phone']} | {profile['email']}\n"

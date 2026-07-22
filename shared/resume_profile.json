@@ -43,7 +43,7 @@
   "certifications": [
     "Microsoft Certified: Azure Administrator Associate (AZ-104)"
   ],
-  "summary_template": "DevSecOps and Cloud Engineer with {years} years of production experience on Azure and AKS. Skilled in {top_skills}. Built automation tools reducing manual ops work by 40-90% and MTTR by 40%. AZ-104 Certified.",
+  "summary_template": "DevSecOps and Cloud Engineer at Amdocs delivering Azure and AKS platform reliability, cloud security, and automation. Skilled in {top_skills}. Built tools reducing manual ops effort by 40-90% and MTTR by 40%. AZ-104 Certified.",
   "experience_highlights": [
     "Azure security compliance with Azure Policy, Defender for Cloud, and Entra ID RBAC",
     "Production AKS cluster operations, pod recovery automation, MTTR reduced 40%",
