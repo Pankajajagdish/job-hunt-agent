@@ -4,7 +4,11 @@
   "company": "Qim info",
   "url": "https://ch.linkedin.com/jobs/view/iam-engineer-at-qim-info-4437246715",
   "match_score": 30,
-  "posted_at": "2026-07-20",
-  "tailored_summary": "IAM engineer with 2 years' experience on Azure and AKS. Skilled in IAM. Built automation that reduced manual ops work and improved MTTR.",
-  "generated_at": "2026-07-20T12:52:30.836891+00:00"
+  "posted_at": "2026-07-23",
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: IAM engineer. Emphasized: IAM.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "resume_file": "PANKAJA_IAM_engineer.pdf",
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-23T19:10:32.773831+00:00"
 }
