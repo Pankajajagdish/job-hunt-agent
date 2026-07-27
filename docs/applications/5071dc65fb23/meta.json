@@ -4,7 +4,11 @@
   "company": "MiTek Vietnam",
   "url": "https://vn.linkedin.com/jobs/view/cloud-devops-engineer-azure-terraform-at-mitek-vietnam-4439043312",
   "match_score": 69,
-  "posted_at": "2026-07-20",
-  "tailored_summary": "Cloud / DevOps Engineer (Azure, Terraform) with 2 years' experience on Azure and AKS. Skilled in Terraform, Azure. Built automation that reduced manual ops work and improved MTTR.",
-  "generated_at": "2026-07-20T12:52:30.262619+00:00"
+  "posted_at": "2026-07-27",
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: Cloud / DevOps Engineer (Azure, Terraform). Emphasized: Terraform, Microsoft Azure, DevOps.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "resume_file": "PANKAJA_Cloud_DevOps_Engineer.pdf",
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-07-27T09:43:31.858223+00:00"
 }
