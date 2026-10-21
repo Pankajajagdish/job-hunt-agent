@@ -1,0 +1,14 @@
+{
+  "job_id": "9af7bd912850",
+  "title": "DevOps Engineer",
+  "company": "RemotePeople",
+  "url": "https://himalayas.app/companies/remote-people/jobs/devops-engineer?utm_source=api",
+  "match_score": 100,
+  "posted_at": "2026-10-21T01:07:11+00:00",
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: DevOps Engineer. Emphasized: Kubernetes, Terraform, GitHub Actions, Docker, Prometheus.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "resume_file": "PANKAJA_DevOps_Engineer.pdf",
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-10-21T03:08:34.818622+00:00"
+}
