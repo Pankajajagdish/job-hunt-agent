@@ -1,0 +1,14 @@
+{
+  "job_id": "96f4a947c7c4",
+  "title": "DevOps Engineer",
+  "company": "Point Wild",
+  "url": "https://himalayas.app/companies/point-wild/jobs/devops-engineer?utm_source=api",
+  "match_score": 100,
+  "posted_at": "2026-11-18T00:35:45+00:00",
+  "tailored_summary": "Base resume kept as-is. TECHNICAL SKILLS updated for: DevOps Engineer. Emphasized: Kubernetes, Terraform, GitHub Actions, Helm, IAM.",
+  "ats_score": 10.0,
+  "overall_score": 10.0,
+  "resume_file": "PANKAJA_DevOps_Engineer.pdf",
+  "tailor_mode": "skills_only_keep_base_resume",
+  "generated_at": "2026-11-18T00:47:15.882494+00:00"
+}
